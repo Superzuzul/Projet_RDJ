@@ -1,4 +1,4 @@
-
+ï»¿
 RECUPERATION D'UN DEPOT EN LIGNE vers l'espace local
 =====================================================
 
@@ -9,17 +9,31 @@ RECUPERATION D'UN DEPOT EN LIGNE vers l'espace local
 						|
 						|--> 4. cliquer sur "Ouvrir GitHub"
 
-	5. Définir le dossier local où utiliser le projet (ex. : C:\xampp\htdocs\Projet_RDJ)
+	5. DÃ©finir le dossier local oÃ¹ utiliser le projet (ex. : C:\xampp\htdocs\Projet_RDJ)
 
 
 
-ENVOI DE MODIFS D'UN ESPACE LOCAL vers le dépôt en ligne
+
+ENVOI DE MODIFS D'UN ESPACE LOCAL vers le dÃ©pÃ´t en ligne
 =========================================================
 
-	6. Sur l'interface GitHub, après un changement dans le dossier local (ex. : C:\xampp\htdocs\Projet_RDJ),
-		cliquez sur "Changes" : l'ensemble des éléments à envoyer en ligne est listé
+	6. Sur l'interface GitHub, aprÃ¨s un changement dans le dossier local (ex. : C:\xampp\htdocs\Projet_RDJ),
+		cliquez sur "Changes" : l'ensemble des Ã©lÃ©ments Ã  envoyer en ligne est listÃ©
 
-				|--> 7. saisir le titre de vos modifs (Summary) et une brève description
+				|--> 7. saisir le titre de vos modifs (Summary) et une brÃ¨ve description
 
 						|--> 8. cliquer sur Commit to "(le nom de votre branche)"
 								|--> 9. puis cliquer sur "Publish" pour envoyer le tout sur le projet en ligne
+
+
+
+
+AJOUT DE LA BRANCHE crÃ©Ã©e par /d'un autre dÃ©veloppeur
+=========================================================
+	Cliquer sur "Create a new branch"
+			|--> lui donner le nom exact sous lequel l'autre dÃ©veloppeur l'a crÃ©Ã©e
+				par ex. :
+					1. Sylvain rÃ©cupÃ¨re la branche d'Alex en cliquant sur "Create a new branch"
+					2. puis saisit dans "New branch name" alex
+			|
+			|--> cliquer sur Publish pour tout "synchroniser"
