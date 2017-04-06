@@ -1,0 +1,92 @@
+body, header, #cont-menu{
+	margin: 0;
+}
+
+header{
+	text-align: center;
+}
+/* section LOGO */
+#logo{
+	width: 300px;
+}
+
+/* section contenant le MENU / la NAVIGATION */
+#cont-menu{
+	margin-top: 20px;
+	padding-top: 5px;
+	background-color: #540202;
+	height: 40px;
+}
+
+#menu-ul-global, #menu-ul-global ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+	text-align:center;
+}
+#menu-ul-global li{
+	display:inline-block;
+	position:relative;
+	border-radius:8px 8px 0 0;
+}
+#menu-ul-global ul li{
+	display:inherit;
+	border-radius:0;
+}
+#menu-ul-global ul li:hover{
+	border-radius:0;
+}
+#menu-ul-global ul li:last-child{
+	border-radius:0 0 8px 8px;
+}
+#menu-ul-global ul{
+	position:absolute;
+	z-index: 1000;
+	max-height:0;
+	left: 0;
+	right: 0;
+	overflow:hidden;
+	-moz-transition: .2s all .3s;
+	-webkit-transition: .2s all .3s;
+	transition: .2s all .3s;
+}
+#menu-ul-global li:hover ul{
+	max-height:200em;
+}
+
+/* background des liens menus */
+#menu-ul-global li:first-child, #menu-ul-global li:nth-child(2), #menu-ul-global li:nth-child(3), #menu-ul-global li:nth-child(4), #menu-ul-global li:nth-child(5), #menu-ul-global li:last-child{
+	background-color: red;
+}
+/* background des liens menus et sous menus au survol */
+#menu-ul-global li:first-child:hover, #menu-ul-global li:first-child li:hover{
+	background-color: red;
+}
+#menu-ul-global li:nth-child(2):hover, #menu-ul-global li:nth-child(2) li:hover{
+	background-color: red;
+}
+#menu-ul-global li:nth-child(3):hover, #menu-ul-global li:nth-child(3) li:hover{
+	background-color: red;
+}
+#menu-ul-global li:last-child:hover, #menu-ul-global li:last-child li:hover{
+	background-color: red;
+}
+
+/* les a href */
+#menu-ul-global a{
+	text-decoration:none;
+	display:block;
+	padding:8px 32px;
+	color:#fff;
+	font-family:arial;
+}
+#menu-ul-global ul a{
+	padding:8px 0;
+}
+#menu-ul-global li:hover li a{
+	color:#fff;
+	text-transform:inherit;
+}
+#menu-ul-global li:hover a, #menu-ul-global li li:hover a{
+	color:#000;
+}
