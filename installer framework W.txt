@@ -1,0 +1,16 @@
+
+1. Télécharger le dossier "w-master.zip"
+	--> le dézipper dans le dossier htdocs/RdJ (ou nom du répertoire du projet)
+
+2. ouvrir la console et choisir le dossier du projet
+	--> saisir "cd(espace).." pour remonter d'un niveau
+	--> ou saisir "cd(espace)nomDuDossier"
+				|--> ici par exemple : C:\>cd xampp\htdocs\RdJ
+
+3. saisir en ligne de commande "composer install"
+
+4. copier/coller le fichier "config.dist.php" (il se trouve dans C:\xampp\htdocs\RdJ\app)
+	--> le renommer "config.php"
+		--> le modifier pour lui indiquer les informations relatives à la base de données utilisée
+				==> chacun des développeurs devra adapter les informations à sa propre base de données, notamment :
+					'db_name' => 'revesdejeux',
