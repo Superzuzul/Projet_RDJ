@@ -1,0 +1,25 @@
+
+RECUPERATION D'UN DEPOT EN LIGNE vers l'espace local
+=====================================================
+
+	1. se rendre sur le projet en ligne (ex. : https://github.com/Superzuzul/Projet_RDJ)
+
+	2. cliquer sur "Clone or download"
+			|--> 3. cliquer sur "Open in Desktop"
+						|
+						|--> 4. cliquer sur "Ouvrir GitHub"
+
+	5. Définir le dossier local où utiliser le projet (ex. : C:\xampp\htdocs\Projet_RDJ)
+
+
+
+ENVOI DE MODIFS D'UN ESPACE LOCAL vers le dépôt en ligne
+=========================================================
+
+	6. Sur l'interface GitHub, après un changement dans le dossier local (ex. : C:\xampp\htdocs\Projet_RDJ),
+		cliquez sur "Changes" : l'ensemble des éléments à envoyer en ligne est listé
+
+				|--> 7. saisir le titre de vos modifs (Summary) et une brève description
+
+						|--> 8. cliquer sur Commit to "(le nom de votre branche)"
+								|--> 9. puis cliquer sur "Publish" pour envoyer le tout sur le projet en ligne
