@@ -10,7 +10,6 @@
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
-		<!--<link rel="stylesheet" type="text/css" href="../css/menu.css">-->
 		<link rel="stylesheet" type="text/css" href="css/global.css">
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 	</head>
@@ -23,7 +22,6 @@
             </section>
             
     	    <section id="cont-menu">
-                
                 <ul id="menu-ul-global">
                 	<li><a href="#">Les séjours</a>
                 		<ul id="ssmenu-ul1">
@@ -54,15 +52,49 @@
                             <li><a href="#">Outils de communication</a></li>
                 		</ul>
                 	</li>
-                	<li><a href="formAdherent.php">Espace adhérent</a>
-                		<!--<ul id="ssmenu-ul4">-->
-                		<!--	<li><a href="#">Photos des séjours</a></li>-->
-                  <!--          <li><a href="#">Calendrier interactif</a></li>-->
-                		<!--</ul>-->
-                	</li>
+                	<li><a href="formAdherent.php">Espace adhérent</a></li>
                 </ul>
-            
             </section>
         </header>
+
+        <section id="nav-mobile">
+            <h1><a href="#">Rêves de Jeux</a></h1>
+            <div class="txt-menu"><img id="led-sejours" class="menu-led" src="img/ledr.png"><a id="menu-sejours" href="#">Séjours</a></div>
+                <!-- sous-menu SEJOURS -->
+                <div id="nav-sejours">
+                    <div class="txt-ssmenu"><a href="rdjClassique.php">Rêves de Jeux Classique</a></div>
+                    <div class="txt-ssmenu"><a href="gamerVideo.php">Gamer Vidéo</a></div>
+                    <div class="txt-ssmenu"><a href="enQueteAventures.php">En-quête d'aventure</a></div>
+                    <div class="txt-ssmenu"><a href="revesAventures.php">Rêves d'aventure</a></div>
+                    <div class="txt-ssmenu"><a href="revesdeJeuxDecouverte.php">Rêves de Jeux Découvertes</a></div>
+                    <div class="txt-ssmenu"><a href="bandeAJtrouvetout.php">La bande à J'Trouvetou</a></div>
+                    <div class="txt-ssmenu"><a href="recrutement.php">Recrutement</a></div>
+                </div>
+                <!-- FIN sous-menu SEJOURS -->
+
+            <div class="txt-menu"><img id="led-association" class="menu-led" src="img/ledr.png"><a id="menu-association" href="#">Association</a></div>
+                <!-- sous-menu ASSOCIATION -->
+                <div id="nav-association">
+                    <div class="txt-ssmenu"><a href="historique.php">Historique</a></div>
+                    <div class="txt-ssmenu"><a href="projetEducatif.php">Projet Educatif</a></div>
+                    <div class="txt-ssmenu"><a href="faq.php">FAQ</a></div>
+                    <div class="txt-ssmenu"><a href="salonsEtFestivals.php">Salons et Festivals</a></div>
+                    <div class="txt-ssmenu"><a href="#">Nos autres activités</a></div>
+                    <div class="txt-ssmenu"><a href="formulaireContact.php">Contactez-nous</a></div>
+                </div>
+                <!-- FIN sous-menu ASSOCIATION -->
+
+            <div class="txt-menu"><img id="led-aider" class="menu-led" src="img/ledr.png"><a id="menu-aider" href="#">Aider Rêves de Jeux</a></div>
+                <!-- sous-menu AIDER -->
+                <div id="nav-aider">
+                    <div class="txt-ssmenu"><a href="#">Faire un don</a></div>
+                    <div class="txt-ssmenu"><a href="#">Devenir membre</a></div>
+                    <div class="txt-ssmenu"><a href="#">Les bonnes affaires</a></div>
+                    <div class="txt-ssmenu"><a href="#">Outils de communication</a></div>
+                </div>
+                <!-- FIN sous-menu AIDER -->
+
+            <div class="txt-menu"><img id="led-adherent" class="menu-led" src="img/ledr.png"><a id="menu-adherent" href="#">Espace adhérent</a></div>
+        </section>
         
         <main>
