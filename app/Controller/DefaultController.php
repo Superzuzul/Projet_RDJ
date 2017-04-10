@@ -124,9 +124,69 @@ class DefaultController extends Controller
 
 	public function devenirMembre(){
 
-		//affichage de la page faire un don
+		//affichage de la page devenir membre
 
 		$this->show('pages/aider_rdj/devenir_membre');
+
+	}
+
+
+	public function lesBonnesAffaires(){
+
+		//affichage de la page les bonnes affaires
+
+		$this->show('pages/aider_rdj/les_bonnes_affaires');
+
+	}
+
+
+
+	public function outilsCommunication(){
+
+		//affichage de la page outils de communication
+
+		$this->show('pages/aider_rdj/outils_communication');
+
+	}
+
+
+
+	/************************************************
+					Partie aider rdj
+	************************************************/
+
+	public function indexAdherents(){
+
+		//affichage de la page d'index de l'espace adhérent (pour la navigation interne)
+
+		$this->show('pages/espace_adherents/index_adherents');
+
+	}
+
+
+
+	public function photosSejour(){
+
+		//affichage de la page comprenant la liste des séjours pour aller prendre les photos
+
+		$this->show('pages/espace_adherents/photos_sejour');
+
+	}
+
+
+	public function listePhotos(){
+
+		//affichage de la page dynamique affichant les photos des séjours
+
+		$this->show('pages/espace_adherents/liste_photos');
+
+	}
+
+	public function calendrier(){
+
+		//affichage de la page du calendrier interactif
+
+		$this->show('pages/espace_adherents/calendrier');
 
 	}
 

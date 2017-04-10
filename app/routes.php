@@ -65,5 +65,41 @@
 		['GET|POST', '/aider-rdj/devenir-membre', 'Default#devenirMembre', 'default_devenir_membre'],
 
 
+		//Page devenir membre
+		['GET|POST', '/aider-rdj/les-bonnes-affaires', 'Default#lesBonnesAffaires', 'default_les_bonnes_affaires'],
+
+
+		//Page outils de communication
+		['GET|POST', '/aider-rdj/outils-communication', 'Default#outilsCommunication', 'default_outils_communication'],
+
+
+		/************************************************
+						Espace Adhérent
+		************************************************/
+
+
+		//Page index de navigation pour les adhérents
+		['GET|POST', '/espace_adherents/', 'Default#indexAdherents', 'default_index_adherents'],
+
+
+		//Page liste des séjours pour afficher les photos selon le sejour
+		['GET|POST', '/espace_adherents/photos-sejour', 'Default#photosSejour', 'default_photos_sejour'],	
+
+
+		//page dynamique avec la liste des photos
+		['GET|POST', '/espace_adherents/photos-sejour/[:url]', 'Default#listePhotos', 'default_liste_photos'],	
+
+
+		//Page calendrier interactif (à voir si on le fait)
+		['GET|POST', '/espace_adherents/calendrier', 'Default#calendrier', 'default_calendrier'],
+
+
+		/************************************************
+						Espace Administrateur
+		************************************************/
+
+
+		
+
 
 	);
