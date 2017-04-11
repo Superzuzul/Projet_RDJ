@@ -18,7 +18,7 @@
 
 
 		//Page dynamique pour les séjours
-		['GET|POST',	'/sejours/[:url]', 	'Default#sejourDetail', 'default_sejour_detail'],
+		// ['GET|POST',	'/sejours/[:url]', 	'Default#sejourDetail', 'default_sejour_detail'],
 
 		//Page pour le recrutement
 		['GET|POST', '/sejours/recrutement', 'Default#recrutement', 'default_recrutement'],
