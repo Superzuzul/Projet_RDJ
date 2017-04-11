@@ -17,8 +17,29 @@
 		************************************************/						
 
 
-		//Page dynamique pour les séjours
-		['GET|POST',	'/sejours/[:url]', 	'Default#sejourDetail', 'default_sejour_detail'],
+		//Page pour les séjours classiques
+		['GET|POST',	'/sejours/rdj-classique/', 	'Default#rdjClassique', 'default_rdj_classique'],
+
+
+		//Page pour les séjours gamer vidéo
+		['GET|POST',	'/sejours/gamer-video/', 	'Default#gamerVideo', 'default_gamer_video'],
+
+
+		//Page pour les séjours En quete d'aventures
+		['GET|POST',	'/sejours/en-quete-aventures/', 	'Default#enQueteAventures', 'default_en_quete_aventures'],
+
+
+		//Page pour les séjours Rêves d'Aventures
+		['GET|POST',	'/sejours/reves-aventures/', 	'Default#revesAventures', 'default_reves_aventures'],
+
+
+		//Page pour les séjours Reves de Jeux Découvertes
+		['GET|POST',	'/sejours/rdj-decouvertes/', 	'Default#rdjDecouvertes', 'default_rdj_decouvertes'],
+
+
+		//Page pour les bandes à Jtrouvetou
+		['GET|POST',	'/sejours/bande-jtrouvetou/', 	'Default#bandeJtrouvetou', 'default_bande_jtrouvetou'],
+
 
 		//Page pour le recrutement
 		['GET|POST', '/sejours/recrutement', 'Default#recrutement', 'default_recrutement'],

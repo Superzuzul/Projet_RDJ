@@ -33,13 +33,52 @@ class DefaultController extends Controller
 	************************************************/
 
 
-	public function sejourDetail($url)
+	public function rdjClassique()
 
-	//Le framework W va extraire de l'url l'information qui correspond à [:url] Et va le passer en paramettre de la fonction
 	{
-		//On transmet des infos depuis le controlleur vers la vue grâce à un tableau associatif
-		//La cle => va devenir une variable dans la vue et la valeur va devenir la valeur de la variable
-		$this->show('pages/sejours/sejour-detail',["url"=>$url]);
+		//affichage de la page rdj Classique
+		$this->show('pages/sejours/rdj-classique');
+	}
+
+
+
+	public function gamerVideo()
+	
+	{
+		//affichage de la page gamer video
+		$this->show('pages/sejours/gamer-video');
+	}
+
+
+	public function enQueteAventures()
+	
+	{
+		//affichage de la page en quete d'aventures
+		$this->show('pages/sejours/en-quete-aventures');
+	}
+
+
+	public function revesAventures()
+	
+	{
+		//affichage de la page Reves d'aventures
+		$this->show('pages/sejours/reves-aventures');
+	}
+
+
+	public function rdjDecouvertes()
+	
+	{
+		//affichage de la page rdj Découvertes
+		$this->show('pages/sejours/rdj-decouvertes');
+	}
+
+
+	public function bandeJtrouvetou()
+	
+	{
+		//affichage de la page Bande à J"trouvetou
+		$this->show('pages/sejours/bande-jtrouvetou');
 	}
 
 
