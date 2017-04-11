@@ -4,97 +4,100 @@
 		<meta charset="utf-8">
 		<meta name="description" content="<?php echo $description ?>" />
 		<title><?php echo $titre; ?></title>
-		
-		<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
-		<link rel="stylesheet" type="text/css" href="css/global.css">
+
+		<script type="text/javascript" src="<?php echo $this->assetUrl("/js/jquery-3.1.1.js") ?>"></script>
+		<script type="text/javascript" src="<?php echo $this->assetUrl("/js/bootstrap.min.js") ?>"></script>
+
+		<link rel="stylesheet" type="text/css" href="<?php echo $this->assetUrl("/css/font-awesome.min.css") ?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo $this->assetUrl("/css/bootstrap.min.css") ?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo $this->assetUrl("/css/bootstrap-theme.min.css") ?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo $this->assetUrl("/css/global.css") ?>">
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 	</head>
+	<!-- reprendre la fonction assetUrl pour l'utiliser sur la Toolbox -->
 	<?php include "toolbox.php"; ?>
 	
 	<body>
     	<header>
             <section id="cont-logo">
-                <img src="img/logo.jpg" id="logo">
+                <img src="<?php echo $this->assetUrl("/img/logo.jpg") ?>" id="logo">
             </section>
             
     	    <section id="cont-menu">
                 <ul id="menu-ul-global">
-                	<li><a href="#">Les séjours</a>
+                	<li><a href="<?php echo $this->url("default_rdj_classique") ?>">Les séjours</a>
                 		<ul id="ssmenu-ul1">
-                			<li><a href="rdjClassique.php">Rêves de Jeux Classique</a></li>
+                			<li><a href="<?php echo $this->url("default_rdj_classique") ?>">Rêves de Jeux Classique</a></li>
                             <li><a href="gamerVideo.php">Gamer Vidéo</a></li>
-                            <li><a href="enQueteAventures.php">En-quête d'aventure</a></li>
-                            <li><a href="revesAventures.php">Rêves d'aventure</a></li>
+                            <li><a href="enQueteAventures.php">En-quête d'aventures</a></li>
+                            <li><a href="revesAventures.php">Rêves d'aventures</a></li>
                             <li><a href="revesdeJeuxDecouverte.php">Rêves de Jeux Découvertes</a></li>
                             <li><a href="bandeAJtrouvetout.php">La bande à J'Trouvetou</a></li>
-                            <li><a href="recrutement.php">Recrutement</a></li>
+                            <li><a href="<?php echo $this->url("default_recrutement") ?>">Recrutement</a></li>
                 		</ul>
                 	</li>
-                	<li><a href="#">L'association</a>
+                	<li><a href="<?php echo $this->url("default_presentation") ?>">L'association</a>
                 		<ul id="ssmenu-ul2">
-                			<li><a href="historique.php">Historique</a></li>
-                            <li><a href="projetEducatif.php">Projet Educatif</a></li>
-                            <li><a href="faq.php">FAQ</a></li>
-                            <li><a href="salonsEtFestivals.php">Salons et Festivals</a></li>
-                            <li><a href="#">Nos autres activités</a></li>
-                            <li><a href="formulaireContact.php">Contactez-nous</a></li>
+                			<li><a href="<?php echo $this->url("default_presentation") ?>">Historique</a></li>
+                            <li><a href="<?php echo $this->url("default_projet_educatif") ?>">Projet Educatif</a></li>
+                            <li><a href="<?php echo $this->url("default_faq") ?>">FAQ</a></li>
+                            <li><a href="<?php echo $this->url("default_salons_et_festivals") ?>">Salons et Festivals</a></li>
+                            <li><a href="<?php echo $this->url("default_autres_activites") ?>">Nos autres activités</a></li>
+                            <li><a href="<?php echo $this->url("default_contact") ?>">Contactez-nous</a></li>
                 		</ul>
                 	</li>
-                	<li><a href="#">Aider Rêves de Jeux</a>
+                	<li><a href="<?php echo $this->url("default_don") ?>">Aider Rêves de Jeux</a>
                 		<ul id="ssmenu-ul3">
-                			<li><a href="#">Faire un don</a></li>
-                            <li><a href="#">Devenir membre</a></li>
-                            <li><a href="#">Les bonnes affaires</a></li>
-                            <li><a href="#">Outils de communication</a></li>
+                			<li><a href="<?php echo $this->url("default_don") ?>">Faire un don</a></li>
+                            <li><a href="<?php echo $this->url("default_devenir_membre") ?>">Devenir membre</a></li>
+                            <li><a href="<?php echo $this->url("default_les_bonnes_affaires") ?>">Les bonnes affaires</a></li>
+                            <li><a href="<?php echo $this->url("default_outils_communication") ?>">Outils de communication</a></li>
                 		</ul>
                 	</li>
-                	<li><a href="formAdherent.php">Espace adhérent</a></li>
+                	<li><a href="<?php echo $this->url("default_index_adherents") ?>">Espace adhérent</a>
+                	</li>
                 </ul>
             </section>
         </header>
 
         <section id="nav-mobile">
-            <h1><a href="#">Rêves de Jeux</a></h1>
-            <div class="txt-menu"><img id="led-sejours" class="menu-led" src="img/ledr.png"><a id="menu-sejours" href="#">Séjours</a></div>
+            <h1><a href="<?php echo $this->url("default_index") ?>">Rêves de Jeux</a></h1>
+            <div class="txt-menu sejours"><img id="led-sejours" class="menu-led" src="<?php echo $this->assetUrl("/img/ledr.png") ?>">Séjours</div>
                 <!-- sous-menu SEJOURS -->
                 <div id="nav-sejours">
-                    <div class="txt-ssmenu"><a href="rdjClassique.php">Rêves de Jeux Classique</a></div>
+                    <div class="txt-ssmenu"><a href="<?php echo $this->url("default_rdj_classique") ?>">Rêves de Jeux Classique</a></div>
                     <div class="txt-ssmenu"><a href="gamerVideo.php">Gamer Vidéo</a></div>
                     <div class="txt-ssmenu"><a href="enQueteAventures.php">En-quête d'aventure</a></div>
                     <div class="txt-ssmenu"><a href="revesAventures.php">Rêves d'aventure</a></div>
                     <div class="txt-ssmenu"><a href="revesdeJeuxDecouverte.php">Rêves de Jeux Découvertes</a></div>
                     <div class="txt-ssmenu"><a href="bandeAJtrouvetout.php">La bande à J'Trouvetou</a></div>
-                    <div class="txt-ssmenu"><a href="recrutement.php">Recrutement</a></div>
+                    <div class="txt-ssmenu"><a href="<?php echo $this->url("default_recrutement") ?>">Recrutement</a></div>
                 </div>
                 <!-- FIN sous-menu SEJOURS -->
 
-            <div class="txt-menu"><img id="led-association" class="menu-led" src="img/ledr.png"><a id="menu-association" href="#">Association</a></div>
+            <div class="txt-menu association"><img id="led-association" class="menu-led" src="<?php echo $this->assetUrl("/img/ledr.png") ?>"><a id="menu-association" href="<?php echo $this->url("default_presentation") ?>">Association</a></div>
                 <!-- sous-menu ASSOCIATION -->
                 <div id="nav-association">
-                    <div class="txt-ssmenu"><a href="historique.php">Historique</a></div>
-                    <div class="txt-ssmenu"><a href="projetEducatif.php">Projet Educatif</a></div>
-                    <div class="txt-ssmenu"><a href="faq.php">FAQ</a></div>
-                    <div class="txt-ssmenu"><a href="salonsEtFestivals.php">Salons et Festivals</a></div>
-                    <div class="txt-ssmenu"><a href="#">Nos autres activités</a></div>
-                    <div class="txt-ssmenu"><a href="formulaireContact.php">Contactez-nous</a></div>
+                    <div class="txt-ssmenu"><a href="<?php echo $this->url("default_presentation") ?>">Historique</a></div>
+                    <div class="txt-ssmenu"><a href="<?php echo $this->url("default_projet_educatif") ?>">Projet Educatif</a></div>
+                    <div class="txt-ssmenu"><a href="<?php echo $this->url("default_faq") ?>">FAQ</a></div>
+                    <div class="txt-ssmenu"><a href="<?php echo $this->url("default_salons_et_festivals") ?>">Salons et Festivals</a></div>
+                    <div class="txt-ssmenu"><a href="<?php echo $this->url("default_autres_activites") ?>">Nos autres activités</a></div>
+                    <div class="txt-ssmenu"><a href="<?php echo $this->url("default_contact") ?>">Contactez-nous</a></div>
                 </div>
                 <!-- FIN sous-menu ASSOCIATION -->
 
-            <div class="txt-menu"><img id="led-aider" class="menu-led" src="img/ledr.png"><a id="menu-aider" href="#">Aider Rêves de Jeux</a></div>
+            <div class="txt-menu aider"><img id="led-aider" class="menu-led" src="<?php echo $this->url("default_don") ?>"><a id="menu-aider" href="#">Aider Rêves de Jeux</a></div>
                 <!-- sous-menu AIDER -->
                 <div id="nav-aider">
-                    <div class="txt-ssmenu"><a href="#">Faire un don</a></div>
-                    <div class="txt-ssmenu"><a href="#">Devenir membre</a></div>
-                    <div class="txt-ssmenu"><a href="#">Les bonnes affaires</a></div>
-                    <div class="txt-ssmenu"><a href="#">Outils de communication</a></div>
+                    <div class="txt-ssmenu"><a href="<?php echo $this->url("default_don") ?>">Faire un don</a></div>
+                    <div class="txt-ssmenu"><a href="<?php echo $this->url("default_devenir_membre") ?>">Devenir membre</a></div>
+                    <div class="txt-ssmenu"><a href="<?php echo $this->url("default_les_bonnes_affaires") ?>">Les bonnes affaires</a></div>
+                    <div class="txt-ssmenu"><a href="<?php echo $this->url("default_outils_communication") ?>">Outils de communication</a></div>
                 </div>
                 <!-- FIN sous-menu AIDER -->
 
-            <div class="txt-menu"><img id="led-adherent" class="menu-led" src="img/ledr.png"><a id="menu-adherent" href="#">Espace adhérent</a></div>
+            <div class="txt-menu adherent"><img id="led-adherent" class="menu-led" src="<?php echo $this->assetUrl("/img/ledr.png") ?>"><a id="menu-adherent" href="<?php echo $this->url("default_index_adherents") ?>">Espace adhérent</a></div>
         </section>
         
         <main>
