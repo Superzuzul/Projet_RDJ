@@ -183,16 +183,15 @@ class DefaultController extends Controller
 		$this->show('pages/association/autres_activites');
 
 	}
-			public function autresActivitesGalipettes(){
-
-				//affichage de la sous-page Nos autres activités/espace-galipettes
-				$this->show('pages/association/autres_activites/espace_galipettes');
-			}
-			public function autresActivitesMedieval(){
-
-				//affichage de la sous-page Nos autres activités/espace-medieval
-				$this->show('pages/association/autres_activites/espace_medieval');
-			}
+	//affichage des sous-pages de Nos autres activités
+	public function autresActivitesGalipettes(){
+		//affichage de la sous-page Nos autres activités/espace-galipettes
+		$this->show('pages/association/autres_activites/espace_galipettes');
+	}
+	public function autresActivitesMedieval(){
+		//affichage de la sous-page Nos autres activités/espace-medieval
+		$this->show('pages/association/autres_activites/espace_medieval');
+	}
 
 
 	public function contact(){
@@ -254,7 +253,7 @@ class DefaultController extends Controller
 
 		//affichage de la page d'index de l'espace adhérent (pour la navigation interne)
 
-		$this->show('pages/espace_adherents/index_adherents');
+		$this->show('pages/espace-adherents/index-adherents');
 
 	}
 
@@ -264,7 +263,7 @@ class DefaultController extends Controller
 
 		//affichage de la page comprenant la liste des séjours pour aller prendre les photos
 
-		$this->show('pages/espace_adherents/photos_sejour');
+		$this->show('pages/espace-adherents/photos-sejour');
 
 	}
 
@@ -273,7 +272,7 @@ class DefaultController extends Controller
 
 		//affichage de la page dynamique affichant les photos des séjours
 
-		$this->show('pages/espace_adherents/liste_photos');
+		$this->show('pages/espace-adherents/liste-photos');
 
 	}
 
@@ -281,7 +280,7 @@ class DefaultController extends Controller
 
 		//affichage de la page du calendrier interactif
 
-		$this->show('pages/espace_adherents/calendrier');
+		$this->show('pages/espace-adherents/calendrier');
 
 	}
 
