@@ -7,7 +7,7 @@ use \W\Controller\Controller;
 class DefaultController extends Controller
 {
 
-	//surcharge de la methode show
+	//surcharge de la methode show pour ajouter des fonctions et eviter la toolbox
 
 	public function show($file, array $data = array())
 	{

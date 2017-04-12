@@ -91,8 +91,8 @@ $this->insert('partials/header',['title'=>"Accueil"]);
     </article>
 </section>
 
-<?php/*
+<?php
 
 $this->insert('partials/footer');
 
-*/?>
+?>
