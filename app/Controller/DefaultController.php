@@ -183,6 +183,16 @@ class DefaultController extends Controller
 		$this->show('pages/association/autres_activites');
 
 	}
+			public function autresActivitesGalipettes(){
+
+				//affichage de la sous-page Nos autres activités/espace-galipettes
+				$this->show('pages/association/autres_activites/espace_galipettes');
+			}
+			public function autresActivitesMedieval(){
+
+				//affichage de la sous-page Nos autres activités/espace-medieval
+				$this->show('pages/association/autres_activites/espace_medieval');
+			}
 
 
 	public function contact(){

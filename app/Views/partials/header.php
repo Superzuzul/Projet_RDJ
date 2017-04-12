@@ -59,7 +59,7 @@
 
         <section id="nav-mobile">
             <h1><a href="<?php echo $this->url("default_index") ?>">Rêves de Jeux</a></h1>
-            <div class="txt-menu sejours"><img id="led-sejours" class="menu-led" src="<?php echo $this->assetUrl("/img/ledr.png") ?>">Séjours</div>
+            <div class="txt-menu sejours" id="menu-sejours"><img id="led-sejours" class="menu-led" src="<?php echo $this->assetUrl("/img/ledr.png") ?>">Séjours</div>
                 <!-- sous-menu SEJOURS -->
                 <div id="nav-sejours">
                     <div class="txt-ssmenu"><a href="<?php echo $this->url("default_rdj_classique") ?>">Rêves de Jeux Classique</a></div>
@@ -72,7 +72,7 @@
                 </div>
                 <!-- FIN sous-menu SEJOURS -->
 
-            <div class="txt-menu association"><img id="led-association" class="menu-led" src="<?php echo $this->assetUrl("/img/ledr.png") ?>"><a id="menu-association" href="<?php echo $this->url("default_presentation") ?>">Association</a></div>
+            <div class="txt-menu association" id="menu-association"><img id="led-association" class="menu-led" src="<?php echo $this->assetUrl("/img/ledr.png") ?>">Association</div>
                 <!-- sous-menu ASSOCIATION -->
                 <div id="nav-association">
                     <div class="txt-ssmenu"><a href="<?php echo $this->url("default_presentation") ?>">Historique</a></div>
@@ -84,7 +84,7 @@
                 </div>
                 <!-- FIN sous-menu ASSOCIATION -->
 
-            <div class="txt-menu aider"><img id="led-aider" class="menu-led" src="<?php echo $this->url("default_don") ?>"><a id="menu-aider" href="#">Aider Rêves de Jeux</a></div>
+            <div class="txt-menu aider" id="menu-aider"><img id="led-aider" class="menu-led" src="<?php echo $this->assetUrl("/img/ledr.png") ?>">Aider Rêves de Jeux</div>
                 <!-- sous-menu AIDER -->
                 <div id="nav-aider">
                     <div class="txt-ssmenu"><a href="<?php echo $this->url("default_don") ?>">Faire un don</a></div>
@@ -94,7 +94,7 @@
                 </div>
                 <!-- FIN sous-menu AIDER -->
 
-            <div class="txt-menu adherent"><img id="led-adherent" class="menu-led" src="<?php echo $this->assetUrl("/img/ledr.png") ?>"><a id="menu-adherent" href="<?php echo $this->url("default_index_adherents") ?>">Espace adhérent</a></div>
+            <div class="txt-menu adherent" id="menu-adherent"><img id="led-adherent" class="menu-led" src="<?php echo $this->assetUrl("/img/ledr.png") ?>">Espace adhérent</div>
         </section>
         
         <main>

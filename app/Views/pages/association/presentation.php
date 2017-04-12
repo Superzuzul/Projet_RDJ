@@ -1,8 +1,7 @@
 <?php
-
-$this->insert('partials/header',['title'=>"Accueil"]);
-
+$this->insert('partials/header',['titre'=>"(titre page PRESENTATION)", 'description'=>"(description page PRESENTATION)"]);
 ?>
+
 <h1>Histoire de l'association</h1>
 <section>
     <article>
@@ -92,7 +91,11 @@ $this->insert('partials/header',['title'=>"Accueil"]);
 </section>
 
 <?php
+<<<<<<< HEAD
 
 $this->insert('partials/footer');
 
+=======
+$this->insert('partials/footer');
+>>>>>>> origin/master
 ?>
