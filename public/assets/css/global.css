@@ -277,8 +277,12 @@ header{
     	color: white;
     	text-decoration: none;
 	}
-    #adresse:hover, #soc-fb:hover, #soc-yt:hover{
-        color: red;
+    #adresse:hover, #soc-yt:hover{
+        color: #E52D27;
+        text-decoration: none;
+    }
+    #soc-fb:hover{
+        color: #3B5998;
         text-decoration: none;
     }
     #adresse i, #soc-fb i, #soc-yt i{
