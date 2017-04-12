@@ -1,5 +1,5 @@
 <?php
-$this->insert('partials/header',['title'=>"Accueil"]);
+$this->insert('partials/header',['titre'=>"Accueil"]);
 ?>
 
 <h1>Séjour « RDJ Classic" » pour les 12-17 ans (60 places)</h1>
@@ -23,8 +23,8 @@ $this->insert('partials/header',['title'=>"Accueil"]);
 	<article>
 <?php 
 
-//Je crée un nouvel objet de la classe ArticleModel
-$objetSejourModel=new\Model\SejourModel;
+//Je crée un nouvel objet de la classe SejourModel (en rapport avec la table sejour de la BDD)
+$objetSejourModel=new \Model\SejourModel;
 $tabResult=$objetSejourModel->search(['nomSejour'=>"rdj-classique"]); //la methode search est défini dans la classe\W\Model\Model
 
 //on boucle à chaque case pour eviter la repetition
@@ -37,7 +37,7 @@ $tabResult=$objetSejourModel->search(['nomSejour'=>"rdj-classique"]); //la metho
 				<?php 
 				foreach ($tabResult as $key => $value) {
 
-				echo '<p>'.$value['dateDepart'].'</p>'; 
+				echo '<p>'.$this->dateFr($value['dateDepart']).'</p>'; 
 
 				}
 				?>	
@@ -48,7 +48,7 @@ $tabResult=$objetSejourModel->search(['nomSejour'=>"rdj-classique"]); //la metho
 				<?php 
 				foreach ($tabResult as $key => $value) {
 
-				echo '<p>'.$value['dateRetour'].'</p>'; 
+				echo '<p>'.$this->dateFr($value['dateRetour']).'</p>'; 
 
 				}
 				?>	
@@ -58,7 +58,7 @@ $tabResult=$objetSejourModel->search(['nomSejour'=>"rdj-classique"]); //la metho
 				<?php 
 				foreach ($tabResult as $key => $value) {
 
-				echo '<p>'.$value['duree'].'</p>'; 
+				echo '<p>'.$value['duree'].' jours</p>'; 
 
 				}
 				?>	
@@ -68,7 +68,7 @@ $tabResult=$objetSejourModel->search(['nomSejour'=>"rdj-classique"]); //la metho
 				<?php 
 				foreach ($tabResult as $key => $value) {
 
-				echo '<p>'.$value['tarif'].'</p>'; 
+				echo '<p>'.$value['tarif'].' €</p>'; 
 
 				}
 				?>	
@@ -79,7 +79,7 @@ $tabResult=$objetSejourModel->search(['nomSejour'=>"rdj-classique"]); //la metho
 		<h2>Réservation</h2>
 		<p>
 		Inscriptions à faire auprès de DJURINGA Juniors au 04 78 23 23 46 ou directement ici :
-			<a href=""><button>S'inscrire à un séjour</button></a>
+			<a href="https://www.djuringa-juniors.fr/reves-de-jeux-2264.html"><button>S'inscrire à un séjour</button></a>
 		</p>	
 	</article>
 	<article>

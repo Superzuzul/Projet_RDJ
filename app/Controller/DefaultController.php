@@ -7,6 +7,52 @@ use \W\Controller\Controller;
 class DefaultController extends Controller
 {
 
+	//surcharge de la methode show
+
+	public function show($file, array $data = array())
+	{
+		//incluant le chemin vers nos vues
+		$engine = new \League\Plates\Engine(self::PATH_VIEWS);
+
+		//charge nos extensions (nos fonctions personnalisées)
+		$engine->loadExtension(new \W\View\Plates\PlatesExtensions());
+
+		// le flash message
+		$flash_message = (isset($_SESSION['flash']) && !empty($_SESSION['flash'])) ? (object) $_SESSION['flash'] : null;
+
+		// 
+		$app = getApp();		
+
+		// Rend certaines données disponibles à tous les vues
+		// accessible avec $w_user & $w_current_route dans les fichiers de vue
+		$engine->addData(
+			[
+				'w_user' 		  => $this->getUser(),
+				'w_current_route' => $app->getCurrentRoute(),
+				'w_site_name'	  => $app->getConfig('site_name'),
+				'w_flash_message' => $flash_message,
+			]
+		);
+
+		// Retire l'éventuelle extension .php
+		$file = str_replace('.php', '', $file);
+
+
+		$engine->registerFunction('dateFr', function ($date) {
+           	 //on transforme la chaine en tableau
+				$tabDate = explode('-', $date);
+				//return $tabDate[2].'/'.$tabDate[1].'/'.$tabDate[0];
+				return implode('/', array_reverse($tabDate));
+        });
+
+
+		// Affiche le template
+		echo $engine->render($file, $data);
+		die();
+	}
+
+
+
 	/*******************************
 	 * Page d'accueil + sans session
 	 *******************************/

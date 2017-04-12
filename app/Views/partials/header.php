@@ -15,7 +15,7 @@
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 	</head>
 	<!-- reprendre la fonction assetUrl pour l'utiliser sur la Toolbox -->
-	<?php include "toolbox.php"; ?>
+	<?php $this->insert('partials/toolbox'); ?>
 	
 	<body>
     	<header>
