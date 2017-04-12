@@ -1,5 +1,5 @@
 <?php
-$this->insert('partials/header',['titre'=>"Accueil"]);
+$this->insert('partials/header',['titre'=>"Rêves de Jeux Classique, colonie de vacance pour les 12/17 ans, acitivités Jeux de Rôles, Jeux de Sociétés, Jeux vidéos...", 'description'=>"Rêves de Jeux propose des colonies de vacances pour les 12/17 ans pendant l'été, spécialisés le jeu sous toutes ses formes (Jeux de sociétés, Jeux de rôles, Jeux vidéos, Grandeur Natures, activités extérieurs)"]);
 ?>
 
 <h1>Séjour « RDJ Classic" » pour les 12-17 ans (60 places)</h1>

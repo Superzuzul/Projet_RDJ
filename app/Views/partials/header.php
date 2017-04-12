@@ -13,10 +13,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo $this->assetUrl("/css/bootstrap-theme.min.css") ?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo $this->assetUrl("/css/global.css") ?>">
 		<script src='https://www.google.com/recaptcha/api.js'></script>
-	</head>
-	<!-- reprendre la fonction assetUrl pour l'utiliser sur la Toolbox -->
-	<?php $this->insert('partials/toolbox'); ?>
-	
+	</head>	
 	<body>
     	<header>
             <section id="cont-logo">
