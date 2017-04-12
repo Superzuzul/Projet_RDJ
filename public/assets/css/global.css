@@ -45,10 +45,14 @@ header{
 		padding: 10px;
 		background-color: brown;
 	}
+	.menu-led{
+		padding-right: 10px;
+	}
 	#nav-mobile #menu-sejours, #nav-mobile #menu-association, #nav-mobile #menu-aider, #nav-mobile #menu-adherent{
 		color: white;
 		font-size: 1.5em;
 		margin: 0 auto;
+		margin: 5px 0 0;
 		text-decoration: none;
 		padding: 10px;
 	}

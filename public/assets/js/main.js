@@ -24,7 +24,8 @@ $(".sejours").click(function(){
 		g_bMenuFerme_sejours = false;
 
   		// au clic pour ouvrir, on allume la led verte
-  		$("#led-sejours").attr("src","../img/ledg.png");
+  		$("#led-sejours").attr("src", led+"ledg.png");	// la variable "led" est définie dans le footer
+  															// juste avant l'appel du script "main.js"
 	}
 	else{
 		//-> le menu est ouvert
@@ -34,7 +35,8 @@ $(".sejours").click(function(){
 			g_bMenuFerme_sejours = true;
 
   			// au clic pour fermer, on allume la led rouge
-  			$("#led-sejours").attr("src","../img/ledr.png");
+  			$("#led-sejours").attr("src", led+"ledr.png");	// la variable "led" est définie dans le footer
+  															// juste avant l'appel du script "main.js"
 	}
 });
 
@@ -51,7 +53,8 @@ $(".association").click(function(){
 		g_bMenuFerme_association = false;
 
 		// au clic pour ouvrir, on allume la led verte
-  		$("#led-association").attr("src","../img/ledg.png");
+		$("#led-association").attr("src", led+"ledg.png");	// la variable "led" est définie dans le footer
+  															// juste avant l'appel du script "main.js"
 	}
 	else{
 		//-> le menu est ouvert
@@ -61,7 +64,8 @@ $(".association").click(function(){
 			g_bMenuFerme_association = true;
 
   			// au clic pour fermer, on allume la led rouge
-  			$("#led-association").attr("src","../img/ledr.png");
+  			$("#led-association").attr("src", led+"ledr.png");	// la variable "led" est définie dans le footer
+  															// juste avant l'appel du script "main.js"
 	}
 });
 
@@ -78,7 +82,8 @@ $(".aider").click(function(){
 		g_bMenuFerme_aider = false;
 
   		// au clic pour ouvrir, on allume la led verte
-  		$("#led-aider").attr("src","../img/ledg.png");
+  		$("#led-aider").attr("src", led+"ledg.png");	// la variable "led" est définie dans le footer
+  															// juste avant l'appel du script "main.js"
 	}
 	else{
 		//-> le menu est ouvert
@@ -88,16 +93,22 @@ $(".aider").click(function(){
 			g_bMenuFerme_aider = true;
 
 			// au clic pour fermer, on allume la led rouge
-  			$("#led-aider").attr("src","../img/ledr.png");
+  			$("#led-aider").attr("src", led+"ledr.png");	// la variable "led" est définie dans le footer
+  															// juste avant l'appel du script "main.js"
 	}
 });
 
 
 
 $(".adherent").click(function(){
+	// on définit une variable src qui définit l'image à afficher par défaut
+	var src = ($("#led-adherent").attr('src') === led+"ledr.png")	// la variable "led" est définie dans le footer
+																	// juste avant l'appel du script "main.js"
+	// condition ternaire
+		// à chaque clic, la valeur change :
+	?  led+"ledg.png"	// SI l'on clique une fois, on passe la valeur de la variable src à "ledg.png"
+	:  led+"ledr.png";	// SINON SI l'on clique une autre fois, on passe la valeur de la variable src à "ledr.png"
 	
-	var src = ($("#led-adherent").attr('src') === "../img/ledr.png")
-	? "../img/ledg.png"
-	: "../img/ledr.png";
-	$("#led-adherent").attr('src', src);
+	$("#led-adherent").attr('src', src); // on indique l'image à afficher
+										// grâce à la valeur "à l'instant T" de la variable src
 });

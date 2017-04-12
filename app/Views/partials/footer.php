@@ -34,6 +34,9 @@
 			</div>
 		</footer>
 	
+	<script type="text/javascript">
+		var led = "<?php echo $this->assetUrl("/img/") ?>";
+	</script>
 	<script type="text/javascript" src="<?php echo $this->assetUrl("/js/main.js") ?>"></script>
 	</body>
 </html>
