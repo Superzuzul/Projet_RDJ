@@ -68,6 +68,10 @@
 
 		//Page pour nos autres activités
 		['GET|POST', '/association/autres-activites', 'Default#autresActivites', 'default_autres_activites'],
+				// Sous-pages pour nos autres activités
+				['GET|POST', '/association/autres-activites/espace-galipettes', 'Default#autresActivitesGalipettes', 'default_autres_activites_galipettes'],
+
+				['GET|POST', '/association/autres-activites/espace-medieval', 'Default#autresActivitesMedieval', 'default_autres_activites_medieval'],
 
 		//Page contact
 		['GET|POST', '/association/contact', 'Default#contact', 'default_contact'],
