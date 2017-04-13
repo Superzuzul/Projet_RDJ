@@ -6,7 +6,7 @@ $this->insert('partials/header',['titre'=>"Espace Galipettes - RevesdeJeux.com",
 <section>
     <article>
         <figure>
-            <img src="../../img/autresactivites/e_galipettes1.jpg" alt="Des enfants jouants dans l'espace galipettes"></img>
+            <img src="<?php echo $this->assetUrl("/img/autres-activites/e_galipettes1.jpg") ?>" alt="Des enfants jouants dans l'espace galipettes"></img>
             <figcaption>L'espace Galipettes</figcaption>
         </figure>
         <h2>Description de l'activité</h2>
@@ -17,7 +17,7 @@ $this->insert('partials/header',['titre'=>"Espace Galipettes - RevesdeJeux.com",
     <article>
         <h2>Descriptif de l'espace</h2>
         <figure>
-            <img src="../../img/autresactivites/e_galipettes2.jpg" alt="illustration de l'espace Galipettes"></img>
+            <img src="<?php echo $this->assetUrl("/img/autres-activites/e_galipettes2.jpg") ?>" alt="illustration de l'espace Galipettes"></img>
             <figcaption>L'espace Galipettes en vue aerienne</figcaption>
         </figure>
         <p>
@@ -36,7 +36,7 @@ $this->insert('partials/header',['titre'=>"Espace Galipettes - RevesdeJeux.com",
     <article>
         <h2>Les differentes ambiances</h2>
         <figure>
-            <img src="../../img/autresactivites/e_galipettes3.jpg" alt="au coeur de l'action de l'espace galipettes"></img>
+            <img src="<?php echo $this->assetUrl("/img/autres-activites/e_galipettes1.jpg") ?>" alt="au coeur de l'action de l'espace galipettes"></img>
             <figcaption>Au coeur de l'action</figcaption>
         </figure>
         <ul>
