@@ -51,7 +51,7 @@
                             <li><a href="<?php echo $this->url("default_outils_communication") ?>">Outils de communication</a></li>
                 		</ul>
                 	</li>
-                	<li><a href="<?php echo $this->url("default_index_adherents") ?>">Espace adhérent</a>
+                    <li><a href="<?php echo $this->url("user_login_adherents") ?>">Espace adhérent</a>
                 	</li>
                 </ul>
             </section>
