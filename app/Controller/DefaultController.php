@@ -183,15 +183,44 @@ class DefaultController extends Controller
 		$this->show('pages/association/autres_activites');
 
 	}
-	//affichage des sous-pages de Nos autres activités
+
+
+	/*    affichage des sous-pages de Nos autres activités     */
+
+
 	public function autresActivitesGalipettes(){
+
 		//affichage de la sous-page Nos autres activités/espace-galipettes
-		$this->show('pages/association/autres_activites/espace_galipettes');
+
+		$this->show('pages/association/autres_activites/espace-galipettes');
 	}
+
+
 	public function autresActivitesMedieval(){
+
 		//affichage de la sous-page Nos autres activités/espace-medieval
-		$this->show('pages/association/autres_activites/espace_medieval');
+
+		$this->show('pages/association/autres_activites/espace-medieval');
 	}
+
+
+	public function autresActivitesBarAJeux(){
+
+		//affichage de la sous-page Nos autres activités/bar-a-jeux
+
+		$this->show('pages/association/autres_activites/bar-a-jeux');
+	}
+
+	public function autresActivitesBarATheme(){
+
+		//affichage de la sous-page Nos autres activités/bar-a-theme
+
+		$this->show('pages/association/autres_activites/bar-a-theme');
+	}
+
+
+
+	/*   				 fin des sous-pages  				   */
 
 
 	public function contact(){

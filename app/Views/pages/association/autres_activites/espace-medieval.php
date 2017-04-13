@@ -6,7 +6,7 @@ $this->insert('partials/header',['titre'=>"Espace Medieval - RevesdeJeux.com", '
 <section>
     <article>
         <figure>
-            <img src="../../img/autresactivites/e_medieval1.jpg" alt="Illustration de l'espace médiéval"></img>
+            <img src="<?php echo $this->assetUrl("/img/autres-activites/e_medieval1.jpg") ?>" alt="Illustration de l'espace médiéval"></img>
             <figcaption>Un espace d'action à l'ambiance médiévale</figcaption>
         </figure>
         <h2>Description de l'activité</h2>
@@ -22,7 +22,7 @@ $this->insert('partials/header',['titre'=>"Espace Medieval - RevesdeJeux.com", '
         </p>
         <h3>Le Tir à l’Arc Médiéval</h3>
         <figure>
-            <img src="../../img/autresactivites/e_medieval2.jpg" alt="Illustration du tir à l'arc Médiéval"></img>
+            <img src="<?php echo $this->assetUrl("/img/autres-activites/e_medieval2.jpg") ?>" alt="Illustration du tir à l'arc Médiéval"></img>
             <figcaption>Le tir à l'arc médiéval encadré par des professionnels</figcaption>
         </figure>
         <p>
@@ -30,7 +30,7 @@ $this->insert('partials/header',['titre'=>"Espace Medieval - RevesdeJeux.com", '
         </p>
         <h3>Les Contes Interactifs Médiévaux</h3>
         <figure>
-            <img src="../../img/autresactivites/e_medieval3.jpg" alt="Illustration des contes interactifs médiévaux"></img>
+            <img src="<?php echo $this->assetUrl("/img/autres-activites/e_medieval3.jpg") ?>" alt="Illustration des contes interactifs médiévaux"></img>
             <figcaption>Les contes interactifs</figcaption>
         </figure>
         <p>
