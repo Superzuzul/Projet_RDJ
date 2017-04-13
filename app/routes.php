@@ -90,7 +90,7 @@
 		['GET|POST', '/aider-rdj/devenir-membre', 'Default#devenirMembre', 'default_devenir_membre'],
 
 
-		//Page devenir membre
+		//Page les bonnes affaires
 		['GET|POST', '/aider-rdj/les-bonnes-affaires', 'Default#lesBonnesAffaires', 'default_les_bonnes_affaires'],
 
 
@@ -108,7 +108,7 @@
 
 
 		//Page mot de passe perdu
-		['GET|POST', '/espace-adherents/mdp-perdu', 'Default#mdpAdherents', 'default_mdp_adherents'],
+		['GET|POST', '/espace-adherents/mdp-adherents', 'User#mdpAdherents', 'user_mdp_adherents'],
 
 
 		//Page liste des séjours pour afficher les photos selon le sejour

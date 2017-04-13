@@ -71,5 +71,16 @@
 	        // VIEW
 	        $this->show("pages/espace-adherents/index-adherents", ["message" => $message]);
 		}
+
+		// methode MDP PERDU
+		public function mdpAdherents(){
+
+			// code PHP
+
+			//affichage de la page de modification/réinitialisation du mot de passe
+			$this->show('pages/espace-adherents/mdp-adherents');
+
+		}
+
 	}
 ?>
