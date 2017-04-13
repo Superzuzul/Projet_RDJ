@@ -306,7 +306,6 @@ class DefaultController extends Controller
 	public function indexAdherents(){
 
 		//affichage de la page d'index de l'espace adhérent (pour la navigation interne)
-
 		$this->show('pages/espace-adherents/index-adherents');
 
 	}

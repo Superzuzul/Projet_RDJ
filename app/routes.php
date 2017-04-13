@@ -135,13 +135,17 @@
 						Espace Adhérent
 		************************************************/
 
-
 		//Page index de navigation pour les adhérents
 		['GET|POST', '/espace-adherents', 'Default#indexAdherents', 'default_index_adherents'],
 
+		//Page login pour les adhérents
+		['GET|POST', '/espace-adherents/login', 'User#login', 'user_login_adherents'],
 
 		//Page mot de passe perdu
-		['GET|POST', '/espace-adherents/mdp-adherents', 'User#mdpAdherents', 'user_mdp_adherents'],
+		['GET|POST', '/espace-adherents/mdp-perdu', 'User#mdpPerdu', 'user_mdp_perdu'],
+
+		//Page redéfinition du mot de passe
+		['GET|POST', '/espace-adherents/mdp-red', 'User#mdpRed', 'user_mdp_red'],
 
 
 		//Page liste des séjours pour afficher les photos selon le sejour
