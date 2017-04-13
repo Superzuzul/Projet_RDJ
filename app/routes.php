@@ -107,12 +107,16 @@
 		['GET|POST', '/espace-adherents/', 'Default#indexAdherents', 'default_index_adherents'],
 
 
+		//Page mot de passe perdu
+		['GET|POST', '/espace-adherents/mdp-perdu', 'Default#mdpAdherents', 'default_mdp_adherents'],
+
+
 		//Page liste des séjours pour afficher les photos selon le sejour
 		['GET|POST', '/espace-adherents/photos-sejour', 'Default#photosSejour', 'default_photos_sejour'],	
 
 
 		//page dynamique avec la liste des photos
-		['GET|POST', '/espace-adherents/photos-sejour/[:url]', 'Default#listePhotos', 'default_liste_photos'],	
+		['GET|POST', '/espace-adherents/photos-sejour/[:url]', 'Default#listePhotos', 'default_liste_photos'],
 
 
 		//Page calendrier interactif (à voir si on le fait)

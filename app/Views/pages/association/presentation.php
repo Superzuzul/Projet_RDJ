@@ -91,11 +91,5 @@ $this->insert('partials/header',['titre'=>"(titre page PRESENTATION)", 'descript
 </section>
 
 <?php
-<<<<<<< HEAD
-
 $this->insert('partials/footer');
-
-=======
-$this->insert('partials/footer');
->>>>>>> origin/master
 ?>

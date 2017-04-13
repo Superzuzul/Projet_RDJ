@@ -254,6 +254,45 @@ header{
 	}
 
 
+	/* formulaire ADHERENT - mdp à modifier/réinitialiser */
+		#form-mdp-adherents{
+			margin-top: 80px;
+			margin-bottom: 100px;
+		}
+		
+		#form-mdp-adherents #adherent-mail, #form-adherent #adherent-mdp{
+			margin: 0 auto;
+			margin-top: 10px;
+			padding: 10px;
+		    border-radius: 10px;
+		    width: 600px;
+		}
+		#form-adherent #adherent-btn-submit{
+			margin-top: 20px;
+		    background-color: #420100;
+		    padding: 10px;
+		    border-radius: 10px;
+		    width: 300px;
+		    color: gold;
+		}
+		
+		#adherent-mdp-perdu{
+			margin-top: 40px;
+		}
+		#adherent-mdp-perdu{
+			color: black;
+			font-style: italic;
+		}
+		#adherent-mdp-perdu a{
+			color: red;
+			font-weight: bold;
+			text-decoration: none;
+		}
+		#adherent-mdp-perdu a:hover{
+			text-decoration: none;
+		}
+
+
 /************************************************
                 FOOTER
 *************************************************/

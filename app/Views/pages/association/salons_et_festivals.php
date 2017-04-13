@@ -11,10 +11,11 @@ $this->insert('partials/header',['titre'=>"Salons et Festivals - Revesdejeux.com
                 Vous trouverez sur cette page la liste des salons et festivals auquels nous allons participer ! N'hésitez pas à venir nous voir sur place !
             </p>
             <p>
-                Vous êtes un organisateur et souhaitez notre présence à votre événement ? N'hésitez pas à <a href="formulaireContact.php">nous contacter</a> afin de discuter ensemble de cette participation !
+                Vous êtes un organisateur et souhaitez notre présence à votre événement ? N'hésitez pas à <a href="<?php echo $this->url("default_contact") ?>">nous contacter</a> afin de discuter ensemble de cette participation !
             </p>
         </p>
     </article>
+    
     <?php
 		//Ouverture de la BDD
 		$bdd=new PDO("mysql:host=localhost;dbname=revesdejeux;charset=utf8","guillaumeazoulay","");

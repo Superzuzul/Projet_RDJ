@@ -246,7 +246,7 @@ class DefaultController extends Controller
 
 
 	/************************************************
-					Partie aider rdj
+					Partie espace adherent
 	************************************************/
 
 	public function indexAdherents(){
@@ -257,7 +257,12 @@ class DefaultController extends Controller
 
 	}
 
+	public function mdpAdherents(){
 
+		//affichage de la page de modification/réinitialisation du mot de passe
+		$this->show('pages/espace-adherents/mdp-adherents');
+
+	}
 
 	public function photosSejour(){
 
@@ -266,7 +271,6 @@ class DefaultController extends Controller
 		$this->show('pages/espace-adherents/photos-sejour');
 
 	}
-
 
 	public function listePhotos(){
 
@@ -283,8 +287,4 @@ class DefaultController extends Controller
 		$this->show('pages/espace-adherents/calendrier');
 
 	}
-
-
-
-
 }

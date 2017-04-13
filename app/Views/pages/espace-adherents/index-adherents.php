@@ -1,8 +1,8 @@
 <?php
-$this->insert('partials/header',['titre'=>"(TITRE page INDEX_ADHERENTS à modifier)", 'description'=>"(DESCRIPTION page INDEX_ADHERENTS à modifier)"]);
+$this->insert('partials/header',['titre'=>"Espace Adhérent - identification", 'description'=>"L'espace adhérent de Rêves de Jeux vous permet d'accéder à des contenus exclusifs : photos, chat entre membres,..."]);
 ?>
 
-<h1>(page INDEX_ADHERENTS à modifier)</h1>
+<h1>Espace personnel</h1>
 <section>
 	<!--  -->
 
@@ -22,7 +22,8 @@ $this->insert('partials/header',['titre'=>"(TITRE page INDEX_ADHERENTS à modifi
 		
 		<div class="form-group text-center" id="adherent-mdp-perdu">
 			<p>Mot de passe perdu ?
-				<br/><a href="perdu.php">cliquez ici</a>  pour retrouver l'accès à votre espace !
+				<!-- <br/><a href="perdu.php">cliquez ici</a>  pour retrouver l'accès à votre espace ! -->
+				<br/><a href=<?php echo $this->url("default_mdp_adherents") ?>>cliquez ici</a>  pour retrouver l'accès à votre espace !
 			</p>
 		</div>
 	</form>
