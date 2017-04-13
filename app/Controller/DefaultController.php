@@ -211,11 +211,36 @@ class DefaultController extends Controller
 		$this->show('pages/association/autres_activites/bar-a-jeux');
 	}
 
+
 	public function autresActivitesBarATheme(){
 
 		//affichage de la sous-page Nos autres activités/bar-a-theme
 
 		$this->show('pages/association/autres_activites/bar-a-theme');
+	}
+
+
+	public function autresActivitesGrandQuiz(){
+
+		//affichage de la sous-page Nos autres activités/grand-quiz
+
+		$this->show('pages/association/autres_activites/grand-quiz');
+	}
+
+
+	public function autresActivitesVipDeJouer(){
+
+		//affichage de la sous-page Nos autres activités/vip-de-jouer
+
+		$this->show('pages/association/autres_activites/vip-de-jouer');
+	}
+
+
+	public function autresActivitesReveDeNature(){
+
+		//affichage de la sous-page Nos autres activités/reve-de-nature
+
+		$this->show('pages/association/autres_activites/reve-de-nature');
 	}
 
 
