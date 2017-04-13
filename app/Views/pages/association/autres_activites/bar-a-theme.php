@@ -1,5 +1,5 @@
 <?php
-$this->insert('partials/header',['titre'=>"Bar à Jeux à Thème - RevesdeJeux.com", 'description'=>"Rêves de Jeux vous propose d'adapter ses Bar à Jeux"]);
+$this->insert('partials/header',['titre'=>"Bar à Jeux à Thème - RevesdeJeux.com", 'description'=>"Rêves de Jeux vous propose d'adapter ses Bar à Jeux à vos themes"]);
 ?>
 <h1>Bar à Jeux à Thème</h1>
 <section>
