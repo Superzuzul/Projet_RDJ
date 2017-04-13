@@ -286,13 +286,6 @@ class DefaultController extends Controller
 
 	}
 
-	public function mdpAdherents(){
-
-		//affichage de la page de modification/réinitialisation du mot de passe
-		$this->show('pages/espace-adherents/mdp-adherents');
-
-	}
-
 	public function photosSejour(){
 
 		//affichage de la page comprenant la liste des séjours pour aller prendre les photos

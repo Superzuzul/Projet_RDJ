@@ -2,9 +2,9 @@
 $this->insert('partials/header',['titre'=>"Espace Adhérent - identification", 'description'=>"L'espace adhérent de Rêves de Jeux vous permet d'accéder à des contenus exclusifs : photos, chat entre membres,..."]);
 ?>
 
-<h1>Espace personnel</h1>
+<h1 id="esp-pers" class="text-center">Espace personnel</h1>
+
 <section>
-	<!--  -->
 
 	<form action="loginUtilisateur.php" method="post" id="form-adherent">
 		<div class="form-group text-center" id="adherent-mail">
@@ -23,7 +23,7 @@ $this->insert('partials/header',['titre'=>"Espace Adhérent - identification", '
 		<div class="form-group text-center" id="adherent-mdp-perdu">
 			<p>Mot de passe perdu ?
 				<!-- <br/><a href="perdu.php">cliquez ici</a>  pour retrouver l'accès à votre espace ! -->
-				<br/><a href=<?php echo $this->url("default_mdp_adherents") ?>>cliquez ici</a>  pour retrouver l'accès à votre espace !
+				<br/><a href=<?php echo $this->url("user_mdp_adherents") ?>>cliquez ici</a>  pour retrouver l'accès à votre espace !
 			</p>
 		</div>
 	</form>
