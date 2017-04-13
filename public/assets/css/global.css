@@ -216,8 +216,12 @@ header{
 /************************************************
                 formulaire ADHERENT
 *************************************************/
+	#esp-pers{
+		margin-top: 50px;
+	}
+
 	#form-adherent{
-		margin-top: 80px;
+		margin-top: 30px;
 		margin-bottom: 100px;
 	}
 	
@@ -260,36 +264,20 @@ header{
 			margin-bottom: 100px;
 		}
 		
-		#form-mdp-adherents #adherent-mail, #form-adherent #adherent-mdp{
+		#form-mdp-adherents #mdp-adherents-mail, #form-mdp-adherents #mdp-adherents-input_mail{
 			margin: 0 auto;
 			margin-top: 10px;
 			padding: 10px;
 		    border-radius: 10px;
 		    width: 600px;
 		}
-		#form-adherent #adherent-btn-submit{
+		#form-mdp-adherents #mdp-adherents-btn-submit{
 			margin-top: 20px;
 		    background-color: #420100;
 		    padding: 10px;
 		    border-radius: 10px;
 		    width: 300px;
 		    color: gold;
-		}
-		
-		#adherent-mdp-perdu{
-			margin-top: 40px;
-		}
-		#adherent-mdp-perdu{
-			color: black;
-			font-style: italic;
-		}
-		#adherent-mdp-perdu a{
-			color: red;
-			font-weight: bold;
-			text-decoration: none;
-		}
-		#adherent-mdp-perdu a:hover{
-			text-decoration: none;
 		}
 
 
