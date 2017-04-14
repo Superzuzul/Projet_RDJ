@@ -185,7 +185,7 @@ class DefaultController extends Controller
 	}
 
 
-	/*    affichage des sous-pages de Nos autres activités     */
+	/************    affichage des sous-pages de Nos autres activités     ***********/
 
 
 	public function autresActivitesGalipettes(){
@@ -244,8 +244,38 @@ class DefaultController extends Controller
 	}
 
 
+	public function autresActivitesBarANature(){
 
-	/*   				 fin des sous-pages  				   */
+		//affichage de la sous-page Nos autres activités/bar-a-nature
+
+		$this->show('pages/association/autres_activites/bar-a-nature');
+	}
+
+
+	public function autresActivitesSeminaireCreation(){
+
+		//affichage de la sous-page Nos autres activités/seminaire-creation
+
+		$this->show('pages/association/autres_activites/seminaire-creation');
+	}
+
+
+	public function autresActivitesFormation(){
+
+		//affichage de la sous-page Nos autres activités/formation
+
+		$this->show('pages/association/autres_activites/formation');
+	}
+
+
+	public function autresActivitesAtelierPrevention(){
+
+		//affichage de la sous-page Nos autres activités/atelier-prevention
+
+		$this->show('pages/association/autres_activites/atelier-prevention');
+	}
+
+	/***********		 fin des sous-pages  		**********/
 
 
 	public function contact(){

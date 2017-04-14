@@ -98,7 +98,7 @@
 
 		['GET|POST', '/association/autres-activites/grand-quiz', 'Default#autresActivitesGrandQuiz', 'default_autres_activites_grand_quiz'],
 
-		//page Le grand Quiz	
+		//page VIP de Jouer	
 
 		['GET|POST', '/association/autres-activites/vip-de-jouer', 'Default#autresActivitesVipDeJouer', 'default_autres_activites_vip_de_jouer'],
 
@@ -106,9 +106,23 @@
 
 		['GET|POST', '/association/autres-activites/reve-de-nature', 'Default#autresActivitesReveDeNature', 'default_autres_activites_reve_de_nature'],
 
+		//page Festival Rêve de Nature Bar à jeux	
 
-		
+		['GET|POST', '/association/autres-activites/bar-a-nature', 'Default#autresActivitesBarANature', 'default_autres_activites_bar_a_nature'],
 
+
+		//page Sémiraire Création de Jeux	
+
+		['GET|POST', '/association/autres-activites/seminaire-creation', 'Default#autresActivitesSeminaireCreation', 'default_autres_activites_seminaire_creation'],
+
+		//page formation	
+
+		['GET|POST', '/association/autres-activites/formation', 'Default#autresActivitesFormation', 'default_autres_activites_formation'],	
+
+
+		//page Atelier Prévention "jeux tu il"	
+
+		['GET|POST', '/association/autres-activites/atelier-prevention', 'Default#autresActivitesAtelierPrevention', 'default_autres_activites_atelier_prevention'],
 
 
 		/************************************************
