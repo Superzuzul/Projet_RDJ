@@ -130,9 +130,132 @@ class DefaultController extends Controller
 
 	public function recrutement(){
 
+		$erreur=array();
+
+		$safe=array_map('strip_tags', $_REQUEST);
+
+		if(isset($safe['btnSub'])){
+
+			
+
+			//verification des champs
+
+			if(empty(trim($safe['nom']))){
+				$erreur['nom']='Le champ "Nom" doit être rempli !';
+			}
+
+			if(empty(trim($safe['prenom']))){
+				$erreur['prenom']='Le champ "Prenom" doit être rempli !';
+			}
+
+			if(!filter_var($safe['email'], FILTER_VALIDATE_EMAIL)){
+				$erreur['email']='Le champ "E-mail" doit être correctement rempli !';
+			}
+
+			if(empty($safe['sejour'])){
+				$erreur['prenom']='Veuillez sélectionner un séjour !';
+			}
+
+			if(empty($_FILES['cv']) OR empty($_FILES['lettreMotivation'])){
+				$erreur['fichiers']="Merci de bien télécharger votre CV ainsi que votre lettre de motivation";
+			}
+
+			if(empty(trim($safe['message'])) && strlen($safe['message']) <10){
+				$erreur['message']='Merci de bien vouloir remplir le message (minimum 10 caractères) !';
+			}
+
+			if(count($erreur)==0){
+
+				//vérification de l'extension des fichiers
+
+				$cv=$_FILES['cv']['name']; //le nom d'origine sur mon pc
+
+				$lettreMotivation=$_FILES['lettreMotivation']['name']; //le nom d'origine sur mon pc
+
+				$extCv=new \SplFileInfo($cv);
+
+				$extCvMin=strtolower($extCv->getExtension());
+
+				
+				if(!in_array($extCvMin, ['pdf','doc','docx','jpg'])){
+
+					$erreur['extCv']="L'extension de votre CV n'est pas reconnue. $extCvMin";
+
+				}//fin de verif extCv
+
+				$extLettreMotivation=new \SplFileInfo($lettreMotivation);
+
+				$extLettreMotivationMin=strtolower($extLettreMotivation->getExtension());
+
+				if(!in_array($extLettreMotivationMin, ['pdf','doc','docx','jpg'])){
+
+					$erreur['extLettreMotivation']="L'extension de votre lettre de motivation n'est pas reconnue. $extLettreMotivationMin";
+
+				}//fin verif extLettreMotivation
+
+				if(count($erreur)==0){
+
+					//verrification de la taille des fichiers
+
+					if($_FILES['cv']["size"]>2000000){
+						$erreur['tailleCv']="La taille de votre CV est supérieur à 2 MO !";
+					}
+
+					if($_FILES['lettreMotivation']["size"]>2000000){
+						$erreur['tailleCv']="La taille de votre lettre de motivation est supérieur à 2 MO !";
+					}
+
+
+					if(count($erreur)==0){
+
+						//Si tout est bon, on peut passer à l'upload pour l'envoi de l'e-mail
+
+						$repertoire=__DIR__.'/../cv_lettre_motivation'; //le répertoire destination du fichier
+
+						$cvTemp=$_FILES['cv']['tmp_name']; //le nom temporaire
+						$cv=$_FILES['cv']['name']; //le nom d'origine sur mon pc
+
+						$lettreMotivationTemp=$_FILES['lettreMotivation']['tmp_name']; //le nom temporaire
+						
+
+
+
+
+						//copie du fichier
+						if(move_uploaded_file($cvTemp,"$repertoire/cv-".$safe['email'].".$extCvMin") && move_uploaded_file($lettreMotivationTemp,"$repertoire/lettre-motivation-".$safe['email'].".$extLettreMotivationMin")){
+						
+							//ON DOIT ENVOYER L'E-MAIL ICI !!!!	
+
+							
+							
+
+						}//fin de l'upload
+						else{
+							$erreur['upload']="Erreur lors du telechargement de votre ou vos fichier(s).";
+						}
+
+
+					}//fin du troisieme count($erreur)
+
+
+
+				}//fin du deuxième count($erreur)
+
+
+			}//fin du count($erreur) numéro 1
+
+
+
+
+		}//fin du isset
+
+
+
+
+
 		//affichage de la page recrutement
 
-		$this->show('pages/sejours/recrutement');
+		$this->show('pages/sejours/recrutement',['erreur'=>$erreur]);
 
 	}
 
