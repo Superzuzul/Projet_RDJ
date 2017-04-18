@@ -254,6 +254,7 @@ class DefaultController extends Controller
 							$mail = new \PHPMailer();
     	
 					    	$mail->isSMTP(); //connexion directe au serveur SMTP
+					    	$mail->Charset='UTF-8';
 					    	$mail->SMTPDebug=0;
 					    	$mail->isHTML(true); //utilisation du format HTML pour le message
 
@@ -509,6 +510,7 @@ class DefaultController extends Controller
 				$mail = new \PHPMailer();
 
 		    	$mail->isSMTP(); //connexion directe au serveur SMTP
+		    	$mail->Charset='UTF-8';
 		    	$mail->SMTPDebug=0;
 		    	$mail->isHTML(true); //utilisation du format HTML pour le message
 

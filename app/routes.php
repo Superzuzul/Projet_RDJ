@@ -175,7 +175,14 @@
 		************************************************/
 
 
-		
+		//Page modification sejours
+
+
+		//route pour la page admin
+		['GET|POST',	'/admin/sejour', 	'Admin#sejour', 'admin_sejour'],
+
+		//Route dynamique pour la modification d'un article
+		['GET|POST',	'/admin/sejour/update/[:id]', 	'Admin#sejourUpdate', 'admin_sejour_update'],
 
 
 	);
