@@ -501,7 +501,6 @@ class DefaultController extends Controller
 		if(isset($safe['btnSub'])){
 
 			
-
 			//verification des champs
 
 			if(empty(trim($safe['nom']))){
@@ -512,6 +511,9 @@ class DefaultController extends Controller
 				$erreur['email']='Le champ "E-mail" doit être correctement rempli !';
 			}
 
+			if(empty(trim($safe['sujet'])) && strlen($safe['sujet']) <5){
+				$erreur['nom']='Le champ "sujet" doit être rempli et faire minimum 5 caractères !';
+			}
 
 			if(empty(trim($safe['message'])) && strlen($safe['message']) <10){
 				$erreur['message']='Merci de bien vouloir remplir le message (minimum 10 caractères) !';
@@ -565,6 +567,12 @@ class DefaultController extends Controller
 								</tr>
 								<tr>
 									<td>'. $safe['email'] . '</td>
+								</tr>
+								<tr>
+									<td><b>Sujet du message:</b></td>
+								</tr>
+								<tr>
+									<td>'. $safe['sujet'] . '</td>
 								</tr>
 								<tr>
 									<td><b>Contenu du message:</b></td>
