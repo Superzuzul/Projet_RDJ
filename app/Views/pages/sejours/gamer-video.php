@@ -5,13 +5,13 @@ $this->insert('partials/header',['titre'=>"Gamer Vidéo, colonie de vacance pour
 <section>
 	<article>
 		<h2>Description du séjour</h2>
-		<p>
+		<p class="positionTexte">
 			Tu es littéralement mordu de jeux vidéo ? Tu peux faire travailler tes méninges pendant des heures à la recherche des solutions qui te mèneront au niveau supérieur et à la victoire ? Tu t’es fait beaucoup de contacts à travers la pratique de jeux multi-joueurs ? Ou bien, tu aimes tout simplement y jouer de temps en temps et découvrir des tas de jeux différents pour essayer des jeux différents ? C’est sûr, tu as le profil ! Rejoins d’autres aficionados le temps d’un séjour unique en France, encadré par les professionnels de l’association Rêves de Jeux. Ces passionnés ont concocté pour vous un programme "Récréa-Éducatif" autour du jeu vidéo.
 		</p>
-		<p>
+		<p class="positionTexte">
 			Pratique intelligente du jeu sur PC en réseau et sur consoles : Wii, Wii U, PS4 et Xbox One, avec un petit détour du côté des anciennes consoles pour le délire "rétrogaming" (PS one et 2 et 3, Xbox 360, Game Cube, Nintendo 64, Méga Drive, etc.).   Et voici nos jeunes gamers plongé dans un univers convivial où l’imaginaire est sollicité sans relâche et les règles comprises, acquises et respectées. La préférence est donnée aux modes coopératifs et aux jeux multi-joueurs : une manière amicale de s'amuser et d’apprendre à jouer intelligemment, en toute solidarité.
 		</p>
-		<p>
+		<p class="positionTexte">
 			A raison de trois après-midi par semaine, des plages horaires sont aménagées pour ménager des pauses avec le monde du jeu vidéo. Ces instants sont consacrés à la pratique d’activités détente proposées sur le site, en intérieur ou extérieur. 
 		</p>
 	</article>
@@ -95,14 +95,14 @@ foreach ($tabResult as $key => $value) {
 	</article>
 	<article>
 		<h2>Réservation</h2>
-		<p>
+		<p class="positionTexte">
 		Inscriptions à faire auprès de DJURINGA Juniors au 04 78 23 23 46 ou directement ici :
 			<a href="https://www.djuringa-juniors.fr/gamer-video-2266.html"><button>S'inscrire à un séjour</button></a>
 		</p>
 	</article>
 	<article>
 		<h2>Une question ?</h2>
-		<p>Vous souhaitez obtenir plus d'information sur les séjours ? N'hésitez pas <a href="contact.php">à nous contacter</a> et nous répondrons à toutes vos interrogations !</p>
+		<p class="positionTexte">Vous souhaitez obtenir plus d'information sur les séjours ? N'hésitez pas <a href="contact.php">à nous contacter</a> et nous répondrons à toutes vos interrogations !</p>
 	</article>
 </section>
 <?php

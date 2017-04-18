@@ -18,27 +18,27 @@
 
 
 		//Page pour les séjours classiques
-		['GET|POST',	'/sejours/rdj-classique', 	'Default#rdjClassique', 'default_rdj_classique'],
+		['GET|POST',	'/sejours/rdj-classique/', 	'Default#rdjClassique', 'default_rdj_classique'],
 
 
 		//Page pour les séjours gamer vidéo
-		['GET|POST',	'/sejours/gamer-video', 	'Default#gamerVideo', 'default_gamer_video'],
+		['GET|POST',	'/sejours/gamer-video/', 	'Default#gamerVideo', 'default_gamer_video'],
 
 
 		//Page pour les séjours En quete d'aventures
-		['GET|POST',	'/sejours/en-quete-aventures', 	'Default#enQueteAventures', 'default_en_quete_aventures'],
+		['GET|POST',	'/sejours/en-quete-aventures/', 	'Default#enQueteAventures', 'default_en_quete_aventures'],
 
 
 		//Page pour les séjours Rêves d'Aventures
-		['GET|POST',	'/sejours/reves-aventures', 	'Default#revesAventures', 'default_reves_aventures'],
+		['GET|POST',	'/sejours/reves-aventures/', 	'Default#revesAventures', 'default_reves_aventures'],
 
 
 		//Page pour les séjours Reves de Jeux Découvertes
-		['GET|POST',	'/sejours/rdj-decouvertes', 	'Default#rdjDecouvertes', 'default_rdj_decouvertes'],
+		['GET|POST',	'/sejours/rdj-decouvertes/', 	'Default#rdjDecouvertes', 'default_rdj_decouvertes'],
 
 
 		//Page pour les bandes à Jtrouvetou
-		['GET|POST',	'/sejours/bande-jtrouvetou', 	'Default#bandeJtrouvetou', 'default_bande_jtrouvetou'],
+		['GET|POST',	'/sejours/bande-jtrouvetou/', 	'Default#bandeJtrouvetou', 'default_bande_jtrouvetou'],
 
 
 		//Page pour le recrutement
@@ -94,35 +94,9 @@
 
 		['GET|POST', '/association/autres-activites/bar-a-theme', 'Default#autresActivitesBarATheme', 'default_autres_activites_bar_a_theme'],
 
-		//page Le grand Quiz	
 
-		['GET|POST', '/association/autres-activites/grand-quiz', 'Default#autresActivitesGrandQuiz', 'default_autres_activites_grand_quiz'],
+		
 
-		//page VIP de Jouer	
-
-		['GET|POST', '/association/autres-activites/vip-de-jouer', 'Default#autresActivitesVipDeJouer', 'default_autres_activites_vip_de_jouer'],
-
-		//page Festival Rêve de Nature	
-
-		['GET|POST', '/association/autres-activites/reve-de-nature', 'Default#autresActivitesReveDeNature', 'default_autres_activites_reve_de_nature'],
-
-		//page Festival Rêve de Nature Bar à jeux	
-
-		['GET|POST', '/association/autres-activites/bar-a-nature', 'Default#autresActivitesBarANature', 'default_autres_activites_bar_a_nature'],
-
-
-		//page Sémiraire Création de Jeux	
-
-		['GET|POST', '/association/autres-activites/seminaire-creation', 'Default#autresActivitesSeminaireCreation', 'default_autres_activites_seminaire_creation'],
-
-		//page formation	
-
-		['GET|POST', '/association/autres-activites/formation', 'Default#autresActivitesFormation', 'default_autres_activites_formation'],	
-
-
-		//page Atelier Prévention "jeux tu il"	
-
-		['GET|POST', '/association/autres-activites/atelier-prevention', 'Default#autresActivitesAtelierPrevention', 'default_autres_activites_atelier_prevention'],
 
 
 		/************************************************
@@ -149,17 +123,13 @@
 						Espace Adhérent
 		************************************************/
 
-		//Page index de navigation pour les adhérents
-		['GET|POST', '/espace-adherents', 'Default#indexAdherents', 'default_index_adherents'],
 
-		//Page login pour les adhérents
-		['GET|POST', '/espace-adherents/login', 'User#login', 'user_login_adherents'],
+		//Page index de navigation pour les adhérents
+		['GET|POST', '/espace-adherents/', 'Default#indexAdherents', 'default_index_adherents'],
+
 
 		//Page mot de passe perdu
-		['GET|POST', '/espace-adherents/mdp-perdu', 'User#mdpPerdu', 'user_mdp_perdu'],
-
-		//Page redéfinition du mot de passe
-		['GET|POST', '/espace-adherents/mdp-red', 'User#mdpRed', 'user_mdp_red'],
+		['GET|POST', '/espace-adherents/mdp-adherents', 'User#mdpAdherents', 'user_mdp_adherents'],
 
 
 		//Page liste des séjours pour afficher les photos selon le sejour

@@ -8,7 +8,7 @@ $this->insert('partials/header',['titre'=>"Foire Aux Questions - Revesdejeux.com
         <p>
             Question : Ceci est une question, n'est-ce pas ?
         </p>
-        <p>
+        <p class="positionTexte">
             Réponse : Voici la réponse à la question posée. Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
             sed diam nonummy nibh euismod tincidunt ut laoreet dolore
             magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
@@ -30,7 +30,7 @@ $this->insert('partials/header',['titre'=>"Foire Aux Questions - Revesdejeux.com
         <p>
             Question : Ceci est une question, n'est-ce pas ?
         </p>
-        <p>
+        <p class="positionTexte">
             Réponse : Voici la réponse à la question posée. Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
             sed diam nonummy nibh euismod tincidunt ut laoreet dolore
             magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
@@ -41,7 +41,7 @@ $this->insert('partials/header',['titre'=>"Foire Aux Questions - Revesdejeux.com
         <p>
             Question : Ceci est une question, n'est-ce pas ?
         </p>
-        <p>
+        <p class="positionTexte">
             Réponse : Voici la réponse à la question posée. Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
             sed diam nonummy nibh euismod tincidunt ut laoreet dolore
             magna aliquam erat volutpat. Ut wisi enim ad minim veniam,

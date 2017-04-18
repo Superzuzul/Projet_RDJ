@@ -6,19 +6,19 @@ $this->insert('partials/header',['titre'=>"La bande à J’Trouvetou, colonie de
 <section>
 	<article>
 		<h2>Description du séjour</h2>
-		<p>
+		<p class="positionTexte">
 			« La bande à J’Trouvetou » est un séjour qui donne aux enfants l'opportunité de s'épanouir, d'agir et de développer leur curiosité vis-à-vis du milieu dans lequel ils évoluent, tout en laissant libre cours à leur créativité et imagination.  
 		</p>
-		<p>
+		<p class="positionTexte">
            Ce séjour entraînera les enfants dans une série de péripéties insolites au fil d’une histoire mise en scène dans le décor naturel du Centre. Heureusement, la bande à J’Trouvetou est là pour les aider à passer ces épreuves ! Celles-ci, tout en étant ludiques, sont l’occasion de redécouvrir la magie et la beauté de la nature ainsi que son importance et aussi de favoriser l’expression de la créativité des enfants en leur faisant découvrir d’autres matériaux, d’autres outils pour s’exprimer, laisser une bonne empreinte de leur passage. Les enfants seront guidés dans leur quête par les animateurs du Pierlou, grands spécialistes de mystères en tous genres. 
 		</p>
-		<p>
+		<p class="positionTexte">
             Pendant ce séjour, un éventail d’activités au choix favorisera la motricité, l’éveil, et l’expression : jeu de piste et activités sensorielles de découverte de la nature, randonnée au fil de l’eau, promenade nocturne à la recherche des énigmes de la forêt, fabrication d’hôtels à insectes, pyrogravure sur bois, création du talisman et peinture sur tissu du blason de la bande à J’Trouvetou, initiation slackline et escalade au sol, etc.
 		</p>
 	</article>
 	<article>
 		<h2>Le lieu</h2>
-		<p>
+		<p class="positionTexte">
 			Dans le Parc Naturel Régional du Livradois-Forez. Le centre d' hébergement " Le PierLou " est situé à 900 mètres d'altitude sur la commune d' Echandelys (63980) en plein coeur du " Haut Livradois"...
 			<p><a href="#">Pour en savoir plus...</a></p>
 		</p>

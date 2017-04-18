@@ -11,7 +11,7 @@ $this->insert('partials/header',['titre'=>"(titre page PRESENTATION)", 'descript
             <figcaption>Légende de la photo</figcaption>
         </figure>
         
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+        <p class="positionTexte">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
         sed diam nonummy nibh euismod tincidunt ut laoreet dolore
         magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
         quis nostrud exerci tation ullamcorper suscipit lobortis nisl
@@ -38,7 +38,7 @@ $this->insert('partials/header',['titre'=>"(titre page PRESENTATION)", 'descript
             <img src="http://lorempicsum.com/futurama/627/300/1" alt="text alternatif"></img>
             <figcaption>Légende de la photo</figcaption>
         </figure>        
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+        <p class="positionTexte">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
         sed diam nonummy nibh euismod tincidunt ut laoreet dolore
         magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
         quis nostrud exerci tation ullamcorper suscipit lobortis nisl
@@ -65,7 +65,7 @@ $this->insert('partials/header',['titre'=>"(titre page PRESENTATION)", 'descript
             <img src="http://lorempicsum.com/futurama/627/300/3" alt="text alternatif"></img>
             <figcaption>Légende de la photo</figcaption>
         </figure>        
-        <p>
+        <p class="positionTexte">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
             sed diam nonummy nibh euismod tincidunt ut laoreet dolore
             magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
