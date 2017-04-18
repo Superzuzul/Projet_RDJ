@@ -6,6 +6,17 @@ $this->insert('partials/header',['titre'=>"Espace Adhérent - identification", '
 
 <section>
 
+	<?php debug($w_user); ?>
+
+	<div class="message text-center">
+		<?php
+			// on crée une variable qui contiendra uniquement le login de l'utilisateur
+			$login = $w_user["prenomMembre"];
+			$message = "BIENVENUE $login";
+			echo $message;
+		?>
+	</div>
+
 	<form action="loginUtilisateur.php" method="post" id="form-adherent">
 		<div class="form-group text-center" id="adherent-mail">
 			<label for="email">Email :</label>
@@ -22,7 +33,6 @@ $this->insert('partials/header',['titre'=>"Espace Adhérent - identification", '
 		
 		<div class="form-group text-center" id="adherent-mdp-perdu">
 			<p>Mot de passe perdu ?
-				<!-- <br/><a href="perdu.php">cliquez ici</a>  pour retrouver l'accès à votre espace ! -->
 				<br/><a href=<?php echo $this->url("user_mdp_adherents") ?>>cliquez ici</a>  pour retrouver l'accès à votre espace !
 			</p>
 		</div>
