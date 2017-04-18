@@ -280,9 +280,33 @@ class DefaultController extends Controller
 
 	public function indexAdherents(){
 
-		//affichage de la page d'index de l'espace adhérent (pour la navigation interne)
-		$this->show('pages/espace-adherents/index-adherents');
+		// on utilise la méthode getUSer() afin de prendre connaissance des données de l'utilisateur connecté
+		$utilisateurConnect = $this->getUser();
+		debug($utilisateurConnect);
 
+		// SI...
+			// ... les données sont vides, alors on dirigera l'utilisateur vers la page de login
+			// $this->show('pages/espace-adherents/login');
+		if($utilisateurConnect == null)
+		{
+        	$this->redirectToRoute("user_login_adherents");
+		}
+		else
+		{
+			// SINON,...
+			//... affichage de la page d'index de l'espace adhérent (pour la navigation interne)
+
+		// code pour comparer le nb de connexion
+			// on crée une variable qui contiendra uniquement le nombre de connexion de l'utilisateur
+			$nbConnex =  $utilisateurConnect["nbConnexionMembre"];
+
+			if($nbConnex == 1){
+				// ON DIRIGE L'UTILISATEUR VERS LA PAGE DE REDEFINITION DU MOT DE PASSE
+	        	$this->redirectToRoute("user_mdp_red");
+			}
+			else
+			$this->show('pages/espace-adherents/index-adherents');
+		}
 	}
 
 	public function photosSejour(){

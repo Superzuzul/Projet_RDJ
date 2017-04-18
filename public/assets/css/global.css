@@ -220,19 +220,19 @@ header{
 		margin-top: 50px;
 	}
 
-	#form-adherent{
+	#form-login{
 		margin-top: 30px;
 		margin-bottom: 100px;
 	}
 	
-	#form-adherent #adherent-mail, #form-adherent #adherent-mdp{
+	#form-login #login-mail, #form-login #login-mdp{
 		margin: 0 auto;
 		margin-top: 10px;
 		padding: 10px;
 	    border-radius: 10px;
 	    width: 600px;
 	}
-	#form-adherent #adherent-btn-submit{
+	#form-login #login-btn-submit{
 		margin-top: 20px;
 	    background-color: #420100;
 	    padding: 10px;
@@ -241,44 +241,68 @@ header{
 	    color: gold;
 	}
 	
-	#adherent-mdp-perdu{
+	#login-mdp-perdu{
 		margin-top: 40px;
-	}
-	#adherent-mdp-perdu{
 		color: black;
 		font-style: italic;
 	}
-	#adherent-mdp-perdu a{
+	#login-mdp-perdu a{
 		color: red;
 		font-weight: bold;
 		text-decoration: none;
 	}
-	#adherent-mdp-perdu a:hover{
+	#login-mdp-perdu a:hover{
 		text-decoration: none;
 	}
 
 
-	/* formulaire ADHERENT - mdp à modifier/réinitialiser */
-		#form-mdp-adherents{
-			margin-top: 80px;
-			margin-bottom: 100px;
-		}
-		
-		#form-mdp-adherents #mdp-adherents-mail, #form-mdp-adherents #mdp-adherents-input_mail{
-			margin: 0 auto;
-			margin-top: 10px;
-			padding: 10px;
-		    border-radius: 10px;
-		    width: 600px;
-		}
-		#form-mdp-adherents #mdp-adherents-btn-submit{
-			margin-top: 20px;
-		    background-color: #420100;
-		    padding: 10px;
-		    border-radius: 10px;
-		    width: 300px;
-		    color: gold;
-		}
+/* formulaire ADHERENT - mdp perdu */
+	#form-mdp-perdu{
+		margin-top: 80px;
+		margin-bottom: 100px;
+	}
+	
+	#form-mdp-perdu #mdp-perdu-mail, #form-mdp-perdu #mdp-perdu-input_mail{
+		margin: 0 auto;
+		margin-top: 10px;
+		padding: 10px;
+	    border-radius: 10px;
+	    width: 600px;
+	}
+	#form-mdp-perdu #mdp-perdu-btn-submit{
+		margin-top: 20px;
+	    background-color: #420100;
+	    padding: 10px;
+	    border-radius: 10px;
+	    width: 300px;
+	    color: gold;
+	}
+
+
+/* formulaire ADHERENT - mdp à redéfinir */
+	#form-mdp-red{
+		margin-top: 50px;
+		margin-bottom: 100px;
+	}
+	
+	#form-mdp-red #mdp-red-motdepasse, #form-mdp-red #mdp-red-conf_motdepasse{
+		margin: 0 auto;
+		margin-top: 10px;
+		padding: 10px;
+	    border-radius: 10px;
+	    width: 600px;
+	}
+	#form-mdp-red #mdp-red-btn-submit{
+		margin-top: 20px;
+	    background-color: #420100;
+	    padding: 10px;
+	    border-radius: 10px;
+	    width: 300px;
+	    color: gold;
+	}
+	#suite-mdp-red{
+		color: brown;
+	}
 
 
 /************************************************
