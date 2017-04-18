@@ -26,7 +26,7 @@ $this->insert('partials/header',['titre'=>"Rêves de Jeux - Recrutement - Vous s
         <h2>Comment postuler</h2>
         <p>Si la possibilité de faire ce "travail/expérience" vous tente, veuillez nous faire parvenir par ce formulaire, un CV et une lettre de motivation :
         </p>
-        <form method="post" action="" id="formulaireRecrutement">
+        <form method="post" action="" id="formulaireRecrutement" enctype="multipart/form-data">
             <label for="nom">Nom : </label>
             <input type="text" name="nom" id="nom" placeholder="Votre nom" required/>           
             <label for="prenom">Prénom : </label>
@@ -42,15 +42,35 @@ $this->insert('partials/header',['titre'=>"Rêves de Jeux - Recrutement - Vous s
                 <option value="enQueteAventures">En quête d'aventures</option>
                 <option value="bandeJtrouvetou">La bande à J'Trouvetou</option>
             </select>
-            <label for="cv">Votre CV : </label>
+            <label for="cv">Votre CV (format PDF/doc/docx/odt/JPG , taille max : 2 MO) : </label>
             <input type="file" id="cv" name="cv" required>
-            <label for="lettreMotivation">Lettre de motivation : </label>
+            <label for="lettreMotivation">Lettre de motivation (format PDF/doc/docx/odt/JPG, taille max : 2 MO) : </label>
             <input type="file" id="lettreMotivation" name="lettreMotivation" required>
             <label for="message">Votre message : </label>
             <textarea name="message" id="message" required placeholder="Votre message ici" rows="5" cols="50"></textarea>
-            <input type="submit" value="Envoyer" id="btnSub"/>
-            <button class="g-recaptcha" data-sitekey="6Lc2FhkUAAAAAHworrrl4S-5ofmbE_-7f2erkG53" data-callback="YourOnSubmitFn">Submit</button>
+            <!-- RECAPTCHA -->
+            <!--<button class="g-recaptcha" data-sitekey="6Lc2FhkUAAAAAHworrrl4S-5ofmbE_-7f2erkG53" data-callback="YourOnSubmitFn">TEST CAPTCHA</button>-->
+            <div id="form-recaptcha">
+                <p id="recaptcha_txtcontrol">Merci de procéder au contrôle de sécurité ci-dessous :</p>
+                <div class="g-recaptcha" name="recaptcha" data-sitekey="6LdWsBYTAAAAABuJBTypj_6yghL6Qz7Ctp6am749"></div>
+            </div>
+            <input type="submit" name="btnSub" value="Envoyer" id="btnSub"/>           
         </form>
+        <?php if(!empty($erreur)){
+
+            echo '<div class="alert alert-danger">
+            <ul>';
+             
+            foreach ($erreur as $key => $value) {
+                echo "<li>".$value."</li>";
+            }
+
+             
+            echo '</ul> 
+        </div>';
+
+        }
+        ?>
     </article>
 </section>
 <?php
