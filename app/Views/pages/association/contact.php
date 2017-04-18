@@ -15,12 +15,12 @@ $this->insert('partials/header',['titre'=>"Formulaire de contact - RêvesdeJeux.
 			</div>
 			<div class="form-group col-md-6 col-xs-12" id="formmail">
 				<label for="cat">Email :</label>
-				<input type="mail" name="mail" id="mail" class="form-control" placeholder="Saisissez votre mail" required />
+				<input type="mail" name="email" id="email" class="form-control" placeholder="Saisissez votre mail" required />
 			</div>
 			<div class="form-group col-xs-12" id="formnessage">
 				<label for="cat">Message :</label>
 				<!--<input type="text" name="mess" id="mess" class="form-control" placeholder="Saisissez votre message" required />-->
-				<textarea name="mess" id="mess" class="form-control" maxlength="300" placeholder="Saisissez votre message" required></textarea>
+				<textarea name="message" id="message" class="form-control" maxlength="300" placeholder="Saisissez votre message" required></textarea>
 			</div>
 			
 			<!-- RECAPTCHA -->
@@ -48,6 +48,21 @@ $this->insert('partials/header',['titre'=>"Formulaire de contact - RêvesdeJeux.
 		        <?php endif; ?>
 		    </div>
 		</form>
+		<?php if(!empty($erreur)){
+
+            echo '<div class="alert alert-danger">
+            <ul>';
+             
+            foreach ($erreur as $key => $value) {
+                echo "<li>".$value."</li>";
+            }
+
+             
+            echo '</ul> 
+        </div>';
+
+        }
+        ?>
 	</article>
 </section>
 

@@ -48,20 +48,29 @@ $this->insert('partials/header',['titre'=>"Rêves de Jeux - Recrutement - Vous s
             <input type="file" id="lettreMotivation" name="lettreMotivation" required>
             <label for="message">Votre message : </label>
             <textarea name="message" id="message" required placeholder="Votre message ici" rows="5" cols="50"></textarea>
-            <input type="submit" name="btnSub" value="Envoyer" id="btnSub"/>
-            <button class="g-recaptcha" data-sitekey="6Lc2FhkUAAAAAHworrrl4S-5ofmbE_-7f2erkG53" data-callback="YourOnSubmitFn">Submit</button>
+            <!-- RECAPTCHA -->
+            <!--<button class="g-recaptcha" data-sitekey="6Lc2FhkUAAAAAHworrrl4S-5ofmbE_-7f2erkG53" data-callback="YourOnSubmitFn">TEST CAPTCHA</button>-->
+            <div id="form-recaptcha">
+                <p id="recaptcha_txtcontrol">Merci de procéder au contrôle de sécurité ci-dessous :</p>
+                <div class="g-recaptcha" name="recaptcha" data-sitekey="6LdWsBYTAAAAABuJBTypj_6yghL6Qz7Ctp6am749"></div>
+            </div>
+            <input type="submit" name="btnSub" value="Envoyer" id="btnSub"/>           
         </form>
-        <div class="alert alert-danger">
-            <ul>
-            <?php 
+        <?php if(!empty($erreur)){
 
+            echo '<div class="alert alert-danger">
+            <ul>';
+             
             foreach ($erreur as $key => $value) {
                 echo "<li>".$value."</li>";
             }
 
-             ?>
-            </ul> 
-        </div>
+             
+            echo '</ul> 
+        </div>';
+
+        }
+        ?>
     </article>
 </section>
 <?php
