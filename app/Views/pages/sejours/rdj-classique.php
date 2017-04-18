@@ -6,16 +6,16 @@ $this->insert('partials/header',['titre'=>"Rêves de Jeux Classique, colonie de 
 <section>
 	<article>
 		<h2>Description du séjour</h2>
-		<p>
+		<p class="positionTexte">
 			Dans cette colonie de vacances créée en 1984, toujours unique en France et désormais culte, nos "Geek-Anim" très spécialisés vous proposent l'immersion dans le monde des jeux sous toute ses facettes : de société, d'aventure, de rôle, de simulation, de coopération, avec du Grandeur Nature organisé autour d’un thème médiéval fantastique (Seigneur des Anneaux, Games of Thrones, Excalibur…), des jeux en réseau, des événementiels thématisés (Star Wars, Matrix, Dune, etc.) et tant d'autres activités : tir à l'arc GN, escrime médiévale douce, Blast Zone, nuit du jeu, vidéo, murder, barbecues, feu de camp et guitares, …).
 		</p>
-		<p>
+		<p class="positionTexte">
 			Équipés comme des pros (matériel, costumes, accessoires, décors, jeux, etc.), vous n'allez pas en croire vos yeux ! Toutes les composantes du jeu sont abordées dans ce séjour qui envisage le jeu comme un outil facétieux au service de l'apprentissage des règles sociales et du  développement des capacités. Être soi oui, mais sans oublier l’importance du travail d’équipe et de la communication. Ici, le joueur s'amuse et passe de très bonnes vacances tout en apprenant à gagner, à perdre et aussi à apprendre en perdant.
 		</p>
 	</article>
 	<article>
 		<h2>Le lieu</h2>
-		<p>
+		<p class="positionTexte">
 			Dans le Parc Naturel Régional du Livradois-Forez. Le centre d' hébergement " Le PierLou " est situé à 900 mètres d'altitude sur la commune d' Echandelys (63980) en plein coeur du " Haut Livradois"...
 			<p><a href="#">Pour en savoir plus...</a></p>
 		</p>
@@ -77,14 +77,14 @@ $tabResult=$objetSejourModel->search(['nomSejour'=>"rdj-classique"]); //la metho
 	</article>
 	<article>
 		<h2>Réservation</h2>
-		<p>
+		<p class="positionTexte">
 		Inscriptions à faire auprès de DJURINGA Juniors au 04 78 23 23 46 ou directement ici :
 			<a href="https://www.djuringa-juniors.fr/reves-de-jeux-2264.html"><button>S'inscrire à un séjour</button></a>
 		</p>	
 	</article>
 	<article>
 		<h2>Une question ?</h2>
-		<p>Vous souhaitez obtenir plus d'information sur les séjours ? N'hésitez pas <a href="contact.php">à nous contacter</a> et nous répondrons à toutes vos interrogations !</p>
+		<p class="positionTexte">Vous souhaitez obtenir plus d'information sur les séjours ? N'hésitez pas <a href="contact.php">à nous contacter</a> et nous répondrons à toutes vos interrogations !</p>
 	</article>
 </section>
 <?php

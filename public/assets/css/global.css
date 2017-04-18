@@ -2,8 +2,10 @@ body, header, #cont-menu{
 	margin: 0;
 }
 
+
 header{
 	text-align: center;
+    
 }
 
 /******************************************** 
@@ -20,12 +22,14 @@ header{
 /* Style par defaut des elements externes */
 	header{
 		display: none;
+        margin-top: 20%;
 	}
 
 	#nav-mobile{
 		background-color: white;
 		font-size: 0.9em;
 		text-align: left;
+        margin-top: 200px;
 	}
 	#nav-mobile h1{
 		margin: 0;
@@ -97,26 +101,38 @@ header{
 			display: initial;
 		}
 		#cont-menu{
-			margin-top: 20px;
+			margin-top: 320px;
 			padding-top: 5px;
 			background-color: #540202;
 			height: 41px;
+            padding-left: 100px;
+            
 		}
-
+        
+        
 		#menu-ul-global, #menu-ul-global ul{
 			padding:0;
 			margin:0;
 			list-style:none;
-			text-align:center;
+			text-align:left;
+            z-index: 999;
+            
+            
+            
+        
 		}
 		#menu-ul-global li{
 			display:inline-block;
 			position:relative;
-			border-radius:8px 8px 0 0;
+			border-radius:4px 4px 0 0;
+            z-index: 999;
+            
+            
 		}
 		#menu-ul-global ul li{
 			display:inherit;
 			border-radius:0;
+            
 		}
 		#menu-ul-global ul li:hover{
 			border-radius:0;
@@ -141,20 +157,20 @@ header{
 
 		/* background des liens menus */
 		#menu-ul-global li:first-child, #menu-ul-global li:nth-child(2), #menu-ul-global li:nth-child(3), #menu-ul-global li:nth-child(4), #menu-ul-global li:nth-child(5), #menu-ul-global li:nth-child(6), #menu-ul-global li:last-child{
-			background-color: red;
+			background-color: #A52525;
 		}
 		/* background des liens menus et sous menus au survol */
 		#menu-ul-global li:first-child:hover, #menu-ul-global li:first-child li:hover{
-			background-color: red;
+			background-color: #A52525;
 		}
 		#menu-ul-global li:nth-child(2):hover, #menu-ul-global li:nth-child(2) li:hover{
-			background-color: red;
+			background-color: #A52525;
 		}
 		#menu-ul-global li:nth-child(3):hover, #menu-ul-global li:nth-child(3) li:hover{
-			background-color: red;
+			background-color: #A52525;
 		}
 		#menu-ul-global li:last-child:hover, #menu-ul-global li:last-child li:hover{
-			background-color: red;
+			background-color: #A52525;
 		}
 
 		/* les a href */
@@ -164,6 +180,8 @@ header{
 			padding:8px 40px;
 			color:#fff;
 			font-family:arial;
+            text-align: center;
+            
 		}
 		#menu-ul-global ul a{
 			padding:8px 0;
@@ -171,11 +189,16 @@ header{
 		#menu-ul-global li:hover li a{
 			color:#fff;
 			text-transform:inherit;
+            text-align: center;
+            
+            
 		}
 		#menu-ul-global li:hover a{
 			color: white;
 			text-transform: uppercase;
 			padding:8px 29px;
+            text-align: center;
+           
 		}
 		#menu-ul-global li li:hover a{
 			color:#000;
@@ -280,6 +303,14 @@ header{
 		    color: gold;
 		}
 
+/************************************************************************************
+                POSITIONNEMENT DU TEXTE SUR LE SITE
+*************************************************************************************/
+
+.positionTexte{
+    margin-right: 250px;
+    margin-left: 40px;
+}
 
 /************************************************
                 FOOTER
@@ -330,3 +361,7 @@ header{
 		margin-bottom: 10px;
 		font-size: 1em;
     }
+
+    footer{
+    z-index: 998;
+}

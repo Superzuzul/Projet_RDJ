@@ -5,14 +5,14 @@ $this->insert('partials/header',['titre'=>"Rêves de Jeux découverte, colonie d
 <section>
 	<article>
 		<h2>Description du séjour</h2>
-		<p>
+		<p class="positionTexte">
 			Toutes les composantes du jeu sont abordées dans ce séjour qui envisage le jeu comme un outil facétieux au service de l'apprentissage des règles sociales et du  développement des capacités. De société, d'aventure, de rôles, de simulation, en réseau, vidéo, etc. Le jeu se décline sous toutes ses formes pour enseigner aux jeunes l’importance du travail d’équipe et de la communication. Car il leur faudra ruser, rivaliser d’hardiesse (de corps et d’esprit !), faire preuve d’imagination et  échafauder des plans pour dénouer les intrigues fantastiques et venir à bout des énigmes médiévales des jeux de rôle « grandeur nature ». En parallèle, et pour rester dans la thématique, les jeunes s’adonnent à l’escrime et à l’archerie médiévale. Ce séjour, petit frère de "<a href="rdjClassique.php">RÊVES DE JEUX Classic"</a> (en été) a été créé pour pouvoir "gouter" au grand frère sur une plus petite période. 
 
 		</p>
 	</article>
 	<article>
 		<h2>Le lieu</h2>
-		<p>
+		<p class="positionTexte">
 			Dans le Parc Naturel Régional du Livradois-Forez. Le centre d' hébergement " Le PierLou " est situé à 900 mètres d'altitude sur la commune d' Echandelys (63980) en plein coeur du " Haut Livradois"...
 			<p><a href="#">Pour en savoir plus...</a></p>
 		</p>
@@ -74,14 +74,14 @@ $tabResult=$objetSejourModel->search(['nomSejour'=>"rdj-decouvertes"]); //la met
 	</article>
 	<article>
 		<h2>Réservation</h2>
-		<p>
+		<p class="positionTexte">
 		Inscriptions à faire auprès de DJURINGA Juniors au 04 78 23 23 46 ou directement ici :
 			<a href="https://www.djuringa-juniors.fr/reves-de-jeux-decouverte-2837.html"><button>S'inscrire à un séjour</button></a>
 		</p>	
 	</article>
 	<article>
 		<h2>Une question ?</h2>
-		<p>Vous souhaitez obtenir plus d'information sur les séjours ? N'hésitez pas <a href="contact.php">à nous contacter</a> et nous répondrons à toutes vos interrogations !</p>
+		<p class="positionTexte">Vous souhaitez obtenir plus d'information sur les séjours ? N'hésitez pas <a href="contact.php">à nous contacter</a> et nous répondrons à toutes vos interrogations !</p>
 	</article>
 </section>
 <?php

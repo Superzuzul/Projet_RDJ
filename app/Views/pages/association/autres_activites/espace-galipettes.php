@@ -10,7 +10,7 @@ $this->insert('partials/header',['titre'=>"Espace Galipettes - RevesdeJeux.com",
             <figcaption>L'espace Galipettes</figcaption>
         </figure>
         <h2>Description de l'activité</h2>
-        <p>
+        <p class="positionTexte">
             Cet espace est le complément indispensable de votre manifestation, festival, ou votre fête où les plus jeunes peuvent se défouler en toute sécurité, tout en respectant les règles.
         </p>
     </article>
@@ -20,16 +20,16 @@ $this->insert('partials/header',['titre'=>"Espace Galipettes - RevesdeJeux.com",
             <img src="<?php echo $this->assetUrl("/img/autres-activites/e_galipettes2.jpg") ?>" alt="illustration de l'espace Galipettes"></img>
             <figcaption>L'espace Galipettes en vue aerienne</figcaption>
         </figure>
-        <p>
+        <p class="positionTexte">
             Une aire de jeu avec une vraie station orbitale : des sas d’accès, des modules d’habitation ou scientifiques, des coursives pour aller de l’un à l’autre, des "technos réparateurs spécialisés" qu’on reconnaît à leur combinaison spatiale pour contrôler l’ensemble, des missions hautement aventureuses et amusantes dirigées par le chef de la station, des pluies de météorites molletonnées à absolument éviter pour ne pas se faire "neutroniser", ....
         </p>
-        <p>
+        <p class="positionTexte">
             On y trouve un espace "doudou" pour les petits avec des peluches.
         </p> 
-        <p>
+        <p class="positionTexte">
             Tout est pensé pour que les enfants s’amusent dans un environnement complètement sécurisé avec une ambiance d’un autre temps et d’un autre monde.... Avec quatre animateurs.
         </p>
-        <p>
+        <p class="positionTexte">
             Dépaysement garanti !
         </p>
     </article>
@@ -54,11 +54,11 @@ $this->insert('partials/header',['titre'=>"Espace Galipettes - RevesdeJeux.com",
     </article>
     <article>
         <h2>Public concerné</h2>
-        <p>à partir de 4 jusqu’à 10 ans environ (1m20 maximum)</p>
+        <p class="positionTexte">à partir de 4 jusqu’à 10 ans environ (1m20 maximum)</p>
     </article>
     <article>
         <h2>Réalisations</h2>
-        <p>
+        <p class="positionTexte">
             Francas d’Audincourt, Foire de Haute Savoie Mont Blanc (Cerf Volant), Mairie de Palaiseau, Mairie de Saint Maurice L’Exil, Ludothèque de Villeparisis, Ludothèque de Moissy-Cramayel, MJC et Maison de quartier de Palaiseau...
         </p>
     </article>
