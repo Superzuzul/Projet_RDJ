@@ -1,0 +1,348 @@
+/* BACKGROUND DU SITE (IMAGE DE FOND: LE MUR)*/
+body{
+    background-image: url(./ElementsBackgroundS/Fondmur.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+/* CORPS DE LA MACHINE*/
+.machine{
+    background: url(../img/ElementsBackgroundS/Machine.png) no-repeat top ;
+    background-size: contain;
+    max-width: 90%;
+    position: relative;
+    
+}
+
+/* CORPS BAS DE LA MACHINE*/
+.machinebas{
+    background: url(../img/ElementsBackgroundS/MachineBas.jpg) no-repeat top ;
+    background-size: contain;
+    width: 41vmin;
+    height: 80vmin;
+    max-width: 90%;
+    position: relative;
+    margin-left: 950px;
+}
+
+/* LAMPE DE LA MACHINE RÉGLAGE ET POSITIONNEMENT*/
+.lampe1{ 
+    background: url(../img/ElementsBackgroundS/lampeAllu.png) no-repeat center;
+    background-size: contain;
+    top: 0;
+    width: 10%;
+    height: 25%;
+    margin-left: 5px;
+	position: absolute;
+    background-repeat: no-repeat;
+    right: 89%;
+   
+    
+/* ANIMATION QUI PERMET LE CHANGEMENT D'IMAGE (ALLUMÉ/ÉTEINTE)*/    
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+ }
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    from {background-image: url(../img/ElementsBackgroundS/LampeEtein.png);}
+    to {background-image: url(../img/ElementsBackgroundS/LampeAllu.png);}
+}
+
+/* Standard syntax */
+@keyframes example {
+   from {background-image: url(../img/ElementsBackgroundS/LampeEtein.png);}
+    to {background-image: url(../img/ElementsBackgroundS/LampeAllu.png);}
+}
+
+
+.lampeM{
+    text-align:center
+}
+
+/* POSITIONNEMENT DE LA ROUE1 QUI VA TOURNER*/
+.roue1{
+    background-image: url(../img/ElementsBackgroundS/Roues+Ombres/Roue1.png) no-repeat top left;
+    background-size: cover;
+    position: absolute;
+    width: 28vmin;
+    height: 28vmin;
+    top: 10%;
+    margin-left: 27%;
+    
+        /* CODE POUR LA ROTATION DE LA ROUE 1*/        
+     -webkit-animation-name: rotation; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+    animation-name: rotation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  
+}
+
+/* Safari 4.0 - 8.0 */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+/* POSITIONNEMENT DE L'OMBRE DE LA ROUE1 QUI TOURNE*/
+.ombre1{
+    background-image: url(../img/ElementsBackgroundS/Roues+Ombres/OmbreRoue1.png) no-repeat top left;
+    background-size: cover;
+    position: absolute;
+    width: 28vmin;
+    height: 28vmin;
+    top: 10%;
+    margin-left: 28%;
+    
+    /* CODE POUR LA ROTATION DE L'OMBRE DE LA ROUE 1*/        
+     -webkit-animation-name: rotation; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+    animation-name: rotation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  
+}
+
+/* Safari 4.0 - 8.0 */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+    
+}
+
+/* POSITIONNEMENT DE LA ROUE4 QUI VA TOURNER*/
+.roue4{
+    background-image: url(../img/ElementsBackgroundS/Roues+Ombres/Roue4.png) no-repeat top right;
+    background-size: cover;
+    position: absolute;
+    width: 28vmin;
+    height: 28vmin;
+    top: 10%;
+    margin-left: 77%;
+    
+    
+     /* CODE POUR LA ROTATION DE LA ROUE 4*/        
+     -webkit-animation-name: rotation; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration:7s; /* Safari 4.0 - 8.0 */
+    animation-name: rotation;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+  
+}
+
+/* Safari 4.0 - 8.0 */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+    
+}
+
+/* POSITIONNEMENT DE L'OMBRE DE LA ROUE4 QUI TOURNE*/
+.ombre4{
+    background-image: url(../img/ElementsBackgroundS/Roues+Ombres/OmbreRoue4.png) no-repeat top right;
+    background-size: cover;
+    position: absolute;
+    width: 28vmin;
+    height: 28vmin;
+    top: 10%;
+    margin-left: 78%;
+    
+     /* CODE POUR LA ROTATION DE L'OMBRE DE LA ROUE 4*/        
+     -webkit-animation-name: rotation; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 7s; /* Safari 4.0 - 8.0 */
+    animation-name: rotation;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+  
+}
+
+/* Safari 4.0 - 8.0 */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+    
+}
+/* POSITIONNEMENT DE LA ROUE 2 QUI TOURNE*/
+.roue2{
+    background-image: url(../img/ElementsBackgroundS/Roues+Ombres/Roue2.png) no-repeat top right;
+    background-size: cover;
+    position: absolute;
+    width: 36vmin;
+    height: 36vmin;
+    top: 50%;
+    margin-left: 77%;
+    
+        /* CODE POUR LA ROTATION DE LA ROUE 2*/        
+     -webkit-animation-name: rotation; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: rotation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  
+}
+
+/* Safari 4.0 - 8.0 */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+    
+}
+
+/* POSITIONNEMENT DE L'OMBRE DE LA ROUE 2 QUI TOURNE*/
+.ombre2{
+    background-image: url(./ElementsBackgroundS/Roues+Ombres/OmbreRoue2.png) no-repeat top right;
+    background-size: cover;
+    position: absolute;
+    width: 36vmin;
+    height: 36vmin;
+    top: 50%;
+    margin-left: 78%;
+    
+     /* CODE POUR LA ROTATION DE L'OMBRE DE LA ROUE 2*/        
+     -webkit-animation-name: rotation; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: rotation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  
+}
+
+/* Safari 4.0 - 8.0 */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+    
+}
+
+/* POSITIONNEMENT DE LA ROUE 3 QUI TOURNE*/
+.roue3{
+    background-image: url(../img/ElementsBackgroundS/Roues+Ombres/Roue2.png) no-repeat top right;
+    background-size: cover;
+    position: absolute;
+     width: 36vmin;
+    height: 36vmin;
+    top: 30%;
+    margin-left: 75%;
+    
+    /* CODE POUR LA ROTATION DE LA ROUE 3*/        
+     -webkit-animation-name: rotation; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: rotation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  
+}
+
+/* Safari 4.0 - 8.0 */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+    
+}
+
+/* POSITIONNEMENT DE L'OMBRE DE LA ROUE 3 QUI TOURNE*/
+.ombre3{
+    background-image: url(../img/ElementsBackgroundS/Roues+Ombres/OmbreRoue2.png) no-repeat top right;
+    background-size: cover;
+    position: absolute;
+     width: 36vmin;
+    height: 36vmin;
+    top: 30%;
+    margin-left: 76%;
+    
+    /* CODE POUR LA ROTATION DE L'OMBRE DE LA ROUE 3*/        
+     -webkit-animation-name: rotation; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: rotation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  
+}
+
+/* Safari 4.0 - 8.0 */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+    
+}
+
+.salut{
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+}
+
+.bonjour{
+    
+    width: 1279px;
+    height: 1279px;
+    position: absolute;
+    z-index: 999;
+}
+
+.aurevoir{
+    
+    width: 75%;
+    height: 30%;
+    margin-top: 30%;
+}
+
+.machine1{
+    width: 90%;
+    height: 30%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-size: cover;
+}
+
+.machinebas1{
+    margin-top: 30%;
+    width: 41vmin;
+    height: 80vmin;
+    right: 0;
+    position: absolute;
+    background-repeat: repeat-y;
+}
+

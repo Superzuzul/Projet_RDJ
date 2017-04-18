@@ -5,12 +5,12 @@ $this->insert('partials/header',['titre'=>"Salons et Festivals - Revesdejeux.com
 <section>
     <h1>Salons et Festivals</h1>
     <article>
-        <p>
+        <p class="positionTexte">
             Rêves De Jeux participe régulièrement à des salons ainsi qu'à des festivals durant l'année. C'est l'occasion pour nous de rencontrer nos adhérents et fidèles ainsi que d'élargir notre public !
-            <p>
+            <p class="positionTexte">
                 Vous trouverez sur cette page la liste des salons et festivals auquels nous allons participer ! N'hésitez pas à venir nous voir sur place !
             </p>
-            <p>
+            <p class="positionTexte">
                 Vous êtes un organisateur et souhaitez notre présence à votre événement ? N'hésitez pas à <a href="<?php echo $this->url("default_contact") ?>">nous contacter</a> afin de discuter ensemble de cette participation !
             </p>
         </p>

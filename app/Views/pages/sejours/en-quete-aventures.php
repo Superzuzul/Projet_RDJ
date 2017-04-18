@@ -5,19 +5,19 @@ $this->insert('partials/header',['titre'=>"En Quête d'Aventures, colonie de vac
 <section>
 	<article>
 		<h2>Description du séjour</h2>
-		<p>
+		<p class="positionTexte">
 			Si tu désires devenir un trappeur, chercher des paillettes d'or dans le lit de la rivière du Pierlou ou trouver des ossements et des pierres anciennes, si tu veux t'occuper des animaux de ta petite ferme et du potager, ou découvrir la forêt mystérieuse avec ton clan d'aventurier(e)s et votre chien "Pisteur" (avec pique-nique), si tu veux construire un pont ou une petite maison dans les bois, faire de l'artisanat de tes propres mains, et, selon la météo, partir en Ballade Crépusculaire Animée Légendaire, faire des veillées autour du feu de camp et dormir une nuit dehors sous tente, ce séjour est fait pour toi ! 
 		</p>
-		<p>
+		<p class="positionTexte">
             Mais, si tu rêves aussi d'aventures fantastiques, de retrouver des choses qui disparaissent, de faire repartir des choses qui apparaissent, il te faudra partir à la découverte des mystères du Pierlou, là où vivent petits et grands êtres. Ces derniers préoccupés par différents problèmes, vous confieront des missions par le biais de messages et de signes laissés de-ci, de-là. Enfin, tu pourras avoir un vrai goûter de "la Mammée" avec de bons gâteaux faits maisons à l'heure du réconfort et des initiations à la dégustations de jus de fruit du PierLou.
 		</p>
-		<p>
+		<p class="positionTexte">
             Tout en favorisant l’épanouissement personnel, l’autonomie et l’apprentissage de la vie en collectivité, le séjour est fait pour permettre aux enfants de s’amuser pendant une semaine en vivant des aventures de baroudeur. Construction, joutes, jeux, recherches, et action, voilà le monde dans lequel évolueront les petits aventuriers de 6 à 11 ans, monde où la frontière entre réalité et imaginaire se déplace dans le temps.
 		</p>
 	</article>
 	<article>
 		<h2>Le lieu</h2>
-		<p>
+		<p class="positionTexte">
 			Dans le Parc Naturel Régional du Livradois-Forez. Le centre d' hébergement " Le PierLou " est situé à 900 mètres d'altitude sur la commune d' Echandelys (63980) en plein coeur du " Haut Livradois"...
 			<p><a href="#">Pour en savoir plus...</a></p>
 		</p>

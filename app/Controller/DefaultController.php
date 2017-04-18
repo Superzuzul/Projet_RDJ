@@ -53,43 +53,6 @@ class DefaultController extends Controller
 
 
 
-	//Fonction pour l'envoi d'e-mail
-
-	public function envoyerMail($expediteur,$destinataire,$sujet,$corp,$fichier1,$fichier2){
-
-		$mail = new \PHPMailer();
-    	
-	    	$mail->isSMTP(); //connexion directe au serveur SMTP
-	    	$mail->isHTML(true); //utilisation du format HTML pour le message
-
-	    	$mail->Host = 'smtp.gmail.com';
-	    	$mail->Port = 465;
-	    	$mail->SMTPAuth   = true;
-	    	$mail->SMTPSecure ="ssl";
-	    	$mail->Username = "darkzuzul@gmail.com";
-	    	$mail->Password = "guigui10";
-	    	$mail->setFrom($expediteur);
-	    	$mail->FromName='contact@revesdejeux.com';
-	    	$mail->addAddress($destinataire);
-	    	$mail->Subject = $sujet;
-	    	$mail->Body =$corp;
-
-	    	if(!empty($fichier1)){
-	    		$mail->AddAttachment($fichier1);
-	    	}
-
-	    	if(!empty($fichier2)){
-	    		$mail->AddAttachment($fichier2);
-	    	}
-	    	
-	    	
-	    	if (!$mail->send()) {
-	    		echo "Mailer Error: " . $mail->ErrorInfo;
-	    	} else {
-	    		echo "Message sent!";
-	    	}
-	}
-
 
 
 	/*******************************
@@ -501,7 +464,6 @@ class DefaultController extends Controller
 		if(isset($safe['btnSub'])){
 
 			
-
 			//verification des champs
 
 			if(empty(trim($safe['nom']))){
@@ -512,6 +474,9 @@ class DefaultController extends Controller
 				$erreur['email']='Le champ "E-mail" doit être correctement rempli !';
 			}
 
+			if(empty(trim($safe['sujet'])) && strlen($safe['sujet']) <5){
+				$erreur['nom']='Le champ "sujet" doit être rempli et faire minimum 5 caractères !';
+			}
 
 			if(empty(trim($safe['message'])) && strlen($safe['message']) <10){
 				$erreur['message']='Merci de bien vouloir remplir le message (minimum 10 caractères) !';
@@ -565,6 +530,12 @@ class DefaultController extends Controller
 								</tr>
 								<tr>
 									<td>'. $safe['email'] . '</td>
+								</tr>
+								<tr>
+									<td><b>Sujet du message:</b></td>
+								</tr>
+								<tr>
+									<td>'. $safe['sujet'] . '</td>
 								</tr>
 								<tr>
 									<td><b>Contenu du message:</b></td>
@@ -643,33 +614,10 @@ class DefaultController extends Controller
 
 	public function indexAdherents(){
 
-		// on utilise la méthode getUSer() afin de prendre connaissance des données de l'utilisateur connecté
-		$utilisateurConnect = $this->getUser();
-		debug($utilisateurConnect);
+		//affichage de la page d'index de l'espace adhérent (pour la navigation interne)
 
-		// SI...
-			// ... les données sont vides, alors on dirigera l'utilisateur vers la page de login
-			// $this->show('pages/espace-adherents/login');
-		if($utilisateurConnect == null)
-		{
-        	$this->redirectToRoute("user_login_adherents");
-		}
-		else
-		{
-			// SINON,...
-			//... affichage de la page d'index de l'espace adhérent (pour la navigation interne)
+		$this->show('pages/espace-adherents/index-adherents');
 
-		// code pour comparer le nb de connexion
-			// on crée une variable qui contiendra uniquement le nombre de connexion de l'utilisateur
-			$nbConnex =  $utilisateurConnect["nbConnexionMembre"];
-
-			if($nbConnex == 1){
-				// ON DIRIGE L'UTILISATEUR VERS LA PAGE DE REDEFINITION DU MOT DE PASSE
-	        	$this->redirectToRoute("user_mdp_red");
-			}
-			else
-			$this->show('pages/espace-adherents/index-adherents');
-		}
 	}
 
 	public function photosSejour(){

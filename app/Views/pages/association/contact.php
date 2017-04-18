@@ -17,6 +17,10 @@ $this->insert('partials/header',['titre'=>"Formulaire de contact - RêvesdeJeux.
 				<label for="cat">Email :</label>
 				<input type="mail" name="email" id="email" class="form-control" placeholder="Saisissez votre mail" required />
 			</div>
+			<div class="form-group col-xs-12" id="formmail">
+				<label for="cat">Sujet :</label>
+				<input type="text" name="sujet" id="sujet" class="form-control" placeholder="Saisissez le sujet de votre e-mail" required />
+			</div>
 			<div class="form-group col-xs-12" id="formnessage">
 				<label for="cat">Message :</label>
 				<!--<input type="text" name="mess" id="mess" class="form-control" placeholder="Saisissez votre message" required />-->

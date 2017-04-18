@@ -5,7 +5,7 @@ $this->insert('partials/header',['titre'=>"Rêves de Jeux Classique, colonie de 
 <section class="articles">
 	<article id="sejourEte">
 		<h2>Séjours d'été</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis fuga harum obcaecati laudantium quidem, molestiae ducimus dicta repudiandae ad laboriosam.</p>
+		<p class="positionTexte">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis fuga harum obcaecati laudantium quidem, molestiae ducimus dicta repudiandae ad laboriosam.</p>
 		<p class="lienArticle"><a href="#">En savoir plus</a></p>
 	</article>
 	<article id="evenements">
@@ -20,7 +20,7 @@ $this->insert('partials/header',['titre'=>"Rêves de Jeux Classique, colonie de 
 	</article>
 	<article id="projetAssociatif">
 		<h2>Notre projet associatif</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis fuga harum obcaecati laudantium quidem, molestiae ducimus dicta repudiandae ad laboriosam.</p>
+		<p class="positionTexte">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis fuga harum obcaecati laudantium quidem, molestiae ducimus dicta repudiandae ad laboriosam.</p>
 		<p class="lienArticle"><a href="#">En savoir plus</a></p>
 	</article>
 </section>

@@ -5,10 +5,10 @@ $this->insert('partials/header',['titre'=>"Rêves d'Aventures, colonie de vacanc
 <section>
 	<article>
 		<h2>Description du séjour</h2>
-		<p>
+		<p class="positionTexte">
 			Notre séjour « Rêves d’Aventures » permet à votre enfant de se plonger dans une histoire interactive moyenâgeuse et fantastique. Le projet pédagogique, relayé par nos équipes professionnelles, offre un cadre préparé et sécurisant aux enfants de 6 à 11 ans qui vivront l’aventure avec nous pendant ces 8 jours. 
 		</p>
-		<p>
+		<p class="positionTexte">
 		    Trois objectifs pour ce séjour : favoriser l’épanouissement, encourager l’autonomie et la créativité, et faire découvrir la collectivité et l’apprentissage des règles du groupe à l’enfant. Pour y parvenir : création, travaux manuels, fair-play, développement de l’imaginaire, connaissance de l’histoire, approche de la nature et animaux de la basse cour, escrime et archerie "douce", joutes et jeux en tous genres dans un univers médiéval fantastique unique sont au programme.
             L’intrigue à laquelle les enfants sont conviés leur permettra d’incarner des personnages et d’interagir avec le monde, à tel point que c’est grâce à eux que l’histoire évoluera. Ils pourront ainsi exploiter leurs dons personnels et laisser libre cours à leur soif de connaître et de rêver dans un cadre parfaitement balisé et préparé par nos soins.
 		</p>
@@ -18,7 +18,7 @@ $this->insert('partials/header',['titre'=>"Rêves d'Aventures, colonie de vacanc
 	</article>
 	<article>
 		<h2>Le lieu</h2>
-		<p>
+		<p class="positionTexte">
 			Dans le Parc Naturel Régional du Livradois-Forez. Le centre d' hébergement " Le PierLou " est situé à 900 mètres d'altitude sur la commune d' Echandelys (63980) en plein coeur du " Haut Livradois"...
 			<p><a href="#">Pour en savoir plus...</a></p>
 		</p>
@@ -116,7 +116,7 @@ if(empty($tabResult)){
 	</article>
 	<article>
 		<h2>Une question ?</h2>
-		<p>Vous souhaitez obtenir plus d'information sur les séjours ? N'hésitez pas <a href="contact.php">à nous contacter</a> et nous répondrons à toutes vos interrogations !</p>
+		<p class="positionTexte">Vous souhaitez obtenir plus d'information sur les séjours ? N'hésitez pas <a href="contact.php">à nous contacter</a> et nous répondrons à toutes vos interrogations !</p>
 	</article>
 </section>
 
