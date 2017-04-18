@@ -53,43 +53,6 @@ class DefaultController extends Controller
 
 
 
-	//Fonction pour l'envoi d'e-mail
-
-	public function envoyerMail($expediteur,$destinataire,$sujet,$corp,$fichier1,$fichier2){
-
-		$mail = new \PHPMailer();
-    	
-	    	$mail->isSMTP(); //connexion directe au serveur SMTP
-	    	$mail->isHTML(true); //utilisation du format HTML pour le message
-
-	    	$mail->Host = 'smtp.gmail.com';
-	    	$mail->Port = 465;
-	    	$mail->SMTPAuth   = true;
-	    	$mail->SMTPSecure ="ssl";
-	    	$mail->Username = "darkzuzul@gmail.com";
-	    	$mail->Password = "guigui10";
-	    	$mail->setFrom($expediteur);
-	    	$mail->FromName='contact@revesdejeux.com';
-	    	$mail->addAddress($destinataire);
-	    	$mail->Subject = $sujet;
-	    	$mail->Body =$corp;
-
-	    	if(!empty($fichier1)){
-	    		$mail->AddAttachment($fichier1);
-	    	}
-
-	    	if(!empty($fichier2)){
-	    		$mail->AddAttachment($fichier2);
-	    	}
-	    	
-	    	
-	    	if (!$mail->send()) {
-	    		echo "Mailer Error: " . $mail->ErrorInfo;
-	    	} else {
-	    		echo "Message sent!";
-	    	}
-	}
-
 
 
 	/*******************************
