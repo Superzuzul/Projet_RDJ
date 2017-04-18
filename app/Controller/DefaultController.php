@@ -53,9 +53,51 @@ class DefaultController extends Controller
 
 
 
+	//Fonction pour l'envoi d'e-mail
+
+	public function envoyerMail($expediteur,$destinataire,$sujet,$corp,$fichier1,$fichier2){
+
+		$mail = new \PHPMailer();
+    	
+	    	$mail->isSMTP(); //connexion directe au serveur SMTP
+	    	$mail->isHTML(true); //utilisation du format HTML pour le message
+
+	    	$mail->Host = 'smtp.gmail.com';
+	    	$mail->Port = 465;
+	    	$mail->SMTPAuth   = true;
+	    	$mail->SMTPSecure ="ssl";
+	    	$mail->Username = "darkzuzul@gmail.com";
+	    	$mail->Password = "guigui10";
+	    	$mail->setFrom($expediteur);
+	    	$mail->FromName='contact@revesdejeux.com';
+	    	$mail->addAddress($destinataire);
+	    	$mail->Subject = $sujet;
+	    	$mail->Body =$corp;
+
+	    	if(!empty($fichier1)){
+	    		$mail->AddAttachment($fichier1);
+	    	}
+
+	    	if(!empty($fichier2)){
+	    		$mail->AddAttachment($fichier2);
+	    	}
+	    	
+	    	
+	    	if (!$mail->send()) {
+	    		echo "Mailer Error: " . $mail->ErrorInfo;
+	    	} else {
+	    		echo "Message sent!";
+	    	}
+	}
+
+
+
 	/*******************************
 	 * Page d'accueil + sans session
 	 *******************************/
+
+
+
 
 	public function index()
 	{
@@ -130,9 +172,180 @@ class DefaultController extends Controller
 
 	public function recrutement(){
 
+		$erreur=array();
+
+		$safe=array_map('strip_tags', $_REQUEST);
+
+		if(isset($safe['btnSub'])){
+
+			
+
+			//verification des champs
+
+			if(empty(trim($safe['nom']))){
+				$erreur['nom']='Le champ "Nom" doit être rempli !';
+			}
+
+			if(empty(trim($safe['prenom']))){
+				$erreur['prenom']='Le champ "Prenom" doit être rempli !';
+			}
+
+			if(!filter_var($safe['email'], FILTER_VALIDATE_EMAIL)){
+				$erreur['email']='Le champ "E-mail" doit être correctement rempli !';
+			}
+
+			if(empty($safe['sejour'])){
+				$erreur['prenom']='Veuillez sélectionner un séjour !';
+			}
+
+			if(empty($_FILES['cv']) OR empty($_FILES['lettreMotivation'])){
+				$erreur['fichiers']="Merci de bien télécharger votre CV ainsi que votre lettre de motivation";
+			}
+
+			if(empty(trim($safe['message'])) && strlen($safe['message']) <10){
+				$erreur['message']='Merci de bien vouloir remplir le message (minimum 10 caractères) !';
+			}
+
+			//Capcha à mettre lorsqu'on aura les bons liens
+
+			/*		// verification recaptcha
+			if(isset($_POST['g-recaptcha-response'])){
+	          $captcha=$_POST['g-recaptcha-response'];
+	        }
+
+	        if(!$captcha){
+			  $erreur['recaptcha'] = "Vous n'avez pas procédé à la vérification anti-spam !";
+	        }
+	        $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LdWsBYTAAAAAH9YPGTwFA1vvOIl8O42KLLPkftF&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
+
+	        if($response.success==false)
+	        {
+	          echo '<h2>La vérification indique que vous êtes un spammer ! Veuillez ne pas insister et quitter ce site immédiatement...</h2>';
+	        }*/
+
+
+			if(count($erreur)==0){
+
+				//vérification de l'extension des fichiers
+
+				$cv=$_FILES['cv']['name']; //le nom d'origine sur mon pc
+
+				$lettreMotivation=$_FILES['lettreMotivation']['name']; //le nom d'origine sur mon pc
+
+				$extCv=new \SplFileInfo($cv);
+
+				$extCvMin=strtolower($extCv->getExtension());
+
+				
+				if(!in_array($extCvMin, ['pdf','doc','docx','jpg'])){
+
+					$erreur['extCv']="L'extension de votre CV n'est pas reconnue. $extCvMin";
+
+				}//fin de verif extCv
+
+				$extLettreMotivation=new \SplFileInfo($lettreMotivation);
+
+				$extLettreMotivationMin=strtolower($extLettreMotivation->getExtension());
+
+				if(!in_array($extLettreMotivationMin, ['pdf','doc','docx','jpg'])){
+
+					$erreur['extLettreMotivation']="L'extension de votre lettre de motivation n'est pas reconnue. $extLettreMotivationMin";
+
+				}//fin verif extLettreMotivation
+
+				if(count($erreur)==0){
+
+					//verrification de la taille des fichiers
+
+					if($_FILES['cv']["size"]>2000000){
+						$erreur['tailleCv']="La taille de votre CV est supérieur à 2 MO !";
+					}
+
+					if($_FILES['lettreMotivation']["size"]>2000000){
+						$erreur['tailleCv']="La taille de votre lettre de motivation est supérieur à 2 MO !";
+					}
+
+
+					if(count($erreur)==0){
+
+						//Si tout est bon, on peut passer à l'upload pour l'envoi de l'e-mail
+
+						$repertoire=__DIR__.'/../cv_lettre_motivation'; //le répertoire destination du fichier
+
+						$cvTemp=$_FILES['cv']['tmp_name']; //le nom temporaire
+						$cv=$_FILES['cv']['name']; //le nom d'origine sur mon pc
+
+						$lettreMotivationTemp=$_FILES['lettreMotivation']['tmp_name']; //le nom temporaire
+						
+
+						$adresseCv="$repertoire/cv-".$safe['email'].".$extCvMin";
+
+						$adresseLettreMotivation="$repertoire/lettre-motivation-".$safe['email'].".$extLettreMotivationMin";
+
+
+						//copie du fichier
+						if(move_uploaded_file($cvTemp,$adresseCv) && move_uploaded_file($lettreMotivationTemp,$adresseLettreMotivation)){
+						
+							//ON DOIT ENVOYER L'E-MAIL ICI !!!!	
+
+							$mail = new \PHPMailer();
+    	
+					    	$mail->isSMTP(); //connexion directe au serveur SMTP
+					    	$mail->SMTPDebug=0;
+					    	$mail->isHTML(true); //utilisation du format HTML pour le message
+
+					    	$mail->Host = 'smtp.gmail.com';
+					    	$mail->Port = 465;
+					    	$mail->SMTPAuth   = true;
+
+					    	$mail->SMTPSecure ="ssl";
+					    	$mail->Username = "darkzuzul@gmail.com";
+					    	$mail->Password = "guigui10";
+					    	$mail->setFrom($safe['email']);
+					    	$mail->FromName='contact@revesdejeux.com';
+					    	$mail->addAddress('darkzuzul@gmail.com');
+					    	$mail->Subject = 'Recrutement pour le sejour '.$safe['sejour'];
+					    	$mail->Body =$safe['message'];					    	
+					    	$mail->AddAttachment($adresseCv);
+							$mail->AddAttachment($adresseLettreMotivation);
+
+					    	
+					    	
+					    	
+					    	if (!$mail->send()) {
+					    		$erreur['envoiEmail']="E-mail non envoyé !";
+					    	} else {
+					    		$erreur['envoiEmail']= "Message envoyé !";
+					    	}
+							
+
+						}//fin de l'upload
+						else{
+							$erreur['upload']="Erreur lors du telechargement de votre ou vos fichier(s).";
+						}
+
+
+					}//fin du troisieme count($erreur)
+
+
+
+				}//fin du deuxième count($erreur)
+
+
+			}//fin du count($erreur) numéro 1
+
+
+
+
+		}//fin du isset
+
+
+
+
+
 		//affichage de la page recrutement
 
-		$this->show('pages/sejours/recrutement');
+		$this->show('pages/sejours/recrutement',['erreur'=>$erreur]);
 
 	}
 
@@ -185,7 +398,7 @@ class DefaultController extends Controller
 	}
 
 
-	/*    affichage des sous-pages de Nos autres activités     */
+	/************    affichage des sous-pages de Nos autres activités     ***********/
 
 
 	public function autresActivitesGalipettes(){
@@ -244,15 +457,140 @@ class DefaultController extends Controller
 	}
 
 
+	public function autresActivitesBarANature(){
 
-	/*   				 fin des sous-pages  				   */
+		//affichage de la sous-page Nos autres activités/bar-a-nature
+
+		$this->show('pages/association/autres_activites/bar-a-nature');
+	}
+
+
+	public function autresActivitesSeminaireCreation(){
+
+		//affichage de la sous-page Nos autres activités/seminaire-creation
+
+		$this->show('pages/association/autres_activites/seminaire-creation');
+	}
+
+
+	public function autresActivitesFormation(){
+
+		//affichage de la sous-page Nos autres activités/formation
+
+		$this->show('pages/association/autres_activites/formation');
+	}
+
+
+	public function autresActivitesAtelierPrevention(){
+
+		//affichage de la sous-page Nos autres activités/atelier-prevention
+
+		$this->show('pages/association/autres_activites/atelier-prevention');
+	}
+
+	/***********		 fin des sous-pages  		**********/
 
 
 	public function contact(){
 
+
+		$erreur=array();
+
+		$safe=array_map('strip_tags', $_REQUEST);
+
+		if(isset($safe['btnSub'])){
+
+			
+
+			//verification des champs
+
+			if(empty(trim($safe['nom']))){
+				$erreur['nom']='Le champ "Nom" doit être rempli !';
+			}
+
+			if(!filter_var($safe['email'], FILTER_VALIDATE_EMAIL)){
+				$erreur['email']='Le champ "E-mail" doit être correctement rempli !';
+			}
+
+
+			if(empty(trim($safe['message'])) && strlen($safe['message']) <10){
+				$erreur['message']='Merci de bien vouloir remplir le message (minimum 10 caractères) !';
+			}
+
+			//Capcha à mettre lorsqu'on aura les bons liens
+
+			/*		// verification recaptcha
+			if(isset($_POST['g-recaptcha-response'])){
+	          $captcha=$_POST['g-recaptcha-response'];
+	        }
+
+	        if(!$captcha){
+			  $erreur['recaptcha'] = "Vous n'avez pas procédé à la vérification anti-spam !";
+	        }
+	        $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LdWsBYTAAAAAH9YPGTwFA1vvOIl8O42KLLPkftF&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
+
+	        if($response.success==false)
+	        {
+	          echo '<h2>La vérification indique que vous êtes un spammer ! Veuillez ne pas insister et quitter ce site immédiatement...</h2>';
+	        }*/
+
+
+			if(count($erreur)==0){
+
+
+					
+				//ON DOIT ENVOYER L'E-MAIL ICI !!!!	
+
+				$mail = new \PHPMailer();
+
+		    	$mail->isSMTP(); //connexion directe au serveur SMTP
+		    	$mail->SMTPDebug=0;
+		    	$mail->isHTML(true); //utilisation du format HTML pour le message
+
+		    	$mail->Host = 'smtp.gmail.com';
+		    	$mail->Port = 465;
+		    	$mail->SMTPAuth   = true;
+
+		    	$mail->SMTPSecure ="ssl";
+		    	$mail->Username = "darkzuzul@gmail.com";
+		    	$mail->Password = "guigui10";
+		    	$mail->setFrom($safe['email']);
+		    	$mail->FromName='contact@revesdejeux.com';
+		    	$mail->addAddress('darkzuzul@gmail.com');
+		    	$mail->Subject = 'Question de  '.$safe['email'];
+		    	$mail->Body =
+		    	'<table>
+								<tr>
+									<td><b>Emetteur du message:</b></td>
+								</tr>
+								<tr>
+									<td>'. $safe['email'] . '</td>
+								</tr>
+								<tr>
+									<td><b>Contenu du message:</b></td>
+								</tr>
+								<tr>
+									<td>'. $safe['message'] . '</td>
+								</tr>
+							</table>'
+						;					    	
+
+	    	if (!$mail->send()) {
+		    		$erreur['envoiEmail']="E-mail non envoyé !";
+		    	} else {
+		    		$erreur['envoiEmail']= "Message envoyé !";
+		    	}
+							
+
+			}//fin du count($erreur) numéro 1
+
+
+		}//fin du isset
+
+
 		//affichage de la page contact
 
-		$this->show('pages/association/contact');
+		$this->show('pages/association/contact',['erreur'=>$erreur]);
 
 	}
 	
