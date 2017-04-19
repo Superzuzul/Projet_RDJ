@@ -269,7 +269,26 @@ class DefaultController extends Controller
 					    	$mail->FromName='contact@revesdejeux.com';
 					    	$mail->addAddress('darkzuzul@gmail.com');
 					    	$mail->Subject = 'Recrutement pour le sejour '.$safe['sejour'];
-					    	$mail->Body =$safe['message'];					    	
+					    	$mail->Body ='
+							<table>
+								<tr>
+									<td><b>Emetteur du message:</b></td>
+								</tr>
+								<tr>
+									<td>'. $safe['nom'].' '.$safe['prenom'].' '.$safe['email'] . '</td>
+								</tr>
+								<tr>
+									<td><b>Contenu du message:</b></td>
+								</tr>
+								<tr>
+									<td>'. $safe['message'] . '</td>
+								</tr>
+							</table>
+						';
+
+
+
+					    						    	
 					    	$mail->AddAttachment($adresseCv);
 							$mail->AddAttachment($adresseLettreMotivation);
 

@@ -193,4 +193,7 @@
 		//route pour la page admin gestion des membres
 		['GET|POST',	'/admin/membre', 	'Admin#membre', 'admin_membre'],
 
+		//Route dynamique pour la modification d'un membre
+		['GET|POST',	'/admin/membre/update/[:id]', 	'Admin#membreUpdate', 'admin_membre_update'],
+
 	);

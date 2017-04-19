@@ -2,8 +2,9 @@
 namespace Model;
 
 use \W\Model\Model;
+use \W\Model\UsersModel;
 
-class MembreModel extends Model{
+class MembreModel extends UsersModel{
     
     public function findBy($nomColonne, $valeurColonne)
 		{
@@ -17,7 +18,7 @@ class MembreModel extends Model{
     
     public function __construct(){
     	parent::__construct();
-    	$this->setPrimaryKey("idMembre");
+    	$this->setPrimaryKey("id");
     }
 }
 
