@@ -17,6 +17,10 @@ $this->insert('partials/header',['titre'=>"Espace Adhérent - Modification de vo
 			<label for="conf_motdepasse">Confirmez votre nouveau mot de Passe :</label>
 			<input type="password" name="conf_motdepasse" id="conf_motdepasse" class="form-control" placeholder="Confirmez votre nouveau mot de passe" required />
 		</div>
+
+		<!-- INFO TECHNIQUE POUR PRECISER L'ACTION QUE LE VISITEUR VEUT REALISER -->
+		<input type="hidden" name="operation" value="mdp-redefinition" />
+
 		<div class="form-group text-center">
 			<button type="submit" name="btnSub" id="mdp-red-btn-submit">Envoyer</button>
 		</div>

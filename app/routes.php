@@ -94,8 +94,35 @@
 
 		['GET|POST', '/association/autres-activites/bar-a-theme', 'Default#autresActivitesBarATheme', 'default_autres_activites_bar_a_theme'],
 
+		//page Le grand Quiz	
 
-		
+		['GET|POST', '/association/autres-activites/grand-quiz', 'Default#autresActivitesGrandQuiz', 'default_autres_activites_grand_quiz'],
+
+		//page VIP de Jouer	
+
+		['GET|POST', '/association/autres-activites/vip-de-jouer', 'Default#autresActivitesVipDeJouer', 'default_autres_activites_vip_de_jouer'],
+
+		//page Festival Rêve de Nature	
+
+		['GET|POST', '/association/autres-activites/reve-de-nature', 'Default#autresActivitesReveDeNature', 'default_autres_activites_reve_de_nature'],
+
+		//page Festival Rêve de Nature Bar à jeux	
+
+		['GET|POST', '/association/autres-activites/bar-a-nature', 'Default#autresActivitesBarANature', 'default_autres_activites_bar_a_nature'],
+
+
+		//page Sémiraire Création de Jeux	
+
+		['GET|POST', '/association/autres-activites/seminaire-creation', 'Default#autresActivitesSeminaireCreation', 'default_autres_activites_seminaire_creation'],
+
+		//page formation	
+
+		['GET|POST', '/association/autres-activites/formation', 'Default#autresActivitesFormation', 'default_autres_activites_formation'],	
+
+
+		//page Atelier Prévention "jeux tu il"	
+
+		['GET|POST', '/association/autres-activites/atelier-prevention', 'Default#autresActivitesAtelierPrevention', 'default_autres_activites_atelier_prevention'],
 
 
 
@@ -153,7 +180,14 @@
 		************************************************/
 
 
-		
+		//Page modification sejours
+
+
+		//route pour la page admin
+		['GET|POST',	'/admin/sejour', 	'Admin#sejour', 'admin_sejour'],
+
+		//Route dynamique pour la modification d'un article
+		['GET|POST',	'/admin/sejour/update/[:id]', 	'Admin#sejourUpdate', 'admin_sejour_update'],
 
 
 	);
