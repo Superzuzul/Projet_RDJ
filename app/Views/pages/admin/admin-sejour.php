@@ -6,6 +6,14 @@ $this->insert('partials/header',['titre'=>"Admin séjour - RêvesdeJeux.com", 'd
 <section>
 	<article>
 		<h2>Création d'un séjour</h2>
+		<p>
+			Voici la partie ajout / modification / suppression de séjour. Bien lire les instructions ci-dessous avant de toucher cette partie.
+		</p>
+		<h3>RDJ Classique</h3>
+		<p>
+			Les sejours RDJ classiques ne doivent pas être supprimés ou ajoutés. Il faut simplement modifier les dates et les tarifs.
+		</p>
+		<h3>Gamer Vidéo</h3>
 		<form action="" method="post">
 
 			<label for="nomSejour">Nom du séjour</label><br>
