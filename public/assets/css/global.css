@@ -187,6 +187,18 @@ header{
 		}
 	}
 
+/************************************************
+                page d'index
+*************************************************/
+#carousel-example-generic img{
+	
+	overflow: hidden;
+	height: 500px;
+	width: 100%;
+	object-fit:cover;
+}
+
+
 
 /************************************************
                 formulaireContact
