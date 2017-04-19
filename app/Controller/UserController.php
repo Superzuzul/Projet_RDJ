@@ -65,10 +65,10 @@
 
 						
 						// si c'est bien la première connexion de l'utilisateur :
-						if($firstConnect = 1){	// == $firstConnect = TRUE
+						if($firstConnect == 1){	// --> 0 = FALSE / 1 = TRUE
 							// on réutilise l'objet créé précédemment afin de pouvoir utiliser cette fois la méthode "update"
 								// MAJ de la BDD pour passer "premiereConnexion" de l'utilisateur à FAUX
-							$objetUsersModel->update(["premiereConnexion" => $firstConnect=0], $idUser);
+							$objetUsersModel->update(["premiereConnexion" => $firstConnect==0], $idUser);
 
 							// on redirige le visiteur sur la page de modification du mot de passe (pour remplacer le MdP fourni par défaut par l'administrateur)
 							$this->redirectToRoute("user_mdp_red");
@@ -138,15 +138,28 @@
 					    	$mail->SMTPAuth   = true;
 
 					    	$mail->SMTPSecure ="ssl";
-					    	$mail->Username = "darkzuzul@gmail.com";
-					    	$mail->Password = "guigui10";
-					    	$mail->setFrom($mailUser);
-					    	// $mail->setFrom('darkzuzul@gmail.com');
+					    	$mail->Username = "sylvain.peysson@gmail.com";
+					    	$mail->Password = "sylvainPN@13800";
+					    	// $mail->setFrom($mailUser);
+					    	$mail->setFrom('sylvain.peysson@gmail.com');
 					    	$mail->FromName='contact@revesdejeux.com';
-					    	$mail->addAddress($mailUser);
-					    	// $mail->addAddress('darkzuzul@gmail.com');
+					    	// $mail->addAddress($mailUser);
+					    	$mail->addAddress('sylvain.peysson@gmail.com');
 					    	$mail->Subject = 'Réinitialisation de votre mot de passe';
-					    	$mail->Body = "TEST : envoi du lien nécessaire à la réinitialisation du MdP<br/>https://www.google.fr/";
+					    	$mail->Body = '
+					    		<table>
+									<tr>
+										<td><b>Vous avez demandé une réinitialisation de votre mot de passe !</b></td>
+									</tr>
+									<br/>
+									<tr>
+										<td>Merci de cliquer sur le lien ci-dessous et de suivre les instructions afin de rétablir vos accès sur le site <b>revesdejeux.com</b> :</td>
+									</tr>
+									<br/>
+									<tr>
+										<td>lien-TEST : <a>https://www.google.fr/</a></td>
+									</tr>
+								</table>';
 					    	
 					    	
 					    	if(!$mail->send()){

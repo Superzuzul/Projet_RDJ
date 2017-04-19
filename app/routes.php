@@ -183,11 +183,14 @@
 		//Page modification sejours
 
 
-		//route pour la page admin
+		//route pour la page admin des séjours
 		['GET|POST',	'/admin/sejour', 	'Admin#sejour', 'admin_sejour'],
 
-		//Route dynamique pour la modification d'un article
+		//Route dynamique pour la modification d'un sejour
 		['GET|POST',	'/admin/sejour/update/[:id]', 	'Admin#sejourUpdate', 'admin_sejour_update'],
 
+
+		//route pour la page admin gestion des membres
+		['GET|POST',	'/admin/membre', 	'Admin#membre', 'admin_membre'],
 
 	);

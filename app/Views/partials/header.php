@@ -16,7 +16,7 @@
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 	</head>	
 	<body>
-        <?php echo $this -> insert("partials/entete") ?>
+        <?php //echo $this -> insert("partials/entete") ?>
         <br/>
     	<header>
             

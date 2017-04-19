@@ -166,5 +166,16 @@ class AdminController extends Controller{
     }
 
 
+    public function membre(){
+
+        
+
+
+        //afficher la page
+        $this->show("pages/admin/admin-membre",['message'=>$message]);
+
+    }
+
+
 
 }

@@ -5,19 +5,32 @@ $this->insert('partials/header',['titre'=>"Admin séjour - RêvesdeJeux.com", 'd
 <h1>Modification des séjours</h1>
 <section>
 	<article>
-		<h2>Création d'un séjour</h2>
 		<p>
 			Voici la partie ajout / modification / suppression de séjour. Bien lire les instructions ci-dessous avant de toucher cette partie.
+		</p>
+		<p>
+			IMPORTANT : Le lieu par défaut est Echandelys ! Ne pas remplir cette colonne si le séjour ce passe là bas !
 		</p>
 		<h3>RDJ Classique</h3>
 		<p>
 			Les sejours RDJ classiques ne doivent pas être supprimés ou ajoutés. Il faut simplement modifier les dates et les tarifs.
 		</p>
 		<h3>Gamer Vidéo</h3>
+		<p>
+			Les deux séjours pour l'été sont déjà existant. Il n'y a qu'à modifier les dates et les tarifs.
+		</p>
+		<h2>Création d'un séjour</h2>
 		<form action="" method="post">
 
 			<label for="nomSejour">Nom du séjour</label><br>
-			<input type="text" name="nomSejour" id="nomSejour" placeholder="Nom du séjour" required><br>
+			<select name="nomSejour" id="nomSejour" required>
+				<option value="rdj-classique">Rêves de Jeux Classique</option>
+				<option value="gamer-video">Gamer Video</option>
+				<option value="rdj-decouvertes">Rêves de Jeux Découvertes</option>
+				<option value="en-quete-aventures">En quête d'Aventures</option>
+				<option value="reves-aventures">Rêves d'Aventures</option>
+				<option value="bande-jtrouvetou">Bande à Jtrouvetou</option>
+			</select><br>
 
 			<label for="lieu">Lieu (non obligatoire, échandelys se met par défaut</label><br>
 			<input type="text" name="lieu" id="lieu" placeholder="lieu du séjour"/><br>

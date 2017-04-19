@@ -632,12 +632,13 @@ class DefaultController extends Controller
 			// SINON,...
 			//... affichage de la page d'index de l'espace adhérent (pour la navigation interne)
 
-		// code pour comparer le nb de connexion
-			// on crée une variable qui contiendra uniquement le nombre de connexion de l'utilisateur
-			$nbConnex =  $utilisateurConnect["nbConnexionMembre"];
+		// EST-CE QUE C'EST LA PREMIERE CONNEXION DE L'UTILISATEUR ?
+			// on crée une variable qui contiendra uniquement le booléen "premiereConnexion" de l'utilisateur
+			$firstConnect =  $utilisateurConnect["premiereConnexion"];
 
-			if($nbConnex == 1){
-				// ON DIRIGE L'UTILISATEUR VERS LA PAGE DE REDEFINITION DU MOT DE PASSE
+			if($firstConnect == 1){	// --> 0 = FALSE / 1 = TRUE
+				// SI C'EST BIEN SA TOUTE PREMIERE CONNEXION, ON DIRIGE L'UTILISATEUR VERS LA PAGE DE REDEFINITION DU MOT DE PASSE
+				// (pour changer le mot de passe par défaut donné par l'administrateur)
 	        	$this->redirectToRoute("user_mdp_red");
 			}
 			else
