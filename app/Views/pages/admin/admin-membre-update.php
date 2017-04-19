@@ -55,6 +55,9 @@ if(!empty($tabMembre)){
 	<?php 
 	}//fin du else 
 	?>
+	<article>
+		<p><a href="<?php echo $this->url('admin_membre');?>">Retour à la liste des membres</a></p>
+	</article>
 </section>
 
 <?php

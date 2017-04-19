@@ -55,7 +55,7 @@
 						$objetUsersModel = new \Model\MembreModel;
 	                    
 		                    // ON RECUPERE TOUTE LA LIGNE SUR L'UTILISATEUR dans un tableau associatif
-							$tabUser = $objetUsersModel->findBy("idMembre", $idUser);	// on cherche la correspondance entre la base de données et la variable $idUSer
+							$tabUser = $objetUsersModel->findBy("id", $idUser);	// on cherche la correspondance entre la base de données et la variable $idUSer
 							
 							// JE VAIS MEMORISER CES INFOS DANS UNE SESSION
 							$objetAuthentificationModel->logUserIn($tabUser);
@@ -223,7 +223,7 @@
 						$objetUsersModel = new \Model\MembreModel;
 	                    
 		                    // ON RECUPERE TOUTE LA LIGNE SUR L'UTILISATEUR dans un tableau associatif
-							$tabUser = $objetUsersModel->findBy("idMembre", $idUser);	// on cherche la correspondance entre la base de données et la variable $idUSer
+							$tabUser = $objetUsersModel->findBy("id", $idUser);	// on cherche la correspondance entre la base de données et la variable $idUSer
 							
 							// JE VAIS MEMORISER CES INFOS DANS UNE SESSION
 							$objetAuthentificationModel->logUserIn($tabUser);

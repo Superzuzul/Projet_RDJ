@@ -10,7 +10,7 @@ $w_config = [
 
 	//authentification, autorisation
 	'security_user_table' => 'membre',					//nom de la table contenant les infos des utilisateurs
-	'security_id_property' => 'idMembre',				//nom de la colonne pour la clef primaire
+	'security_id_property' => 'id',				//nom de la colonne pour la clef primaire
 	'security_username_property' => 'prenomMembre',		//nom de la colonne pour le prénom
 	'security_email_property' => 'emailMembre',			//nom de la colonne pour l'"email"
 	'security_password_property' => 'mdpMembre',		//nom de la colonne pour le "mot de passe"

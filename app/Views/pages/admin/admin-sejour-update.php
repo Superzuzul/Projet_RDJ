@@ -42,11 +42,11 @@ if(!empty($tabSejour)){
 			<label for="duree">Durée du séjour en jour (juste le nombre de jour)</label><br>
 			<input type="text" name="duree" id="duree" placeholder="15" value="<?= $duree;?>"/><br>
 
-			<label for="tarif">tarif du séjour en euro (juste le nombre, exemple : 975.25 )</label><br>
+			<label for="tarif">tarif du séjour en euro (juste le nombre, exemple : 975,25 )</label><br>
 			<input type="number" step="any" name="tarif" id="tarif" placeholder="tarif du séjour" value="<?= $tarif;?>"/><br>
 
 	        <input type="hidden" name="operation" value="modifier"/>
-	        <input type="submit" name="btnSub" id="btnSub" value="Ajouter"/><br>
+	        <input type="submit" name="btnSub" id="btnSub" value="Modifier"/><br>
 
 	        <div class="message">
 	            <?php 
@@ -65,6 +65,9 @@ if(!empty($tabSejour)){
 	<?php 
 	}//fin du else 
 	?>
+	<article>
+		<p><a href="<?php echo $this->url('admin_sejour');?>">Retour à la liste des sejours</a></p>
+	</article>
 </section>
 <?php
 $this->insert('partials/footer');

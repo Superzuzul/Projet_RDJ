@@ -44,7 +44,7 @@ $this->insert('partials/header',['titre'=>"Admin séjour - RêvesdeJeux.com", 'd
 			<label for="duree">Durée du séjour en jour (juste le nombre de jour)</label><br>
 			<input type="text" name="duree" id="duree" placeholder="15"/><br>
 
-			<label for="tarif">tarif du séjour en euro (juste le nombre, exemple : 975.25 )</label><br>
+			<label for="tarif">tarif du séjour en euro (juste le nombre, exemple : 975,25 )</label><br>
 			<input type="number" step="any" name="tarif" id="tarif" placeholder="tarif du séjour"/><br>
 
 	        <input type="hidden" name="operation" value="creer"/>
