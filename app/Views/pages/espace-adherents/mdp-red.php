@@ -27,6 +27,12 @@ $this->insert('partials/header',['titre'=>"Espace Adhérent - Modification de vo
 
 		<br/>
 		<p class="text-center" id="suite-mdp-red">Par la suite, pour vous connecter à votre espace, <br/>retenez simplement votre identifiant et ce nouveau mot de passe.</p>
+
+		<?php
+			if(!empty($message)){
+				echo '<br/><div class="alert alert-success message text-center">'. $message. '</div>';
+			}
+		?>
 	</form>
 
 </section>

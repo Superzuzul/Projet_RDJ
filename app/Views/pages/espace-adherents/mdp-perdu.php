@@ -5,9 +5,9 @@ $this->insert('partials/header',['titre'=>"Espace Adhérent - Mot de passe perdu
 <h1 id="esp-pers" class="text-center">Espace personnel</h1>
 
 <p class="text-center">Vous avez signalé votre mot de passe comme perdu.</p>
-<p class="text-center">Merci de renseigner votre email ci-dessous, afin que nous puissions vous envoyer un lien vous permettant la réinitialisation de votre mot de passe.</p>
+<p id="parag-mdpperdu" class="text-center">Merci de renseigner votre email ci-dessous, afin que nous puissions vous envoyer un lien vous permettant la réinitialisation de votre mot de passe.</p>
 
-<section>
+<section id="section-mdpperdu">
 	<form method="post" id="form-mdp-perdu">
 		<div class="form-group text-center" id="mdp-perdu-mail">
 			<label for="email">Entrez votre email :</label>
@@ -20,8 +20,13 @@ $this->insert('partials/header',['titre'=>"Espace Adhérent - Mot de passe perdu
 		<div class="form-group text-center">
 			<button type="submit" name="btnSub" id="mdp-perdu-btn-submit">Envoyer</button>
 		</div>
-	</form>
 
+		<?php
+			if(!empty($message)){
+				echo '<br/><div class="alert alert-success message text-center">'. $message. '</div>';
+			}
+		?>
+	</form>
 </section>
 
 <?php

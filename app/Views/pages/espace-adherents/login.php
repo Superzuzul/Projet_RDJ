@@ -7,6 +7,9 @@ $this->insert('partials/header',['titre'=>"Espace Adhérent - identification", '
 <section>
 
 	<?php
+		// $mdpass = "123456";
+		// $mdpass_hash = password_hash($mdpass, PASSWORD_DEFAULT);
+		// echo $mdpass_hash;
 		if(!empty($message)){
 			echo '<div class="message text-center">'. $message. '</div>';
 		}
@@ -32,7 +35,7 @@ $this->insert('partials/header',['titre'=>"Espace Adhérent - identification", '
 		
 		<div class="form-group text-center" id="login-mdp-perdu">
 			<p>Mot de passe perdu ?
-				<br/><a href=<?php echo $this->url("user_mdp_perdu") ?>>cliquez ici</a>  pour retrouver l'accès à votre espace !
+				<br/><a href=<?php echo $this->url("user_mdp_perdu") ?>>cliquez ici</a> pour retrouver l'accès à votre espace !
 			</p>
 		</div>
 	</form>
