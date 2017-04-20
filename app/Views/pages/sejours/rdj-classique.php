@@ -6,6 +6,10 @@ $this->insert('partials/header',['titre'=>"Rêves de Jeux Classique, colonie de 
 <section>
 	<article>
 		<h2>Description du séjour</h2>
+		<figure>
+	        <img src="<?php echo $this->assetUrl("/img/rdj-classique/classique1.jpg") ?>" alt="Un peuple lors de l'événementiel GN prenant la pose."></img>
+	        <figcaption>Plongez-vous dans un monde d'aventure</figcaption>
+	    </figure>
 		<p class="positionTexte">
 			Dans cette colonie de vacances créée en 1984, toujours unique en France et désormais culte, nos "Geek-Anim" très spécialisés vous proposent l'immersion dans le monde des jeux sous toute ses facettes : de société, d'aventure, de rôle, de simulation, de coopération, avec du Grandeur Nature organisé autour d’un thème médiéval fantastique (Seigneur des Anneaux, Games of Thrones, Excalibur…), des jeux en réseau, des événementiels thématisés (Star Wars, Matrix, Dune, etc.) et tant d'autres activités : tir à l'arc GN, escrime médiévale douce, Blast Zone, nuit du jeu, vidéo, murder, barbecues, feu de camp et guitares, …).
 		</p>
@@ -32,7 +36,7 @@ $tabResult=$objetSejourModel->search(['nomSejour'=>"rdj-classique"]); //la metho
 ?>
 		<h2>Dates et Tarifs</h2>
 		<div class="row">
-			<div class="col-xs-3" id="dateDepart">
+			<div class="col-xs-12 col-md-3" id="dateDepart">
 				<h3>Date de départ</h3>
 				<?php 
 				foreach ($tabResult as $key => $value) {
@@ -43,7 +47,7 @@ $tabResult=$objetSejourModel->search(['nomSejour'=>"rdj-classique"]); //la metho
 				?>	
 
 			</div>
-			<div class="col-xs-3" id="dateRetour">
+			<div class="col-xs-12 col-md-3" id="dateRetour">
 				<h3>Date de retour</h3>
 				<?php 
 				foreach ($tabResult as $key => $value) {
@@ -53,7 +57,7 @@ $tabResult=$objetSejourModel->search(['nomSejour'=>"rdj-classique"]); //la metho
 				}
 				?>	
 			</div>
-			<div class="col-xs-3" id="duree">
+			<div class="col-xs-12 col-md-3" id="duree">
 				<h3>Durée</h3>
 				<?php 
 				foreach ($tabResult as $key => $value) {
@@ -63,7 +67,7 @@ $tabResult=$objetSejourModel->search(['nomSejour'=>"rdj-classique"]); //la metho
 				}
 				?>	
 			</div>
-			<div class="col-xs-3" id="tarif">
+			<div class="col-xs-12 col-md-3" id="tarif">
 				<h3>Tarif</h3>
 				<?php 
 				foreach ($tabResult as $key => $value) {

@@ -37,19 +37,19 @@ if(empty($tabResult)){
 	'
 		<h2>Dates et Tarifs</h2>
 		<div class="row">
-			<div class="col-xs-3" id="dateDepart">
+			<div class="col-xs-12 col-md-3" id="dateDepart">
 				<h3>Date de départ</h3>
                 <p>A venir...</p>
 			</div>
-			<div class="col-xs-3" id="dateRetour">
+			<div class="col-xs-12 col-md-3" id="dateRetour">
 				<h3>Date de retour</h3>
                 <p>A venir...</p>
 			</div>
-			<div class="col-xs-3" id="duree">
+			<div class="col-xs-12 col-md-3" id="duree">
 				<h3>Durée</h3>
                 <p>A venir...</p>
 			</div>
-			<div class="col-xs-3" id="tarif">
+			<div class="col-xs-12 col-md-3" id="tarif">
 				<h3>Tarif</h3>
                 <p>A venir...</p>
 			</div>
@@ -62,7 +62,7 @@ if(empty($tabResult)){
 ?>
 		<h2>Dates et Tarifs</h2>
 		<div class="row">
-			<div class="col-xs-3" id="dateDepart">
+			<div class="col-xs-12 col-md-3" id="dateDepart">
 				<h3>Date de départ</h3>
 				<?php 
 				foreach ($tabResult as $key => $value) {
@@ -73,7 +73,7 @@ if(empty($tabResult)){
 				?>	
 
 			</div>
-			<div class="col-xs-3" id="dateRetour">
+			<div class="col-xs-12 col-md-3" id="dateRetour">
 				<h3>Date de retour</h3>
 				<?php 
 				foreach ($tabResult as $key => $value) {
@@ -83,7 +83,7 @@ if(empty($tabResult)){
 				}
 				?>	
 			</div>
-			<div class="col-xs-3" id="duree">
+			<div class="col-xs-12 col-md-3" id="duree">
 				<h3>Durée</h3>
 				<?php 
 				foreach ($tabResult as $key => $value) {
@@ -93,7 +93,7 @@ if(empty($tabResult)){
 				}
 				?>	
 			</div>
-			<div class="col-xs-3" id="tarif">
+			<div class="col-xs-12 col-md-3" id="tarif">
 				<h3>Tarif</h3>
 				<?php 
 				foreach ($tabResult as $key => $value) {
