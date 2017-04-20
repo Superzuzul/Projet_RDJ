@@ -23,6 +23,7 @@
             
     	    <aside id="cont-menu">
                 <ul id="menu-ul-global">
+                    <li><a href="<?= $this->url('default_index');?>"><i class="fa fa-home" aria-hidden="true"></i></a></li>
                 	<li><a href="<?php echo $this->url("default_rdj_classique") ?>">Les séjours</a>
                 		<ul id="ssmenu-ul1">
                 			<li><a href="<?php echo $this->url("default_rdj_classique") ?>">Rêves de Jeux Classique</a></li>
