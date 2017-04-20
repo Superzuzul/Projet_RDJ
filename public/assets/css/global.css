@@ -10,13 +10,13 @@ header{
 section{
 	padding-left: 20px;
 	padding-right: 20px;
-	// width: 90%;
 	background-color: white;
-	// z-index: -1;
-	// border-radius: 20px;
-	// margin-bottom: 20px;
-	// box-shadow: 10px 10px 5px #888888;
 }
+
+h1{
+	
+}
+
 p, #evt-index{
 	font-size: 1.3em;
 }
@@ -29,31 +29,49 @@ p, #evt-index{
 	font-size: 1.8em;
 }
 
-#chat-logs {
-            height: 400px;
-            overflow: auto;
-            background-color: lavender;
-            border-radius: 5px;
-            padding: 10px;
-        }
-        
-        #chat-logs .message {
-            margin-bottom: 10px;
-        }
-        
-        input, button {
-            padding: 10px 5px;
-        }
-        
-        #author {
-            width: 20%;
-        }
-        #message {
-            width: 60%;
-        }
-        #chat-form button {
-            width: 15%;
-        }
+figure{
+	position:relative;
+	overflow:hidden;
+}
+figure img{
+	width:100%;
+	// -webkit-backface-visibility:hidden;
+}
+figure figcaption{
+	width:100%;
+	text-align:center;
+	color:#FFF;
+	font-size: 2em;
+	padding:10px 0px;
+	background-color:rgba(0,0,0,0.8);
+	border-radius: 20px 20px 0px 0px;
+	position:absolute;
+	bottom:0px;
+}
+#bloc_pierlou .positionTexte{
+	padding-top: 200px;
+	margin-left: 0px;
+}
+#img_pierlou{
+	max-width:640px;
+}
+#figcaption_pierlou{
+	max-width:640px;
+	text-align:center;
+	color:#FFF;
+	font-size: 2em;
+	padding:10px 0px;
+	background-color:rgba(0,0,0,0.8);
+	border-radius: 20px 20px 0px 0px;
+	position:absolute;
+	bottom:0px;
+}
+
+article{
+	margin-top: 50px;
+}
+
+
 
 
 /******************************************** 
@@ -350,7 +368,7 @@ p, #evt-index{
 			background-color:rgba(0,0,0,0.8);
 			border-radius: 20px 20px 0px 0px;
 			position:absolute;
-			bottom:3px;
+			bottom:0px;
 		}
 
 	/*** formulaire ADHERENT ***/
@@ -447,8 +465,9 @@ p, #evt-index{
                 POSITIONNEMENT DU TEXTE SUR LE SITE
 *******************************************************/
 	.positionTexte{
+		margin-top: 20px;
 		margin-right: 250px;
-		margin-left: 40px;
+		margin-left: 20px;
 	}
 
 
@@ -589,11 +608,6 @@ footer {
 		    width: 300px;
 		    color: gold;
 		}
-
-
-
-
-		
 
 /************************************************************************************
                 POSITIONNEMENT DU TEXTE SUR LE SITE
