@@ -8,13 +8,17 @@ header{
 }
 
 section{
-	margin-left: 20px;
-	margin-right: 20px;
-	width: 88%;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 90%;
+	background-color: white;
+	z-index: -1;
+	border-radius: 20px;
+	margin-bottom: 20px;
+	box-shadow: 10px 10px 5px #888888;
 }
 p, #evt-index{
 	font-size: 1.3em;
-	
 }
 
 
@@ -206,7 +210,7 @@ p, #evt-index{
                 page d'index
 *************************************************/
 #carousel-example-generic{
-	z-index: -2000;
+	z-index: 0;
 }
 
 #carousel-example-generic img{
@@ -665,12 +669,22 @@ header{
     #cont-footer{	/* footer, redéfini par un ID pour avoir une + grande priorité / 1+grand poids */
     	background-color: #420100;
     	color: white;
+    	font-size: 1.2em;
 	}
 	
 	#footer-plan-ul li{
 		margin: 10px;
 		list-style-type: none;
 		font-size: 1em;
+	}
+	#footer-plan-ul li a{
+		text-decoration: none;
+		color: white;
+	}
+	#footer-plan-ul li a:hover{
+		text-decoration: none;
+		color: #3B5998;
+		font-weight: bold;
 	}
 	
     #cont-footer h4{

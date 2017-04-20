@@ -30,7 +30,6 @@ $this->insert('partials/header',['titre'=>"Rêves de Jeux Classique, colonie de 
 	        <h3>Foire aux Questions</h3>
 	      </div>
 	    </div>
-	    ...
 	  </div>
 
 	  <!-- Controls -->
@@ -43,8 +42,9 @@ $this->insert('partials/header',['titre'=>"Rêves de Jeux Classique, colonie de 
 	    <span class="sr-only">Next</span>
 	  </a>
 	</div>
-</section>
-<section class="articles">
+
+<!-- </section>
+<section class="articles"> -->
 	<div class="row">
 		<div class="col-xs-12 col-md-4">
 			<h2>Séjours d'été</h2>
@@ -55,7 +55,7 @@ $this->insert('partials/header',['titre'=>"Rêves de Jeux Classique, colonie de 
 				<a href="<?= $this->url('default_rdj_classique') ?>">En savoir plus...</a>
 			</p>
 		</div>
-		<div class="col-xs-12 col-md-4">
+		<div class="col-xs-12 col-md-4" id="projeduc-index">
 			<h2>Notre projet éducatif</h2>
 			<p>
 				Les responsables de nos différentes activités et les équipes d’encadrement de tous nos séjours se réfèrent, dans toutes leurs actions, à un projet pédagogique qui est l’application logique et directe du projet éducatif de l’association « RÊVES DE JEUX », basé sur l’objet de ses statuts : Cette association a pour but la rencontre et la communication des personnes (enfants, adolescents, adultes)...
