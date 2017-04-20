@@ -16,7 +16,7 @@
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 	</head>	
 	<body>
-        <?php //echo $this -> insert("partials/entete") ?>
+        <?php echo $this -> insert("partials/entete") ?>
         <br/>
     	<header>
             
@@ -26,11 +26,11 @@
                 	<li><a href="<?php echo $this->url("default_rdj_classique") ?>">Les séjours</a>
                 		<ul id="ssmenu-ul1">
                 			<li><a href="<?php echo $this->url("default_rdj_classique") ?>">Rêves de Jeux Classique</a></li>
-                            <li><a href="gamerVideo.php">Gamer Vidéo</a></li>
-                            <li><a href="enQueteAventures.php">En-quête d'aventures</a></li>
-                            <li><a href="revesAventures.php">Rêves d'aventures</a></li>
-                            <li><a href="revesdeJeuxDecouverte.php">Rêves de Jeux Découvertes</a></li>
-                            <li><a href="bandeAJtrouvetout.php">La bande à J'Trouvetou</a></li>
+                            <li><a href="<?php echo $this->url("default_gamer_video") ?>">Gamer Vidéo</a></li>
+                            <li><a href="<?php echo $this->url("default_en_quete_aventures") ?>">En-quête d'aventures</a></li>
+                            <li><a href="<?php echo $this->url("default_reves_aventures") ?>">Rêves d'aventures</a></li>
+                            <li><a href="<?php echo $this->url("default_rdj_decouvertes") ?>">Rêves de Jeux Découvertes</a></li>
+                            <li><a href="<?php echo $this->url("default_bande_jtrouvetou") ?>">La bande à J'Trouvetou</a></li>
                             <li><a href="<?php echo $this->url("default_recrutement") ?>">Recrutement</a></li>
                 		</ul>
                 	</li>
@@ -64,11 +64,11 @@
                 <!-- sous-menu SEJOURS -->
                 <div id="nav-sejours">
                     <div class="txt-ssmenu"><a href="<?php echo $this->url("default_rdj_classique") ?>">Rêves de Jeux Classique</a></div>
-                    <div class="txt-ssmenu"><a href="gamerVideo.php">Gamer Vidéo</a></div>
-                    <div class="txt-ssmenu"><a href="enQueteAventures.php">En-quête d'aventure</a></div>
-                    <div class="txt-ssmenu"><a href="revesAventures.php">Rêves d'aventure</a></div>
-                    <div class="txt-ssmenu"><a href="revesdeJeuxDecouverte.php">Rêves de Jeux Découvertes</a></div>
-                    <div class="txt-ssmenu"><a href="bandeAJtrouvetout.php">La bande à J'Trouvetou</a></div>
+                    <div class="txt-ssmenu"><a href="<?php echo $this->url("default_gamer_video") ?>">Gamer Vidéo</a></div>
+                    <div class="txt-ssmenu"><a href="<?php echo $this->url("default_en_quete_aventures") ?>">En-quête d'aventure</a></div>
+                    <div class="txt-ssmenu"><a href="<?php echo $this->url("default_reves_aventures") ?>">Rêves d'aventure</a></div>
+                    <div class="txt-ssmenu"><a href="<?php echo $this->url("default_rdj_decouvertes") ?>">Rêves de Jeux Découvertes</a></div>
+                    <div class="txt-ssmenu"><a href="<?php echo $this->url("default_bande_jtrouvetou") ?>">La bande à J'Trouvetou</a></div>
                     <div class="txt-ssmenu"><a href="<?php echo $this->url("default_recrutement") ?>">Recrutement</a></div>
                 </div>
                 <!-- FIN sous-menu SEJOURS -->

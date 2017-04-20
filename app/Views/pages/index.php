@@ -64,7 +64,7 @@ $this->insert('partials/header',['titre'=>"Rêves de Jeux Classique, colonie de 
 				<a href="<?= $this->url('default_projet_educatif') ?>">En savoir plus...</a>
 			</p>
 		</div>
-		<div class="col-xs-12 col-md-4">
+		<div class="col-xs-12 col-md-4" id="evt-index">
 			<h2>Evenements à venir</h2>
 			<p>
 				<?php

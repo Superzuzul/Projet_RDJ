@@ -1,3 +1,4 @@
+/* styles par défaut */
 body, header, #cont-menu{
 	margin: 0;
 }
@@ -5,6 +6,18 @@ body, header, #cont-menu{
 header{
 	text-align: center;
 }
+
+section{
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 88%;
+}
+p, #evt-index{
+	font-size: 1.3em;
+	
+}
+
+
 
 /******************************************** 
                 section LOGO
@@ -192,12 +205,23 @@ header{
 /************************************************
                 page d'index
 *************************************************/
+#carousel-example-generic{
+	z-index: -2000;
+}
+
 #carousel-example-generic img{
 	
 	overflow: hidden;
 	height: 500px;
 	width: 100%;
 	object-fit:cover;
+}
+.carousel-caption{
+	font-size: 2em;
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 20px;
+	padding: 5px;
+	margin-bottom: 30px;
 }
 
 
@@ -426,7 +450,7 @@ header{
 			margin-top: 320px;
 			padding-top: 5px;
 			background-color: #540202;
-			height: 41px;
+			height: 50px;
             padding-left: 100px;
             
 		}
@@ -502,6 +526,7 @@ header{
 			padding:8px 40px;
 			color:#fff;
 			font-family:arial;
+			font-size:1.3em;
             text-align: center;
             
 		}

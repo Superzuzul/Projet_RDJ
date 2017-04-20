@@ -12,7 +12,6 @@ body{
     background-size: contain;
     max-width: 90%;
     position: relative;
-    
 }
 
 /* CORPS BAS DE LA MACHINE*/
@@ -413,10 +412,10 @@ animation-iteration-count: infinite;
 }
 /* Safari 4.0 - 8.0 */
 @keyframes rotation {
-from {
-transform: rotate(0deg);
-}
-to {
-transform: rotate(360deg);
-}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
