@@ -21,8 +21,9 @@ if(!empty($tabSejour)){
 
 ?>
 
-<h1>Modification des séjours</h1>
+
 <section>
+	<h1>Modification des séjours</h1>
 	<article>
 		<h2>Création d'un séjour</h2>
 		<form action="" method="post">

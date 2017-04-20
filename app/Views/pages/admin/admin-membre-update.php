@@ -18,8 +18,9 @@ if(!empty($tabMembre)){
     $nbAvertissementMembre=$tabMembre['nbAvertissementMembre'];
 
 ?>
-<h1>Ajout de membre</h1>
+
 <section>
+	<h1>Ajout de membre</h1>
 	<article>
 		<h2>Modifier un Adherent</h2>
 		<form action="" method="post">

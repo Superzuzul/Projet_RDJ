@@ -1,8 +1,9 @@
 <?php
 $this->insert('partials/header-admin',['titre'=>"Admin ajout de membre - RêvesdeJeux.com", 'description'=>"Modification de la table membre dans la base de données"]);
 ?>
-<h1>Ajout de membre</h1>
+
 <section>
+	<h1>Ajout de membre</h1>
 	<article>
 		<h2>Instructions</h2>
 		<p>

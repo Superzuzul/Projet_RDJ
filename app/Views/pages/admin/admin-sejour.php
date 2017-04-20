@@ -2,8 +2,9 @@
 $this->insert('partials/header-admin',['titre'=>"Admin séjour - RêvesdeJeux.com", 'description'=>"Modification de la table séjour dans la base de données"]);
 ?>
 
-<h1>Modification des séjours</h1>
+
 <section>
+	<h1>Modification des séjours</h1>
 	<article>
 		<p>
 			Voici la partie ajout / modification / suppression de séjour. Bien lire les instructions ci-dessous avant de toucher cette partie.
