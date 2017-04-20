@@ -178,6 +178,10 @@
 		['GET|POST', '/espace-adherents/chat', 'Default#chat', 'default_chat'],
 
 
+		//Page ajx chat
+		['GET|POST', '/espace-adherents/chat-ajax', 'Default#chatAjax', 'default_chat_ajax'],
+
+
 		/************************************************
 						Espace Administrateur
 		************************************************/

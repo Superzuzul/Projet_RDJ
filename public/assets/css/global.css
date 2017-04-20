@@ -29,6 +29,31 @@ p, #evt-index{
 	font-size: 1.8em;
 }
 
+#chat-logs {
+            height: 400px;
+            overflow: auto;
+            background-color: lavender;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        
+        #chat-logs .message {
+            margin-bottom: 10px;
+        }
+        
+        input, button {
+            padding: 10px 5px;
+        }
+        
+        #author {
+            width: 20%;
+        }
+        #message {
+            width: 60%;
+        }
+        #chat-form button {
+            width: 15%;
+        }
 
 
 /******************************************** 
@@ -564,6 +589,11 @@ footer {
 		    width: 300px;
 		    color: gold;
 		}
+
+
+
+
+		
 
 /************************************************************************************
                 POSITIONNEMENT DU TEXTE SUR LE SITE

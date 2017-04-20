@@ -681,19 +681,68 @@ class DefaultController extends Controller
 
 	}
 
-	public function calendrier(){
 
-		//affichage de la page du calendrier interactif
-
-		$this->show('pages/espace-adherents/calendrier');
-
-	}
 
 	public function chat(){
+
+		
+
 
 		//affichage de la page de chat
 
 		$this->show('pages/espace-adherents/chat');
+
+	}
+
+
+
+	public function chatAjax(){
+
+
+		// Par défaut, la tâche à accomplir s'appelle getLogs
+		$task = 'getLogs';
+		// SI quelqu'un précise en GET une task différente 
+		// alors, la task doit devenir celle demandée en GET
+
+		if(!empty($_GET['task'])){
+    		$task = $_GET['task'];
+		}
+
+		$objetMessagechatModel= new \Model\MessagechatModel;
+
+		// Selon la tache à accomplir
+		switch($task){
+		    // Dans le cas où la tâche est postMessage
+		    case 'postMessage':
+		        
+		    // Je récupère les données envoyées par le POST (par le formulaire)
+		    $auteur  = $_POST['author'];
+		    $message = $_POST['message'];
+		    
+		    // Je créé une requête préparée (qu'on appelle aussi une requête paramétrée)
+		    $statement = $objetMessagechatModel->insert(['auteur'=>$auteur,
+                                            			'contenu'=>$message,
+			                                            'dateEnvoi'=>date('Y-m-d H:i:s')]);
+		    
+		    
+		    $this->showJson(['state' => 'success', 'message' => 'Message correctement enregistré']);
+		    
+
+
+		        break;
+		    default:
+
+		    	//Affichage des messages
+
+		    	$messages=$objetMessagechatModel->findall('dateEnvoi','DESC',20);
+		    	
+			    
+			    // On convertit en JSON et on affiche le tableau des messages
+			    $this->showJson($messages);
+			    	
+
+		        break;
+		}
 
 	}
 }

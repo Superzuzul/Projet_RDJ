@@ -112,3 +112,70 @@ $(".adherent").click(function(){
 	$("#led-adherent").attr('src', src); // on indique l'image à afficher
 										// grâce à la valeur "à l'instant T" de la variable src
 });
+
+
+
+/**************************************
+*				Chat				  *
+**************************************/
+
+// dès que la page est prête
+        $(document).ready(function(){
+            // on charge les derniers messages
+            loadChatLogs();
+            // on fait en sorte que les derniers messages se rechargent automatiquement toutes les 3 secondes
+            window.setInterval(loadChatLogs, 6000);
+        });
+        
+        // si quelqu'un soumet le formulaire de chat
+        $('#chat-form').submit(function(){
+            // on récupère dans un objet qu'on appelle data les données du formulaire
+            var donneesAEnvoyerAuPHP = {
+              // author sera égal à la valeur de l'input qui a l'identifiant "author"
+              author: $('#author').val(),
+              // message sera égal à la valeur de l'input qui a l'identifiant "message"
+              message: $('#message').val()
+            };
+            
+            // j'appelle en méthode POST l'adresse de mon script PHP en précisant que la tâche à accomplir
+            // sera postMessage
+            $.post(routeAjax+'?task=postMessage', donneesAEnvoyerAuPHP).done(function(resultat){
+                loadChatLogs();
+                $('#message').val('');
+                $('#message').focus();
+            });
+            
+            // On return false, pour que le formulaire ne se soumette pas !
+            return false;
+        })
+        
+        /**
+         * Cette fonction sert à afficher mes messages
+         */
+        function loadChatLogs(){
+            // On appelle en JSON l'adresse chat.php
+            $.getJSON(routeAjax, function(messages){
+                // On vide la zone des messages (pour la rafraichir)
+                $('#chat-logs').html('');
+                // Pour chaque message reçu
+                $(messages).each(function(i, message){
+                    // On créé une div qui a la classe message
+                    var div = '<div class="message">';
+                    // a l'intérieur de la div, on créé un span qui a la classe time et qui contient l'heure, minute et seconde
+                    div += '<span class="time">' + message.dateEnvoi/*.substring(10) */+ '</span> ';
+                    // a l'intérieur de la div encore, on créé un span qui a la classe author et qui contient l'auteur du message
+                    div += '<span class="author">' + message.auteur + ' : </span> ';
+                    // a l'intérieur de la div enfin, on ajoute le contenu du message
+                    div += message.contenu;
+                    // on n'oublie pas de fermer la div
+                    div += '</div>';
+                    // on ajoute la div à l'intérieur de la grande div #chat-logs
+                    $('#chat-logs').prepend(div);
+                });
+                
+                // On oblige le scroll de la div #chat-logs a aller tout en bas
+                $('#chat-logs').scrollTop($('#chat-logs').height());
+            }).fail(function(erreur){
+                console.error(erreur);
+            })
+        }	
