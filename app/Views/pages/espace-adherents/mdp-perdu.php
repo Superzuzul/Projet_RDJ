@@ -1,5 +1,5 @@
 <?php
-$this->insert('partials/header',['titre'=>"Espace Adhérent - Mot de passe perdu", 'description'=>"L'espace adhérent de Rêves de Jeux vous permet d'accéder à des contenus exclusifs : photos, chat entre membres,..."]);
+$this->insert('partials/header',['titre'=>"Espace Adhérent - Mot de passe perdu | RêvesdeJeux.com", 'description'=>"L'espace adhérent de Rêves de Jeux vous permet d'accéder à des contenus exclusifs : photos, chat entre membres,..."]);
 ?>
 
 <h1 id="esp-pers" class="text-center">Espace personnel</h1>

@@ -171,8 +171,11 @@
 		['GET|POST', '/espace-adherents/photos-sejour/[:url]', 'Default#listePhotos', 'default_liste_photos'],
 
 
-		//Page calendrier interactif (à voir si on le fait)
-		['GET|POST', '/espace-adherents/calendrier', 'Default#calendrier', 'default_calendrier'],
+		// //Page calendrier interactif (à voir si on le fait)
+		// ['GET|POST', '/espace-adherents/calendrier', 'Default#calendrier', 'default_calendrier'],
+
+		//Page chat
+		['GET|POST', '/espace-adherents/chat', 'Default#chat', 'default_chat'],
 
 
 		/************************************************

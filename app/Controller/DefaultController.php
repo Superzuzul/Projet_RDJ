@@ -637,7 +637,7 @@ class DefaultController extends Controller
 
 		// on utilise la méthode getUSer() afin de prendre connaissance des données de l'utilisateur connecté
 		$utilisateurConnect = $this->getUser();
-		debug($utilisateurConnect);
+		// debug($utilisateurConnect);
 
 		// SI...
 			// ... les données sont vides, alors on dirigera l'utilisateur vers la page de login
@@ -686,6 +686,14 @@ class DefaultController extends Controller
 		//affichage de la page du calendrier interactif
 
 		$this->show('pages/espace-adherents/calendrier');
+
+	}
+
+	public function chat(){
+
+		//affichage de la page de chat
+
+		$this->show('pages/espace-adherents/chat');
 
 	}
 }

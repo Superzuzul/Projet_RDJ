@@ -20,6 +20,14 @@ section{
 p, #evt-index{
 	font-size: 1.3em;
 }
+.message{
+	font-size: 1.3em;
+}
+#bienvenue{
+	color: brown;
+	font-weight: bold;
+	font-size: 1.8em;
+}
 
 
 
@@ -113,7 +121,7 @@ p, #evt-index{
 			width: 90%;
 			background-color: white;
 			z-index: -1;
-			border-radius: 20px;
+			border-radius: 0px 0px 20px 20px;
 			margin-bottom: 20px;
 			box-shadow: 10px 10px 5px #888888;
 		}
@@ -129,26 +137,30 @@ p, #evt-index{
 			margin-top: 320px;
 			padding-top: 5px;
 			background-color: #540202;
-			height: 41px;
-			padding-left: 100px;
+			height: 50px;
+            padding-left: 100px;
 		}
-
+        
+        
 		#menu-ul-global, #menu-ul-global ul{
 			padding:0;
 			margin:0;
 			list-style:none;
 			text-align:left;
-			z-index: 999;
+            z-index: 999;
 		}
+
 		#menu-ul-global li{
 			display:inline-block;
 			position:relative;
 			border-radius:4px 4px 0 0;
-			z-index: 999;
+            z-index: 999;
 		}
+
 		#menu-ul-global ul li{
 			display:inherit;
 			border-radius:0;
+            
 		}
 		#menu-ul-global ul li:hover{
 			border-radius:0;
@@ -196,21 +208,24 @@ p, #evt-index{
 			padding:8px 40px;
 			color:#fff;
 			font-family:arial;
-			text-align: center;
+			font-size:1.3em;
+            text-align: center;
 		}
+		
 		#menu-ul-global ul a{
 			padding:8px 0;
 		}
 		#menu-ul-global li:hover li a{
 			color:#fff;
 			text-transform:inherit;
-			text-align: center;
+            text-align: center;
 		}
 		#menu-ul-global li:hover a{
 			color: white;
 			text-transform: uppercase;
 			padding:8px 29px;
-			text-align: center;
+            text-align: center;
+           
 		}
 		#menu-ul-global li li:hover a{
 			color:#000;
@@ -271,9 +286,49 @@ p, #evt-index{
 	}
 
 
+
 /************************************************
-                formulaire ADHERENT
+		partie ADHERENT
 *************************************************/
+
+	/*** page index ADHERENT ***/
+	#sections-adherent{
+		// width: 800px;
+
+	}
+	.images{
+		-webkit-column-count:2;
+		-moz-column-count:2;
+		column-count:2;
+		-webkit-column-gap:25px;
+		-moz-column-gap:25px;
+		column-gap:25px;
+	}
+		.images figure{
+			position:relative;
+			overflow:hidden;
+		}
+		.images figure img{
+			max-width:100%;
+			-webkit-backface-visibility:hidden;
+			transition:transform 1s;
+		}
+		.images figure:hover img{
+			transform:scale(1.5);
+		}
+		.images figure figcaption{
+			width:100%;
+			text-align:center;
+			color:#FFF;
+			font-size: 2em;
+			padding:10px 0px;
+			background-color:rgba(0,0,0,0.8);
+			border-radius: 20px 20px 0px 0px;
+			position:absolute;
+			bottom:3px;
+		}
+
+	/*** formulaire ADHERENT ***/
 	#esp-pers{
 		margin-top: 50px;
 	}
@@ -409,163 +464,8 @@ footer {
         color: #E52D27;
         text-decoration: none;
     }
-    #soc-fb:hover{
-        color: #3B5998;
-        text-decoration: none;
-    }
-    #adresse i, #soc-fb i, #soc-yt i{
+    #soc-fb:hover{ #soc-yt i{
 		margin: 10px;
-	}
-    #teleph{
-        font-size: 1.2em;
-    }
-    #res-soc a{		/* h4 "Réseaux sociaux :" */
-        display: inline;
-    }
-    
-	#pied{
-		margin-bottom: 10px;
-		font-size: 1em;
-    }
-
-body, header, #cont-menu{
-	margin: 0;
-}
-
-
-header{
-	text-align: center;
-    
-}
-
-
-
-	/*	***************************	*/
-	/*		VERSION ULTRA-MOBILE 	*/
-	/*	***************************	*/
-	@media screen and (max-width: 320px){
-		/*// */
-	}
-
-
-	/*	**********************	*/
-	/*		VERSION BUREAU 		*/
-	/*	**********************	*/
-
-	/* Media query pour le breakpoint à 1080px */
-	@media screen and (min-width: 1080px){
-		#nav-mobile{
-			display: none;
-		}
-
-		header{
-			display: initial;
-		}
-		#cont-menu{
-			margin-top: 320px;
-			padding-top: 5px;
-			background-color: #540202;
-			height: 50px;
-            padding-left: 100px;
-            
-		}
-        
-        
-		#menu-ul-global, #menu-ul-global ul{
-			padding:0;
-			margin:0;
-			list-style:none;
-			text-align:left;
-            z-index: 999;
-            
-            
-            
-        
-		}
-		#menu-ul-global li{
-			display:inline-block;
-			position:relative;
-			border-radius:4px 4px 0 0;
-            z-index: 999;
-            
-            
-		}
-		#menu-ul-global ul li{
-			display:inherit;
-			border-radius:0;
-            
-		}
-		#menu-ul-global ul li:hover{
-			border-radius:0;
-		}
-		#menu-ul-global ul li:last-child{
-			border-radius:0 0 8px 8px;
-		}
-		#menu-ul-global ul{
-			position:absolute;
-			z-index: 1000;
-			max-height:0;
-			left: 0;
-			right: 0;
-			overflow:hidden;
-			-moz-transition: .2s all .3s;
-			-webkit-transition: .2s all .3s;
-			transition: .2s all .3s;
-		}
-		#menu-ul-global li:hover ul{
-			max-height:200em;
-		}
-
-		/* background des liens menus */
-		#menu-ul-global li:first-child, #menu-ul-global li:nth-child(2), #menu-ul-global li:nth-child(3), #menu-ul-global li:nth-child(4), #menu-ul-global li:nth-child(5), #menu-ul-global li:nth-child(6), #menu-ul-global li:last-child{
-			background-color: #A52525;
-		}
-		/* background des liens menus et sous menus au survol */
-		#menu-ul-global li:first-child:hover, #menu-ul-global li:first-child li:hover{
-			background-color: #A52525;
-		}
-		#menu-ul-global li:nth-child(2):hover, #menu-ul-global li:nth-child(2) li:hover{
-			background-color: #A52525;
-		}
-		#menu-ul-global li:nth-child(3):hover, #menu-ul-global li:nth-child(3) li:hover{
-			background-color: #A52525;
-		}
-		#menu-ul-global li:last-child:hover, #menu-ul-global li:last-child li:hover{
-			background-color: #A52525;
-		}
-
-		/* les a href */
-		#menu-ul-global a{
-			text-decoration:none;
-			display:block;
-			padding:8px 40px;
-			color:#fff;
-			font-family:arial;
-			font-size:1.3em;
-            text-align: center;
-            
-		}
-		#menu-ul-global ul a{
-			padding:8px 0;
-		}
-		#menu-ul-global li:hover li a{
-			color:#fff;
-			text-transform:inherit;
-            text-align: center;
-            
-            
-		}
-		#menu-ul-global li:hover a{
-			color: white;
-			text-transform: uppercase;
-			padding:8px 29px;
-            text-align: center;
-           
-		}
-		#menu-ul-global li li:hover a{
-			color:#000;
-		}
-	}
 
 
 /************************************************
@@ -674,6 +574,8 @@ header{
     margin-left: 40px;
 }
 
+
+
 /************************************************
                 FOOTER
 *************************************************/
@@ -735,5 +637,6 @@ header{
     }
 
     footer{
-    z-index: 998;
-}
+	    z-index: 999;
+		position: relative;
+	}
