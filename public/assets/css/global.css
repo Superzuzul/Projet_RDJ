@@ -10,12 +10,12 @@ header{
 section{
 	padding-left: 20px;
 	padding-right: 20px;
-	width: 90%;
+	// width: 90%;
 	background-color: white;
-	z-index: -1;
-	border-radius: 20px;
-	margin-bottom: 20px;
-	box-shadow: 10px 10px 5px #888888;
+	// z-index: -1;
+	// border-radius: 20px;
+	// margin-bottom: 20px;
+	// box-shadow: 10px 10px 5px #888888;
 }
 p, #evt-index{
 	font-size: 1.3em;
@@ -107,6 +107,17 @@ p, #evt-index{
 
 	/* Media query pour le breakpoint à 1080px */
 	@media screen and (min-width: 1080px){
+		section{
+			padding-left: 20px;
+			padding-right: 20px;
+			width: 90%;
+			background-color: white;
+			z-index: -1;
+			border-radius: 20px;
+			margin-bottom: 20px;
+			box-shadow: 10px 10px 5px #888888;
+		}
+
 		#nav-mobile{
 			display: none;
 		}

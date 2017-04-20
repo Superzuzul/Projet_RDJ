@@ -21,7 +21,7 @@
     	<header>
             
             
-    	    <section id="cont-menu">
+    	    <aside id="cont-menu">
                 <ul id="menu-ul-global">
                 	<li><a href="<?php echo $this->url("default_rdj_classique") ?>">Les séjours</a>
                 		<ul id="ssmenu-ul1">
@@ -55,10 +55,10 @@
                 	<li><a href="<?php echo $this->url("default_index_adherents") ?>">Espace adhérent</a>
                 	</li>
                 </ul>
-            </section>
+            </aside>
         </header>
 
-        <section id="nav-mobile">
+        <aside id="nav-mobile">
             
             <div class="txt-menu sejours" id="menu-sejours"><img id="led-sejours" class="menu-led" src="<?php echo $this->assetUrl("/img/ledr.png") ?>">Séjours</div>
                 <!-- sous-menu SEJOURS -->
@@ -96,6 +96,6 @@
                 <!-- FIN sous-menu AIDER -->
 
             <div class="txt-menu adherent" id="menu-adherent"><img id="led-adherent" class="menu-led" src="<?php echo $this->assetUrl("/img/ledr.png") ?>">Espace adhérent</div>
-        </section>
+        </aside>
         
         <main>
