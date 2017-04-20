@@ -2,13 +2,14 @@
 $this->insert('partials/header',['titre'=>"Rêves de Jeux Classique, colonie de vacance pour les 12/17 ans, acitivités Jeux de Rôles, Jeux de Sociétés, Jeux vidéos...", 'description'=>"Rêves de Jeux propose des colonies de vacances pour les 12/17 ans pendant l'été, spécialisés le jeu sous toutes ses formes (Jeux de sociétés, Jeux de rôles, Jeux vidéos, Grandeur Natures, activités extérieurs)"]);
 ?>
 
-<h1>Séjour « RDJ Classic" » pour les 12-17 ans (60 places)</h1>
+
 <section>
+<h1>Séjour « RDJ Classic" » pour les 12-17 ans (60 places)</h1>
 	<article>
 		<h2>Description du séjour</h2>
 		<figure>
 	        <img src="<?php echo $this->assetUrl("/img/rdj-classique/classique1.jpg") ?>" alt="Un peuple lors de l'événementiel GN prenant la pose."></img>
-	        <figcaption>Plongez-vous dans un monde d'aventure</figcaption>
+	        <figcaption>Plongez-vous dans un monde d'aventure !</figcaption>
 	    </figure>
 		<p class="positionTexte">
 			Dans cette colonie de vacances créée en 1984, toujours unique en France et désormais culte, nos "Geek-Anim" très spécialisés vous proposent l'immersion dans le monde des jeux sous toute ses facettes : de société, d'aventure, de rôle, de simulation, de coopération, avec du Grandeur Nature organisé autour d’un thème médiéval fantastique (Seigneur des Anneaux, Games of Thrones, Excalibur…), des jeux en réseau, des événementiels thématisés (Star Wars, Matrix, Dune, etc.) et tant d'autres activités : tir à l'arc GN, escrime médiévale douce, Blast Zone, nuit du jeu, vidéo, murder, barbecues, feu de camp et guitares, …).
@@ -17,17 +18,22 @@ $this->insert('partials/header',['titre'=>"Rêves de Jeux Classique, colonie de 
 			Équipés comme des pros (matériel, costumes, accessoires, décors, jeux, etc.), vous n'allez pas en croire vos yeux ! Toutes les composantes du jeu sont abordées dans ce séjour qui envisage le jeu comme un outil facétieux au service de l'apprentissage des règles sociales et du  développement des capacités. Être soi oui, mais sans oublier l’importance du travail d’équipe et de la communication. Ici, le joueur s'amuse et passe de très bonnes vacances tout en apprenant à gagner, à perdre et aussi à apprendre en perdant.
 		</p>
 	</article>
-	<article>
-		<h2>Le lieu</h2>
-		<figure>
-	        <img src="<?php echo $this->assetUrl("/img/lieu/lieu4.jpg") ?>" alt="Photo du Pierlou vu de l'extérieur"></img>
-	        <figcaption>Une belle journée au Pierlou</figcaption>
-	    </figure>
+	<article class="row" id="bloc_pierlou">
+		<div class="col-xs-12 col-md-4">
+			<h2>Le lieu</h2>
+			<figure>
+		        <img id="img_pierlou" src="<?php echo $this->assetUrl("/img/lieu/lieu4.jpg") ?>" alt="Photo du Pierlou vu de l'extérieur"></img>
+		        <figcaption id="figcaption_pierlou">Une belle journée au Pierlou</figcaption>
+		    </figure>
+		</div>
 		<p class="positionTexte">
 			Dans le Parc Naturel Régional du Livradois-Forez. Le centre d' hébergement " Le PierLou " est situé à 900 mètres d'altitude sur la commune d' Echandelys (63980) en plein coeur du " Haut Livradois"...
 			<p><a href="#">Pour en savoir plus...</a></p>
 		</p>		
 	</article>
+
+
+
 	<article>
 <?php 
 
