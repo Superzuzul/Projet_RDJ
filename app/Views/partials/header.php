@@ -59,7 +59,7 @@
         </header>
 
         <section id="nav-mobile">
-            <h1><a href="<?php echo $this->url("default_index") ?>">Rêves de Jeux</a></h1>
+            
             <div class="txt-menu sejours" id="menu-sejours"><img id="led-sejours" class="menu-led" src="<?php echo $this->assetUrl("/img/ledr.png") ?>">Séjours</div>
                 <!-- sous-menu SEJOURS -->
                 <div id="nav-sejours">
