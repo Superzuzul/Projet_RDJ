@@ -15,19 +15,19 @@ $this->insert('partials/header',['titre'=>"Rêves de Jeux Classique, colonie de 
 	    <div class="item active">
 	      <a href="<?= $this->url('default_rdj_classique')?>"><img src="<?php echo $this->assetUrl("/img/slider/slider1.jpg") ?>" alt="Les séjours d'été de Rêves de Jeux"></a>
 	      <div class="carousel-caption">
-	        Cette été, partez à l'aventure dans une colonie unique au monde !
+	        <h3>Cette été, partez à l'aventure dans une colonie unique au monde !</h3>
 	      </div>
 	    </div>
 	    <div class="item">
 	      <a href="<?= $this->url('default_presentation')?>"><img src="<?php echo $this->assetUrl("/img/slider/slider2.jpg") ?>" alt="Présentation de Rêves de Jeux"></a>
 	      <div class="carousel-caption">
-	        Qu'est-ce Rêves De Jeux ? Découvrez notre histoire !
+	        <h3>Qu'est-ce Rêves De Jeux ? Découvrez notre histoire !</h3>
 	      </div>
 	    </div>
 	    <div class="item">
 	      <a href="<?= $this->url('default_faq')?>"><img src="<?php echo $this->assetUrl("/img/slider/slider3.jpg") ?>" alt="Foire aux Questions de Rêves de Jeux"></a>
 	      <div class="carousel-caption">
-	        Foire aux Questions
+	        <h3>Foire aux Questions</h3>
 	      </div>
 	    </div>
 	    ...
