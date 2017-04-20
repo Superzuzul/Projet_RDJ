@@ -1,8 +1,9 @@
 <?php
 $this->insert('partials/header',['titre'=>"Rêves de Jeux - Recrutement - Vous souhaitez travaillez avec nous ? Vous êtes au bon endroit !", 'description'=>"Vous souhaitez participer à l'un des séjours de Rêves de Jeux en tant qu'animateur ou directeur adjoint ? Alors envoyez-nous CV et lettre de motivation !"]);
 ?>
-<h1>Recrutement</h1>
+
 <section>
+<h1>Recrutement</h1>
     <article>
         <h2>Postuler pour participer à l'un de nos séjours</h2>
         <p>Il est bon d’injecter du "sang nouveau" et des "idées nouvelles" dans une équipe !</p> 
@@ -26,35 +27,67 @@ $this->insert('partials/header',['titre'=>"Rêves de Jeux - Recrutement - Vous s
         <h2>Comment postuler</h2>
         <p>Si la possibilité de faire ce "travail/expérience" vous tente, veuillez nous faire parvenir par ce formulaire, un CV et une lettre de motivation :
         </p>
+        
+            
+        
         <form method="post" action="" id="formulaireRecrutement" enctype="multipart/form-data">
-            <label for="nom">Nom : </label>
-            <input type="text" name="nom" id="nom" placeholder="Votre nom" required/>           
-            <label for="prenom">Prénom : </label>
-            <input type="text" name="prenom" id="prenom" placeholder="Votre prénom" required/>
-            <label for="email">E-mail : </label>
-            <input type="email" name="email" id="email" placeholder="Votre@email.com" required/>
-            <label for="sujet">Séjour : </label>
-            <select name="sejour" required>
-                <option value="rdjClassique" selected>Rêves de Jeux Classique</option>
-                <option value="gamerVideo">Gamer Vidéo</option>
-                <option value="rdjDecouverte">Rêves de Jeux Découvertes</option>
-                <option value="revesAventures">Rêves d'Aventures</option>
-                <option value="enQueteAventures">En quête d'aventures</option>
-                <option value="bandeJtrouvetou">La bande à J'Trouvetou</option>
-            </select>
-            <label for="cv">Votre CV (format PDF/doc/docx/odt/JPG , taille max : 2 MO) : </label>
-            <input type="file" id="cv" name="cv" required>
-            <label for="lettreMotivation">Lettre de motivation (format PDF/doc/docx/odt/JPG, taille max : 2 MO) : </label>
-            <input type="file" id="lettreMotivation" name="lettreMotivation" required>
-            <label for="message">Votre message : </label>
-            <textarea name="message" id="message" required placeholder="Votre message ici" rows="5" cols="50"></textarea>
-            <!-- RECAPTCHA -->
-            <!--<button class="g-recaptcha" data-sitekey="6Lc2FhkUAAAAAHworrrl4S-5ofmbE_-7f2erkG53" data-callback="YourOnSubmitFn">TEST CAPTCHA</button>-->
-            <div id="form-recaptcha">
-                <p id="recaptcha_txtcontrol">Merci de procéder au contrôle de sécurité ci-dessous :</p>
-                <div class="g-recaptcha" name="recaptcha" data-sitekey="6LdWsBYTAAAAABuJBTypj_6yghL6Qz7Ctp6am749"></div>
+            <div class="row">
+                <div class="form-group col-md-3 col-xs-8">
+                    <label for="nom">Nom : </label>
+                <input type="text" name="nom" id="nom" placeholder="Votre nom" required/>
+                </div>
+                <div class="form-group col-md-3 col-xs-8">
+                   <label for="prenom">Prénom : </label>
+                    <input type="text" name="prenom" id="prenom" placeholder="Votre prénom" required/> 
+                </div>           
+                <div class="form-group col-md-3 col-xs-8">
+                    <label for="email">E-mail : </label>
+                    <input type="email" name="email" id="email" placeholder="Votre@email.com" required/>
+                </div>
             </div>
-            <input type="submit" name="btnSub" value="Envoyer" id="btnSub"/>           
+            <div class="row">
+                <div class="form-group col-md-6 col-xs-12">
+                   <label for="sujet">Séjour : </label>
+                    <select name="sejour" required>
+                        <option value="rdjClassique" selected>Rêves de Jeux Classique</option>
+                        <option value="gamerVideo">Gamer Vidéo</option>
+                        <option value="rdjDecouverte">Rêves de Jeux Découvertes</option>
+                        <option value="revesAventures">Rêves d'Aventures</option>
+                        <option value="enQueteAventures">En quête d'aventures</option>
+                        <option value="bandeJtrouvetou">La bande à J'Trouvetou</option>
+                    </select> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 col-xs-12">                
+                    <label for="cv">Votre CV (format PDF/doc/docx/odt/JPG , taille max : 2 MO) : </label>
+                    <input type="file" id="cv" name="cv" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 col-xs-12">        
+                    <label for="lettreMotivation">Lettre de motivation (format PDF/doc/docx/odt/JPG, taille max : 2 MO) : </label>
+                    <input type="file" id="lettreMotivation" name="lettreMotivation" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 col-xs-12">    
+                    <label for="message">Votre message : </label>
+                    <textarea name="message" id="message" required placeholder="Votre message ici" rows="5" cols="50"></textarea>
+                </div>    
+                <!-- RECAPTCHA -->
+                <!--<button class="g-recaptcha" data-sitekey="6Lc2FhkUAAAAAHworrrl4S-5ofmbE_-7f2erkG53" data-callback="YourOnSubmitFn">TEST CAPTCHA</button>-->
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 col-xs-12">    
+                    <div id="form-recaptcha">
+                        <p id="recaptcha_txtcontrol">Merci de procéder au contrôle de sécurité ci-dessous :</p>
+                        <div class="g-recaptcha" name="recaptcha" data-sitekey="6LdWsBYTAAAAABuJBTypj_6yghL6Qz7Ctp6am749"></div>
+                    </div>
+                    
+                </div>    
+            </div>
+            <input class="btn btn-success" type="submit" name="btnSub" value="Envoyer" id="btnSub"/>               
         </form>
         <?php if(!empty($erreur)){
 

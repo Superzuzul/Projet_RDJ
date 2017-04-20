@@ -2,8 +2,9 @@
 $this->insert('partials/header',['titre'=>"Chat - Rêves de Jeux", 'description'=>"(DESCRIPTION page Chat à modifier)"]);
 ?>
 
-<h1>Chat Rêves de Jeux</h1>
+
 <section>
+<h1>Chat Rêves de Jeux</h1>
 	<article>
 		<div id="chat-logs">
         </div>

@@ -1,8 +1,9 @@
 <?php
 $this->insert('partials/header',['titre'=>"En Quête d'Aventures, colonie de vacance pour les 6-10 ans, séjour pour vivre des aventures dans des univers hauts en couleurs ! L'expertise de Rêves de Jeux adaptée aux plus jeunes !", 'description'=>"Ce séjour de vacances accueille des enfants de 6 à 10 ans pour vivre des aventures inoubliables au coeur d'univers variés et passionants ! Laissez-les explorer le monde en toute sécurité avec nos équipes aguerries dans l’encadrement des plus jeunes, comme des plus grands"]);
 ?>
-<h1>Séjour "En-quête  d’aventures" pour les 6-10 ans (14 places)</h1>
+
 <section>
+<h1>Séjour "En-quête  d’aventures" pour les 6-10 ans (14 places)</h1>
 	<article>
 		<h2>Description du séjour</h2>
 		<figure>

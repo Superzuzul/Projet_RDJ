@@ -1,6 +1,18 @@
+/* Extension des Fontes*/
+@font-face{
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
 /* styles par défaut */
+
+body{
+	font-family: "Roboto",Helvetica,Arial,sans-serif;
+}
+
 body, header, #cont-menu{
 	margin: 0;
+
 }
 
 header{
@@ -14,7 +26,8 @@ section{
 }
 
 h1{
-	
+	text-align: center;
+	padding-top: 20px;
 }
 
 p, #evt-index{
@@ -459,6 +472,35 @@ article{
 	#suite-mdp-red{
 		color: brown;
 	}
+
+
+	/* CHAT ADHERENT*/
+
+	#chat-logs {
+            height: 400px;
+            overflow: auto;
+            background-color: lavender;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        
+        #chat-logs .message {
+            margin-bottom: 10px;
+        }
+        
+        input, button {
+            padding: 10px 5px;
+        }
+        
+        #author {
+            width: 20%;
+        }
+        #message {
+            width: 60%;
+        }
+        #chat-form button {
+            width: 15%;
+        }
 
 
 /******************************************************

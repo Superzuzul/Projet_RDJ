@@ -2,8 +2,9 @@
 $this->insert('partials/header',['titre'=>"Formulaire de contact - RêvesdeJeux.com", 'description'=>"Vous avez une question et souhaitez entrer directement en contact avec nous ? Une interrogation sur l'un de nos séjours ? Vous souhaitez en savoir plus sur l'association ? Vous êtes au bon endroit !"]);
 ?>
 
-<h1>Contactez-nous !</h1>
+
 <section>
+<h1>Contactez-nous !</h1>
 	<article>
 		<p>
 			Vous avez une question et souhaitez entrer directement en contact avec nous ? Vous avez une interrogation concernant l'un de nos séjours, ou bien souhaitez en savoir plus sur l'association ? Vous êtes au bon endroit !
@@ -17,7 +18,7 @@ $this->insert('partials/header',['titre'=>"Formulaire de contact - RêvesdeJeux.
 				<label for="cat">Email :</label>
 				<input type="mail" name="email" id="email" class="form-control" placeholder="Saisissez votre mail" required />
 			</div>
-			<div class="form-group col-xs-12" id="formmail">
+			<div class="form-group col-xs-12" id="formsujet">
 				<label for="cat">Sujet :</label>
 				<input type="text" name="sujet" id="sujet" class="form-control" placeholder="Saisissez le sujet de votre e-mail" required />
 			</div>
