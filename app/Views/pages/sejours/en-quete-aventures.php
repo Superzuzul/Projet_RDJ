@@ -5,6 +5,10 @@ $this->insert('partials/header',['titre'=>"En Quête d'Aventures, colonie de vac
 <section>
 	<article>
 		<h2>Description du séjour</h2>
+		<figure>
+	        <img src="<?php echo $this->assetUrl("/img/en-quete-aventures/aventures1.jpg") ?>" alt="Des enfants construisants un pont sur une rivière"></img>
+	        <figcaption>Construction d'un pont par les aventuriers</figcaption>
+	    </figure>
 		<p class="positionTexte">
 			Si tu désires devenir un trappeur, chercher des paillettes d'or dans le lit de la rivière du Pierlou ou trouver des ossements et des pierres anciennes, si tu veux t'occuper des animaux de ta petite ferme et du potager, ou découvrir la forêt mystérieuse avec ton clan d'aventurier(e)s et votre chien "Pisteur" (avec pique-nique), si tu veux construire un pont ou une petite maison dans les bois, faire de l'artisanat de tes propres mains, et, selon la météo, partir en Ballade Crépusculaire Animée Légendaire, faire des veillées autour du feu de camp et dormir une nuit dehors sous tente, ce séjour est fait pour toi ! 
 		</p>
@@ -21,6 +25,10 @@ $this->insert('partials/header',['titre'=>"En Quête d'Aventures, colonie de vac
 			Dans le Parc Naturel Régional du Livradois-Forez. Le centre d' hébergement " Le PierLou " est situé à 900 mètres d'altitude sur la commune d' Echandelys (63980) en plein coeur du " Haut Livradois"...
 			<p><a href="#">Pour en savoir plus...</a></p>
 		</p>
+		<figure>
+	        <img src="<?php echo $this->assetUrl("/img/lieu/lieu4.jpg") ?>" alt="Photo du Pierlou vu de l'extérieur"></img>
+	        <figcaption>Une belle journée au Pierlou</figcaption>
+	    </figure>
 	</article>
 	<article>
 	<?php 
@@ -113,10 +121,14 @@ if(empty($tabResult)){
 		<p>
             A venir...
 		</p>
+		<figure>
+	        <img src="<?php echo $this->assetUrl("/img/en-quete-aventures/aventures2.jpg") ?>" alt="Un enfant costumé en guerrier"></img>
+	        <figcaption>Pars à l'aventure comme il se doit !</figcaption>
+	    </figure>
 	</article>
 	<article>
 		<h2>Une question ?</h2>
-		<p>Vous souhaitez obtenir plus d'information sur les séjours ? N'hésitez pas <a href="contact.php">à nous contacter</a> et nous répondrons à toutes vos interrogations !</p>
+		<p>Vous souhaitez obtenir plus d'information sur les séjours ? N'hésitez pas <a href="<?= $this->url('default_contact'); ?>">à nous contacter</a> et nous répondrons à toutes vos interrogations !</p>
 	</article>
 </section>
 

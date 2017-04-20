@@ -102,7 +102,7 @@ foreach ($tabResult as $key => $value) {
 	</article>
 	<article>
 		<h2>Une question ?</h2>
-		<p class="positionTexte">Vous souhaitez obtenir plus d'information sur les séjours ? N'hésitez pas <a href="contact.php">à nous contacter</a> et nous répondrons à toutes vos interrogations !</p>
+		<p class="positionTexte">Vous souhaitez obtenir plus d'information sur les séjours ? N'hésitez pas <a href="<?= $this->url('default_contact'); ?>">à nous contacter</a> et nous répondrons à toutes vos interrogations !</p>
 	</article>
 </section>
 <?php

@@ -19,10 +19,14 @@ $this->insert('partials/header',['titre'=>"Rêves de Jeux Classique, colonie de 
 	</article>
 	<article>
 		<h2>Le lieu</h2>
+		<figure>
+	        <img src="<?php echo $this->assetUrl("/img/lieu/lieu4.jpg") ?>" alt="Photo du Pierlou vu de l'extérieur"></img>
+	        <figcaption>Une belle journée au Pierlou</figcaption>
+	    </figure>
 		<p class="positionTexte">
 			Dans le Parc Naturel Régional du Livradois-Forez. Le centre d' hébergement " Le PierLou " est situé à 900 mètres d'altitude sur la commune d' Echandelys (63980) en plein coeur du " Haut Livradois"...
 			<p><a href="#">Pour en savoir plus...</a></p>
-		</p>
+		</p>		
 	</article>
 	<article>
 <?php 
@@ -84,11 +88,15 @@ $tabResult=$objetSejourModel->search(['nomSejour'=>"rdj-classique"]); //la metho
 		<p class="positionTexte">
 		Inscriptions à faire auprès de DJURINGA Juniors au 04 78 23 23 46 ou directement ici :
 			<a href="https://www.djuringa-juniors.fr/reves-de-jeux-2264.html"><button>S'inscrire à un séjour</button></a>
-		</p>	
+		</p>
+		<figure>
+	        <img src="<?php echo $this->assetUrl("/img/rdj-classique/classique2.jpg") ?>" alt="Des enfants jouants au jeu LINK avec un animateur"></img>
+	        <figcaption>Profitez des temps calmes pour découvrir de nouveaux jeux</figcaption>
+	    </figure>	
 	</article>
 	<article>
 		<h2>Une question ?</h2>
-		<p class="positionTexte">Vous souhaitez obtenir plus d'information sur les séjours ? N'hésitez pas <a href="contact.php">à nous contacter</a> et nous répondrons à toutes vos interrogations !</p>
+		<p class="positionTexte">Vous souhaitez obtenir plus d'information sur les séjours ? N'hésitez pas <a href="<?= $this->url('default_contact'); ?>">à nous contacter</a> et nous répondrons à toutes vos interrogations !</p>
 	</article>
 </section>
 <?php
