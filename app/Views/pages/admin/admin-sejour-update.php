@@ -1,5 +1,5 @@
 <?php
-$this->insert('partials/header',['titre'=>"Admin séjour update - RêvesdeJeux.com", 'description'=>"Modification d'un séjour"]);
+$this->insert('partials/header-admin',['titre'=>"Admin séjour update - RêvesdeJeux.com", 'description'=>"Modification d'un séjour"]);
 
 
 //On va chercher les infos du sejour dans la table MYSQL

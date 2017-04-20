@@ -285,6 +285,7 @@ class AdminController extends Controller{
             $prenomMembre=$safe['prenomMembre'];
             $dateNaissanceMembre=$safe['dateNaissanceMembre'];
             $emailMembre=$safe['emailMembre'];
+            $nbAvertissementMembre=$safe['nbAvertissementMembre'];
             
             
             //Securité, verification que chaque info est conforme
@@ -293,6 +294,7 @@ class AdminController extends Controller{
                     && filter_var($emailMembre,FILTER_VALIDATE_EMAIL)
                     &&
                     is_string($prenomMembre)         && ( mb_strlen($prenomMembre) > 1 ) &&
+                    is_numeric($nbAvertissementMembre) &&
                     is_string($dateNaissanceMembre)           && ( mb_strlen($dateNaissanceMembre) == 10 ) 
                 ){
                    
@@ -304,6 +306,7 @@ class AdminController extends Controller{
                 $objetMembreModel->update(['nomMembre'=>$nomMembre,
                                             'prenomMembre'=>$prenomMembre,
                                             'dateNaissanceMembre'=>$dateNaissanceMembre,
+                                            'nbAvertissementMembre'=>$nbAvertissementMembre,
                                             'emailMembre'=>$emailMembre
                                             ],$id,true); 
                    

@@ -1,5 +1,5 @@
 <?php
-$this->insert('partials/header',['titre'=>"Admin membre update - RêvesdeJeux.com", 'description'=>"Modification d'un membre"]);
+$this->insert('partials/header-admin',['titre'=>"Admin membre update - RêvesdeJeux.com", 'description'=>"Modification d'un membre"]);
 
 //On va chercher les infos du sejour dans la table MYSQL
 //Approche par délégation
@@ -15,6 +15,7 @@ if(!empty($tabMembre)){
     $prenomMembre=$tabMembre['prenomMembre'];
     $dateNaissanceMembre=$tabMembre['dateNaissanceMembre'];
     $emailMembre=$tabMembre['emailMembre'];
+    $nbAvertissementMembre=$tabMembre['nbAvertissementMembre'];
 
 ?>
 <h1>Ajout de membre</h1>
@@ -33,6 +34,9 @@ if(!empty($tabMembre)){
 
 			<label for="emailMembre">Adresse e-mail</label><br>
 			<input type="email" name="emailMembre" id="emailMembre" placeholder="votre@email.com" value="<?=$emailMembre;?>" required><br>
+
+			<label for="emailMembre">Avertissement</label><br>
+			<input type="number" name="nbAvertissementMembre" id="nbAvertissementMembre" placeholder="Nombre d'Avertissement" value="<?=$nbAvertissementMembre;?>" required><br>
 
 
 			<input type="hidden" name="operation" value="modifier"/>

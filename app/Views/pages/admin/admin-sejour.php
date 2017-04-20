@@ -1,5 +1,5 @@
 <?php
-$this->insert('partials/header',['titre'=>"Admin séjour - RêvesdeJeux.com", 'description'=>"Modification de la table séjour dans la base de données"]);
+$this->insert('partials/header-admin',['titre'=>"Admin séjour - RêvesdeJeux.com", 'description'=>"Modification de la table séjour dans la base de données"]);
 ?>
 
 <h1>Modification des séjours</h1>

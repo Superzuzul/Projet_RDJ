@@ -1,5 +1,5 @@
 <?php
-$this->insert('partials/header',['titre'=>"Admin ajout de membre - RêvesdeJeux.com", 'description'=>"Modification de la table membre dans la base de données"]);
+$this->insert('partials/header-admin',['titre'=>"Admin ajout de membre - RêvesdeJeux.com", 'description'=>"Modification de la table membre dans la base de données"]);
 ?>
 <h1>Ajout de membre</h1>
 <section>
@@ -44,32 +44,15 @@ $this->insert('partials/header',['titre'=>"Admin ajout de membre - RêvesdeJeux.
 		<h2>Modifier / Supprimer un membre</h2>
 		<table>
 	        <thead>
-	            <?php
-	            //Si je veux acceder à la table Membre, il faut utiliser la classe Model\MembreModel
-	            $objetMembreModel=new \Model\MembreModel;
-	            $tabResult=$objetMembreModel->findall("id","ASC",1);
-	            
-	            //boucle pour parcourir chaque ligne trouvée
-	            foreach ($tabResult as $tabLigne) {
-	                
-	                echo"<tr>";
-	                
-	                //boucle pour parcourir chaque colonne
-	                foreach ($tabLigne as $nomColonne=>$valeurColonne) {
-	                    // affichage de la colonne
-	                    
-	                 echo "<th>$nomColonne</th>" ;   
-	                    
-	                }//fin du deuxieme foreach
-	                
-	                //ajour de deux colonne, une pour modifier, l'autre pour supprimer
-	                echo "<th>Modifier</th>";
-	                echo "<th>Supprimer</th>";
-	                
-	                echo "</tr>";
-	            }//fin du premier foreach
-	            
-	            ?>
+				<tr>
+					<th>Prenom du membre</th>
+					<th>Nom du membre</th>
+					<th>Date de Naissance</th>
+					<th>Adresse e-mail</th>
+					<th>Nombre d'avertissement</th>
+					<th>Modifier</th>
+					<th>Supprimer</th>
+				</tr>
 	        </thead>
 	        <tbody>
 	            
@@ -83,21 +66,25 @@ $this->insert('partials/header',['titre'=>"Admin ajout de membre - RêvesdeJeux.
 	                
 	                echo"<tr>";
 	                
-	                //boucle pour parcourir chaque colonne
-	                foreach ($tabLigne as $nomColonne=>$valeurColonne) {
-	                    // affichage de la colonne
-	                    
-	                 echo "<td>$valeurColonne</td>" ;   
-	                    
-	                }//fin du deuxieme foreach
-	                
+
 	                $id=$tabLigne['id'];
+	                $prenom=$tabLigne['prenomMembre'];
+	                $nom=$tabLigne['nomMembre'];
+	                $dateNaissanceMembre=$tabLigne['dateNaissanceMembre'];
+	                $email=$tabLigne['emailMembre'];
+	                $avertissement=$tabLigne['nbAvertissementMembre'];
+
 	                
 	                $hrefModifier=$this->url("admin_membre_update",['id'=>$id]);
 	                $hrefSupprimer="?id=$id&operation=supprimer";
 	                
 	echo                
 <<<CODEHTML
+<td>$prenom</td>
+<td>$nom</td>
+<td>$dateNaissanceMembre</td>
+<td>$email</td>
+<td>$avertissement</td>
 <td><a href="$hrefModifier">Modifier</a></td>
 <td><a href="$hrefSupprimer">Supprimer</a></td>
 </tr>
